@@ -37,7 +37,7 @@
     
     <title>
         
-            myblog | 
+            Java学习－网络编程(一) | 
         
         Squirrel&#39;Blog
     </title>
@@ -231,18 +231,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="myblog | Squirrel&#39;Blog">
+    <meta property="og:title" content="Java学习－网络编程(一) | Squirrel&#39;Blog">
     <meta property="og:image" content="http://yoursite.com/favicon/favicon.png" />
     <meta property="og:description" content="">
     
 
     
         <meta property="article:published_time" content="Wed Nov 01 2017 18:48:29 GMT+0800" />
-        <meta property="article:modified_time" content="Sat Nov 04 2017 19:16:08 GMT+0800" />
+        <meta property="article:modified_time" content="Sat Nov 04 2017 21:08:36 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="myblog | Squirrel&#39;Blog">
+    <meta name="twitter:title" content="Java学习－网络编程(一) | Squirrel&#39;Blog">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="http://yoursite.com/favicon/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -263,9 +263,9 @@
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "mainEntityOfPage": "http://yoursite.com/2017/11/01/java3/index.html",
-    "headline": "myblog",
+    "headline": "Java学习－网络编程(一)",
     "datePublished": "Wed Nov 01 2017 18:48:29 GMT+0800",
-    "dateModified": "Sat Nov 04 2017 19:16:08 GMT+0800",
+    "dateModified": "Sat Nov 04 2017 21:08:36 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Squirrel Chen",
@@ -344,6 +344,15 @@
     <!-- Left aligned menu below button -->
     
     
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#序"><span class="post-toc-number">1.</span> <span class="post-toc-text">序</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#API解释"><span class="post-toc-number">2.</span> <span class="post-toc-text">API解释</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#举个栗子"><span class="post-toc-number">3.</span> <span class="post-toc-text">举个栗子</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#结束"><span class="post-toc-number">4.</span> <span class="post-toc-text">结束</span></a></li></ol>
+    </ul>
+    
 
 
 
@@ -373,7 +382,7 @@
         
     
             <p class="article-headline-p">
-                myblog
+                Java学习－网络编程(一)
             </p>
         </div>
 
@@ -424,7 +433,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=myblog&url=http://yoursite.com/2017/11/01/java3/index.html&pic=http://yoursite.com/favicon/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Java学习－网络编程(一)&url=http://yoursite.com/2017/11/01/java3/index.html&pic=http://yoursite.com/favicon/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -433,7 +442,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=myblog&url=http://yoursite.com/2017/11/01/java3/index.html&via=Squirrel Chen" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Java学习－网络编程(一)&url=http://yoursite.com/2017/11/01/java3/index.html&via=Squirrel Chen" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -476,12 +485,81 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>大家都会发现，在工作当真，网络编程是基础的，也是很必要的，比如我们经常会用socket通信，HTTP协议，UDP协 议之类的，那么今天我们将会学习到如何用HttpURLConnection这个类进行网络编程。<br>首先我们在官网查下HttpURLConnetcion 的API，官网解释如下：<br>A URLConnection with support for HTTP-specific features. See the spec for details.<br>Each HttpURLConnection instance is used to make a single request but the underlying network connection to the HTTP server may be transparently shared by other instances. Calling the close() methods on the InputStream or OutputStream of an HttpURLConnection after a request may free network resources associated with this instance but has no effect on any shared persistent connection. Calling the disconnect() method may close the underlying socket if a persistent connection is otherwise idle at that time.<br>The HTTP protocol handler has a few settings that can be accessed through System Properties. This covers Proxy settings as well as &gt;various other settings.<br>大概的意思则是<br>与HTTP特定功能的支持一个URLConnection。详情请参阅规范。<br>每个HttpURLConnection实例是用来制造单个请求，但基础网络连接到HTTP服务器可以通过其他实例可以透明共用。呼吁一个 HttpURLConnection类的的InputStream和OutputStream的密切（）方法的请求后，可能释放与此实例关联的网络资源， 但对任何共享的持久连接没有任何影响。如果一个持久连接就是在那个时候闲置的调用disconnect（）方法可以关闭基础套接字。<br>HTTP协议处理程序，可以通过系统属性来访问一些设置。这包括代理设置，以及其他各种设置。<br>而在上述叙述中，我们发现HttpURLConnection是有一个父类的URLConnetcion API文档描述如下<br>The abstract class URLConnection is the superclass of all classes that represent a communications link between the application and a URL. Instances of this class can be used both to read from and to write to the resource referenced by the URL. In general, creating a connection to a URL is a multistep process:<br>翻译如下就是<br>抽象类URLConnection是代表应用程序和URL之间的通信链路的所有类的超类。这个类的实例既可以用来读取和写入由URL引用的资源。一般况下，创建一个URL连接是一个多步骤的过程<br>那么现在废话少说，查看例子是怎么使用的吧：</p>
-<p>package com.baoquan.upload;<br>import java.io.DataOutputStream;<br>import java.io.OutputStream;<br>import java.net.HttpURLConnection;<br>import java.net.URL;<br>public class DataUpload implements Upload {<br>        @Override<br>       public boolean fileupload(String filename, String url) {<br>                // TODO Auto-generated method stub<br>              return false;<br>   }<br>       @Override<br>       public boolean dataupload(String url, String data) {<br>            // TODO Auto-generated method stub<br>                try{<br>            //创建URL连接<br>            URL uploadurl=new URL(url);<br>                     //打开端口通信<br>                HttpURLConnection con=(HttpURLConnection)uploadurl.openConnection();<br>                    //设置相关属性设置 输入输出流打开<br>                con.setDoInput(true);<br>                con.setDoOutput(true);<br>                  //设置请求方式 包括POST GET<br>                 con.setRequestMethod(“POST”);<br>                   //设置请求头属性<br>                 con.setRequestProperty(“Connection”,”keep-Alive”);<br>                 con.setRequestProperty(“User-Agent”, “Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/51.0.2704.79 Chrome/51.0.2704.79 Safari/537.36”);<br>                 con.setRequestProperty(“Charset”, “UTF-8”);<br>                     //打开输出流<br>                 OutputStream out=new DataOutputStream(con.getOutputStream());<br>                        //写入数据<br>                 out.write(data.getBytes());<br>                     //清空缓冲区<br>                 out.flush();<br>                    //关闭输出流<br>                 out.close();<br>                 System.out.println(con.getResponseCode());<br>                 return true;<br>            }<br>               catch(Exception e)<br>              {<br>                 System.out.println(“POST请求异常”);<br>                 e.printStackTrace();<br>            }<br>               return false;</p>
-<pre><code>    }
-    public static void main(String[] args)
-</code></pre><p>  {<br>                 DataUpload dataup=new DataUpload();<br>                 dataup.dataupload(“<a href="http://localhost:8080/Server/servlet/UploadServlet" target="_blank" rel="external">http://localhost:8080/Server/servlet/UploadServlet</a>“, “你好世界”);<br>        }</p>
-<p>}<br>由以上代码 可以看出<br>1.创建URL对象<br>2.URL打开URL地址连接 也就是openConnection()<br>3.设置请求的相关方式 POST/GET<br>4.设置请求的头的相关属性<br>5.获取输入/输出流<br>6.读取/写入数据<br>7.清空缓冲区<br>8.关闭连接<br>大概就是这么的一个过程，大家都明白了吧。其实HttpURLConnection也是采用socket通信的，它内部封装了关于socket的相 关信息，因此熟悉socket的通信相关编程知识的，也就能发现其实HttpURLConnection也是类似的编程步骤。好了，暂时写到这儿。有什么不对或者问题，请务必告知本人，谢谢。</p>
+        <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>大家都会发现,在工作当中,网络编程是基础的,也是很必要的.比如我们经常会用<code>socket</code>通信,<code>HTTP协议</code>,<code>UDP协议</code>之类的.那么今天我们将会学习到如何用<code>HttpURLConnection</code>这个类进行网络编程.</p>
+<h1 id="API解释"><a href="#API解释" class="headerlink" title="API解释"></a>API解释</h1><p>首先我们在官网查下<code>HttpURLConnetcion</code>的API，官网解释如下：</p>
+<pre><code>A URLConnection with support for HTTP-specific features. See the spec for details.
+Each HttpURLConnection instance is used to make a single request but the underlying network connection to the HTTP server may be transparently shared by other instances. Calling the close() methods on the InputStream or OutputStream of an HttpURLConnection after a request may free network resources associated with this instance but has no effect on any shared persistent connection. Calling the disconnect() method may close the underlying socket if a persistent connection is otherwise idle at that time.
+The HTTP protocol handler has a few settings that can be accessed through System Properties. This covers Proxy settings as well as &gt;various other settings.
+</code></pre><p>大概的意思则是与<code>HTTP</code>特定功能的支持一个<code>URLConnection</code>.详情请参阅规范.每个<code>HttpURLConnection</code>实例是用来制造单个请求,但基础网络连接到<code>HTTP</code>服务器可以通过其他实例可以透明共用,呼吁一个<code>HttpURLConnection</code>类的的<code>InputStream</code>和<code>OutputStream</code>的密切方法的请求后,可能释放与此实例关联的网络资源,但对任何共享的持久连接没有任何影响.如果一个持久连接就是在那个时候闲置的调用<code>disconnect()</code>方法可以关闭基础套接字.<code>HTTP</code>协议处理程序,可以通过系统属性来访问一些设置.这包括代理设置,以及其他各种设置.而在上述叙述中,我们发现<code>HttpURLConnection</code>是有一个父类的<code>URLConnetcion</code>API文档描述如下:</p>
+<pre><code>The abstract class URLConnection is the superclass of all classes that represent a communications link between the application and a URL. Instances of this class can be used both to read from and to write to the resource referenced by the URL. In general, creating a connection to a URL is a multistep process
+</code></pre><p>翻译如下就是</p>
+<pre><code>抽象类URLConnection是代表应用程序和URL之间的通信链路的所有类的超类.这个类的实例既可以用来读取和写入由URL引用的资源.一般况下,创建一个URL连接是一个多步骤的过程.
+</code></pre><h1 id="举个栗子"><a href="#举个栗子" class="headerlink" title="举个栗子"></a>举个栗子</h1><p>那么现在废话少说，查看例子是怎么使用的吧：</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>baoquan<span class="token punctuation">.</span>upload<span class="token punctuation">;</span>
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>io<span class="token punctuation">.</span>DataOutputStream<span class="token punctuation">;</span>
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>io<span class="token punctuation">.</span>OutputStream<span class="token punctuation">;</span>
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>net<span class="token punctuation">.</span>HttpURLConnection<span class="token punctuation">;</span>
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>net<span class="token punctuation">.</span>URL<span class="token punctuation">;</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DataUpload</span> <span class="token keyword">implements</span> <span class="token class-name">Upload</span> <span class="token punctuation">{</span>
+        <span class="token annotation punctuation">@Override</span>
+       <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">fileupload</span><span class="token punctuation">(</span>String filename<span class="token punctuation">,</span> String url<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">// TODO Auto-generated method stub</span>
+              <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+       <span class="token annotation punctuation">@Override</span>
+       <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">dataupload</span><span class="token punctuation">(</span>String url<span class="token punctuation">,</span> String data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// TODO Auto-generated method stub </span>
+                <span class="token keyword">try</span><span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">//创建URL连接</span>
+            URL uploadurl<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">URL</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                     <span class="token comment" spellcheck="true">//打开端口通信</span>
+                HttpURLConnection con<span class="token operator">=</span><span class="token punctuation">(</span>HttpURLConnection<span class="token punctuation">)</span>uploadurl<span class="token punctuation">.</span><span class="token function">openConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token comment" spellcheck="true">//设置相关属性设置 输入输出流打开 </span>
+                con<span class="token punctuation">.</span><span class="token function">setDoInput</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                con<span class="token punctuation">.</span><span class="token function">setDoOutput</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                  <span class="token comment" spellcheck="true">//设置请求方式 包括POST GET</span>
+                 con<span class="token punctuation">.</span><span class="token function">setRequestMethod</span><span class="token punctuation">(</span><span class="token string">"POST"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                   <span class="token comment" spellcheck="true">//设置请求头属性</span>
+                 con<span class="token punctuation">.</span><span class="token function">setRequestProperty</span><span class="token punctuation">(</span><span class="token string">"Connection"</span><span class="token punctuation">,</span><span class="token string">"keep-Alive"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                 con<span class="token punctuation">.</span><span class="token function">setRequestProperty</span><span class="token punctuation">(</span><span class="token string">"User-Agent"</span><span class="token punctuation">,</span> <span class="token string">"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/51.0.2704.79 Chrome/51.0.2704.79 Safari/537.36"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                 con<span class="token punctuation">.</span><span class="token function">setRequestProperty</span><span class="token punctuation">(</span><span class="token string">"Charset"</span><span class="token punctuation">,</span> <span class="token string">"UTF-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                     <span class="token comment" spellcheck="true">//打开输出流</span>
+                 OutputStream out<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">DataOutputStream</span><span class="token punctuation">(</span>con<span class="token punctuation">.</span><span class="token function">getOutputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   
+                        <span class="token comment" spellcheck="true">//写入数据</span>
+                 out<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                     <span class="token comment" spellcheck="true">//清空缓冲区</span>
+                 out<span class="token punctuation">.</span><span class="token function">flush</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token comment" spellcheck="true">//关闭输出流</span>
+                 out<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                 System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>con<span class="token punctuation">.</span><span class="token function">getResponseCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                 <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+               <span class="token keyword">catch</span><span class="token punctuation">(</span>Exception e<span class="token punctuation">)</span>
+              <span class="token punctuation">{</span>
+                 System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"POST请求异常"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                 e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+               <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+
+        <span class="token punctuation">}</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+                 DataUpload dataup<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">DataUpload</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                 dataup<span class="token punctuation">.</span><span class="token function">dataupload</span><span class="token punctuation">(</span><span class="token string">"http://localhost:8080/Server/servlet/UploadServlet"</span><span class="token punctuation">,</span> <span class="token string">"你好世界"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>由以上代码 可以看出</p>
+<pre><code>1.创建URL对象
+2.URL打开URL地址连接也就是openConnection()
+3.设置请求的相关方式POST/GET
+4.设置请求的头的相关属性
+5.获取输入/输出流
+6.读取/写入数据
+7.清空缓冲区
+8.关闭连接
+</code></pre><h1 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h1><p>大概就是这么的一个过程,大家都明白了吧.其实<code>HttpURLConnection</code>也是采用<code>socket</code>通信的.它内部封装了关于<code>socket</code>的相关信息.因此熟悉<code>socket</code>的通信相关编程知识的,也就能发现其实<code>HttpURLConnection</code>也是类似的编程步骤.好了.暂时写到这儿.有什么不对或者问题,请务必告知本人.谢谢.</p>
 
         
     
@@ -502,7 +580,7 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2017/11/01/java1/" id="post_nav-newer" class="prev-content">
+        <a href="/2017/11/02/java2/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -516,7 +594,7 @@
 
     <!-- Next Nav -->
     
-        <a href="/2017/11/01/java2/" id="post_nav-older" class="next-content">
+        <a href="/2017/11/01/css/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
