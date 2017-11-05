@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Squirrel&#39;Blog</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-11-05T03:19:45.562Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Squirrel Chen</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>阿里云搭建私有git服务</title>
+    <link href="http://yoursite.com/2017/11/03/linux/"/>
+    <id>http://yoursite.com/2017/11/03/linux/</id>
+    <published>2017-11-03T10:48:29.000Z</published>
+    <updated>2017-11-05T03:19:45.562Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;序&quot;&gt;&lt;a href=&quot;#序&quot; class=&quot;headerlink&quot; title=&quot;序&quot;&gt;&lt;/a&gt;序&lt;/h1&gt;&lt;p&gt;如果觉得github上的代码托管私有仓库比较贵,又不想托管到公共的仓库的话,可以通过自己买一台云服务器.搭建自己的个性化服务器.不仅仅可以用git服
+      
+    
+    </summary>
+    
+      <category term="git" scheme="http://yoursite.com/categories/git/"/>
+    
+    
+      <category term="阿里云" scheme="http://yoursite.com/tags/%E9%98%BF%E9%87%8C%E4%BA%91/"/>
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java学习随记(一)</title>
+    <link href="http://yoursite.com/2017/11/02/java1/"/>
+    <id>http://yoursite.com/2017/11/02/java1/</id>
+    <published>2017-11-02T10:48:29.000Z</published>
+    <updated>2017-11-05T03:19:37.170Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Java随记一&quot;&gt;&lt;a href=&quot;#Java随记一&quot; class=&quot;headerlink&quot; title=&quot;Java随记一&quot;&gt;&lt;/a&gt;Java随记一&lt;/h1&gt;&lt;h2 id=&quot;问&quot;&gt;&lt;a href=&quot;#问&quot; class=&quot;headerlink&quot; title=&quot;问&quot;&gt;
+      
+    
+    </summary>
+    
+      <category term="Java学习" scheme="http://yoursite.com/categories/Java%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java学习随记(二)</title>
+    <link href="http://yoursite.com/2017/11/02/java2/"/>
+    <id>http://yoursite.com/2017/11/02/java2/</id>
+    <published>2017-11-01T16:00:00.000Z</published>
+    <updated>2017-11-05T03:19:39.746Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;String-StringBuilder-StringBUffer-之间的区别&quot;&gt;&lt;a href=&quot;#String-StringBuilder-StringBUffer-之间的区别&quot; class=&quot;headerlink&quot; title=&quot;String StringB
+      
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java学习－网络编程(一)</title>
+    <link href="http://yoursite.com/2017/11/01/java3/"/>
+    <id>http://yoursite.com/2017/11/01/java3/</id>
+    <published>2017-11-01T10:48:29.000Z</published>
+    <updated>2017-11-05T03:19:30.722Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;序&quot;&gt;&lt;a href=&quot;#序&quot; class=&quot;headerlink&quot; title=&quot;序&quot;&gt;&lt;/a&gt;序&lt;/h1&gt;&lt;p&gt;大家都会发现,在工作当中,网络编程是基础的,也是很必要的.比如我们经常会用&lt;code&gt;socket&lt;/code&gt;通信,&lt;code&gt;HTTP协议&lt;/c
+      
+    
+    </summary>
+    
+      <category term="Java学习" scheme="http://yoursite.com/categories/Java%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+      <category term="网络编程" scheme="http://yoursite.com/tags/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS实现简单的时间轴效果</title>
+    <link href="http://yoursite.com/2017/11/01/css/"/>
+    <id>http://yoursite.com/2017/11/01/css/</id>
+    <published>2017-10-31T16:00:00.000Z</published>
+    <updated>2017-11-05T03:19:33.978Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;利用CSS3实现简单的时间轴效果&quot;&gt;&lt;a href=&quot;#利用CSS3实现简单的时间轴效果&quot; class=&quot;headerlink&quot; title=&quot;利用CSS3实现简单的时间轴效果&quot;&gt;&lt;/a&gt;利用CSS3实现简单的时间轴效果&lt;/h1&gt;&lt;h1 id=&quot;序&quot;&gt;&lt;a hre
+      
+    
+    </summary>
+    
+      <category term="Web前端" scheme="http://yoursite.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="CSS3" scheme="http://yoursite.com/tags/CSS3/"/>
+    
+  </entry>
+  
+</feed>
