@@ -106,6 +106,11 @@
         <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/github-v2.min.css?AfzKxt++K+/lhZBlSjnxwg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
 
     
 
@@ -246,7 +251,7 @@
 
     
         <meta property="article:published_time" content="Wed Nov 01 2017 18:48:29 GMT+0800" />
-        <meta property="article:modified_time" content="Sun Nov 05 2017 11:19:30 GMT+0800" />
+        <meta property="article:modified_time" content="Sun Nov 05 2017 15:51:51 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
@@ -273,7 +278,7 @@
     "mainEntityOfPage": "http://yoursite.com/2017/11/01/java3/index.html",
     "headline": "Java学习－网络编程(一)",
     "datePublished": "Wed Nov 01 2017 18:48:29 GMT+0800",
-    "dateModified": "Sun Nov 05 2017 11:19:30 GMT+0800",
+    "dateModified": "Sun Nov 05 2017 15:51:51 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Squirrel Chen",
@@ -307,7 +312,7 @@
     <!-- Custom Head -->
     
 
-<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-funky.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
@@ -589,14 +594,14 @@ The HTTP protocol handler has a few settings that can be accessed through System
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>由以上代码 可以看出</p>
-<pre><code>1.创建URL对象
-2.URL打开URL地址连接也就是openConnection()
-3.设置请求的相关方式POST/GET
-4.设置请求的头的相关属性
-5.获取输入/输出流
-6.读取/写入数据
-7.清空缓冲区
-8.关闭连接
+<pre><code>1. 创建URL对象
+2. URL打开URL地址连接也就是openConnection()
+3. 设置请求的相关方式POST/GET
+4. 设置请求的头的相关属性
+5. 获取输入/输出流
+6. 读取/写入数据
+7. 清空缓冲区
+8. 关闭连接
 </code></pre><h1 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h1><p>大概就是这么的一个过程,大家都明白了吧.其实<code>HttpURLConnection</code>也是采用<code>socket</code>通信的.它内部封装了关于<code>socket</code>的相关信息.因此熟悉<code>socket</code>的通信相关编程知识的,也就能发现其实<code>HttpURLConnection</code>也是类似的编程步骤.好了.暂时写到这儿.有什么不对或者问题,请务必告知本人.谢谢.</p>
 
         
@@ -1099,6 +1104,12 @@ It will not impact the appearance and can give developers a lot of support :)
 
 <!-- Import prettify js  -->
 
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
 
 
 <!-- Window Load -->
@@ -1109,6 +1120,13 @@ It will not impact the appearance and can give developers a lot of support :)
         $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
     });
 
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
     
     
 </script>
