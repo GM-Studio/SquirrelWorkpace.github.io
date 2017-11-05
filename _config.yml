@@ -82,9 +82,15 @@ feed:
   content:
   content_limit: 140
   comtent_limit_delim: ''
+
 search:
   path: search.xml
-  field: all
+  field: post
+  format: html
+  limit: 10000
+
+sitemap:
+  path: sitemap.xml
   
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
