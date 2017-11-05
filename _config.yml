@@ -70,10 +70,12 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: material
+
 prism_plugin:
   mode: 'preprocess'
-  theme: 'default'
+  theme: 'funky'
   line_number: true
+
 feed:
   type: atom
   path: atom.xml

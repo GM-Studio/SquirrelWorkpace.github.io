@@ -92,14 +92,14 @@ public class DataUpload implements Upload {
 由以上代码 可以看出
 
 ```
-1.创建URL对象
-2.URL打开URL地址连接也就是openConnection()
-3.设置请求的相关方式POST/GET
-4.设置请求的头的相关属性
-5.获取输入/输出流
-6.读取/写入数据
-7.清空缓冲区
-8.关闭连接
+1. 创建URL对象
+2. URL打开URL地址连接也就是openConnection()
+3. 设置请求的相关方式POST/GET
+4. 设置请求的头的相关属性
+5. 获取输入/输出流
+6. 读取/写入数据
+7. 清空缓冲区
+8. 关闭连接
 ```
 
 # 结束
