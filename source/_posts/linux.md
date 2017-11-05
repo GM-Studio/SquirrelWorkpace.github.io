@@ -1,0 +1,128 @@
+---
+title: 阿里云搭建私有git服务
+date: 2017-11-03 18:48:29
+tags: [阿里云,git]
+categories: git
+---
+
+# 序
+如果觉得github上的代码托管私有仓库比较贵,又不想托管到公共的仓库的话,可以通过自己买一台云服务器.搭建自己的个性化服务器.不仅仅可以用git服务,还可以用比如apache,网站搭建的都可以.下面就说说怎么使用服务器搭建git私有仓库也就是git服务器
+
+## 详细步骤
+### SSH服务的安装与开启
+确保自己的服务器开启了SSH服务.如果没有,那就安装SSH服务吧.使用下列命令
+
+```
+sudo service ssh start
+```
+打开ssh服务如果出现unkown service表示没有安装ssh服务.使用下列命令
+
+```
+sudo apt-get install ssh
+或者
+sudo apt-get install open-ssh
+```
+
+然后系统会自动运行ssh服务,如果没有运行,那就手动启动.
+
+```
+sudo service ssh start
+```
+
+### 安装git服务
+
+```
+sudo apt-get install git
+```
+配置git用户
+为了方便使用git服务以及管理git,需要另外建立一个git 用户,专门用来管理git.
+
+```
+sudo adduser git
+```
+
+然后输入密码.用户就建立了,切换到该用户主目录下.
+
+```
+cd /home/git
+```
+
+建立.ssh 文件夹,请注意这里有个点.
+
+```
+mkdir .ssh
+cd .ssh 
+touch authorized_keys
+```
+公匙存放
+收集好要连接该git服务器的用户的SSH公匙,通常存放在用户主目录下.ssh/id_rsa.pub文件中.
+
+```
+cat id_rsa.pub >> authorized_keys
+```
+请别忘记,是每一个用户都要导入,且一个一行!
+仓库建立
+然后在该目录下建立一个空的文件夹作为仓库
+
+```
+cd /home/git 
+mkdir gitproject
+cd gitproject 
+sudo git init --bare sample.git 
+sudo chown -R git:git sample.git
+```
+克隆仓库到本地
+1.7 然后就可以使用git clone 该仓库了
+
+```
+git clone git@xxx.xxx.xxx.xxx: /home/git/gitproject/sample.git
+```
+大概就这样,请注意 xxx.xxx.xxx.xxx为你的服务器的ip地址.
+受限git用户
+为了安全性,请让git用户的权利受限.出于安全考虑,创建的git用户不允许登录shell,这可以通过编辑/etc/passwd文件完成.找到类似下面的一行：
+
+```
+git:x:1001:1001:,,,:/home/git:/bin/bash
+```
+改为：
+
+```
+git:x:1001:1001:,,,:/home/git:/usr/bin/git-shell
+```
+
+番外篇
+如何在ssh连接时给服务器起别名,不用输入一长串的ip地址.首先这个是需要在客户端上更改的,而不是服务端.我就犯了这个错误.客户端上切换到用户主目录.诸如这样:
+
+```shell
+cd /home/squirrel-chen
+```
+
+使用ll -a 可以看见有一个.ssh 文件夹
+
+```shell
+cd .ssh
+```
+会有一个config文件 如果没有可以新建
+
+```shell
+touch config 
+sudo vi config
+```
+输入以下的内容
+
+```
+Host squirrel-chen 
+HostName xxx.xxx.xxx.xxx
+User admin
+Port 22
+```
+
+Host 是指要连接的服务器名称
+HostName 指定服务器的ip地址
+User 以什么的身份登陆服务器
+Port 就是端口 一般都是22
+然后就可以直接使用```ssh squirrel-chen```连接了,当然要输入密码的.如果不想输入密码的话,可以在生成公匙秘匙对的时候,一路敲回车,采用默认的方式,这样的话 ```ssh xxx```连接时就不用输入密码了.
+
+# 结束
+此次的博客就写到这儿，Talk is cheap,show me the code.Goodbye!
+
