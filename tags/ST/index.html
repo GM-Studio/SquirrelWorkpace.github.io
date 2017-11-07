@@ -43,7 +43,7 @@
     
     <title>
         
-            阿里云搭建私有git服务 | 
+            标签: ST | 
         
         Squirrel&#39;Blog
     </title>
@@ -55,7 +55,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Squirrel Chen">
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",阿里云,git">
+    <meta name="keywords" content="">
 
     <!-- Import lsloader -->
     <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
@@ -108,9 +108,6 @@
         <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
-            
-                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/github-v2.min.css?AfzKxt++K+/lhZBlSjnxwg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
             
         
 
@@ -246,18 +243,15 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="阿里云搭建私有git服务 | Squirrel&#39;Blog">
+    <meta property="og:title" content="标签: ST | Squirrel&#39;Blog">
     <meta property="og:image" content="http://yoursite.com/favicon/favicon.jpeg" />
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="阿里云"> <meta property="og:article:tag" content="git"> 
-
     
-        <meta property="article:published_time" content="Fri Nov 03 2017 18:48:29 GMT+0800" />
-        <meta property="article:modified_time" content="Sun Nov 05 2017 11:19:45 GMT+0800" />
+
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="阿里云搭建私有git服务 | Squirrel&#39;Blog">
+    <meta name="twitter:title" content="标签: ST | Squirrel&#39;Blog">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="http://yoursite.com/favicon/favicon.jpeg">
     <meta name="twitter:card" content="summary_large_image" />
@@ -265,43 +259,13 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2017/11/03/linux/index.html" />
+        <link rel="canonical" href="http://yoursite.com/tags/ST/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2017/11/03/linux/index.html",
-    "headline": "阿里云搭建私有git服务",
-    "datePublished": "Fri Nov 03 2017 18:48:29 GMT+0800",
-    "dateModified": "Sun Nov 05 2017 11:19:45 GMT+0800",
-    "author": {
-        "@type": "Person",
-        "name": "Squirrel Chen",
-        "image": {
-            "@type": "ImageObject",
-            "url": "/img/avatar.jpg"
-        },
-        "description": "Squirrel's Blog. 谦谦君子,温润如玉"
-    },
-    "publisher": {
-        "@type": "Organization",
-        "name": "Squirrel&#39;Blog",
-        "logo": {
-            "@type":"ImageObject",
-            "url": "/favicon/favicon.jpeg"
-        }
-    },
-    "keywords": ",阿里云,git",
-    "description": "",
-}
-</script>
 
 
     
@@ -340,308 +304,104 @@
                         </button>
                     
 
-                    <!-- Post TOC -->
-
+                    <!-- Index Module -->
+<div class="material-index mdl-grid">
     
-    <!-- Back Button -->
-    <!--
-    <div class="material-back" id="backhome-div" tabindex="0">
-        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
-           href="#" onclick="window.history.back();return false;"
-           target="_self"
-           role="button"
-           data-upgraded=",MaterialButton,MaterialRipple">
-            <i class="material-icons" role="presentation">arrow_back</i>
-            <span class="mdl-button__ripple-container">
-                <span class="mdl-ripple"></span>
-            </span>
-        </a>
-    </div>
-    -->
+    <div class="locate-thumbnail-symbol"></div>
 
-
-    <!-- Left aligned menu below button -->
-    
-    
-    <button id="post-toc-trigger-btn"
-        class="mdl-button mdl-js-button mdl-button--icon">
-        <i class="material-icons">format_list_numbered</i>
-    </button>
-
-    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#序"><span class="post-toc-number">1.</span> <span class="post-toc-text">序</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#详细步骤"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">详细步骤</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#SSH服务的安装与开启"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">SSH服务的安装与开启</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装git服务"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">安装git服务</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#结束"><span class="post-toc-number">2.</span> <span class="post-toc-text">结束</span></a></li></ol>
-    </ul>
+    <!-- Pin on top -->
     
 
-
-
-
-<!-- Layouts -->
-
-    <!-- Post Module -->
-    <div class="material-post_container">
-
-        <div class="material-post mdl-grid">
-            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
-
-                <!-- Post Header(Thumbnail & Title) -->
-                
-    <!-- Paradox Post Header -->
+    <!-- Normal Post -->
+    
+        
+            
+                <!-- Paradox Thumbnail -->
+                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
+    <!-- Post Thumbnail -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-            <script type="text/ls-javascript" id="post-thumbnail-script">
-    var randomNum = Math.floor(Math.random() * 19 + 1);
+        
+    
 
-    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+        <!-- Post Title -->
+        <p class="article-headline-p"><a href="/2017/11/05/sb/">神级文本编辑器(The God of Text Editor) ST的安装和使用</a></p>
+    </div>
+
+    <!-- Post Excerpt -->
+    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+        
+            序
+        
+        &nbsp;&nbsp;&nbsp;
+        <span>
+            <a href="/2017/11/05/sb/" target="_self">阅读全文</a>
+        </span>
+    </div>
+    <!-- Post_entry Info-->
+    <div id="post_entry-info">
+        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
+            <!-- Author Avatar -->
+            <div id="author-avatar">
+                <img src="/img/avatar.jpg" width="44px" height="44px" alt="Squirrel Chen's avatar">
+            </div>
+            <div>
+                <strong>Squirrel Chen</strong>
+                <span>11月 05, 2017</span>
+            </div>
+        </div>
+        <div id="post_entry-right-info">
+          
+              <!-- Category -->
+              <span class="post_entry-category">
+                  <a class="post_category-link" href="/categories/ST/">ST</a>
+              </span>
+            
+
+            
+
+            
+                <!-- Comment Number -->
+                &nbsp;|&nbsp;
+                <span class="post_entry-comment" >
+                        <span id = "sourceId::2017/11/05/sb/" class = "cy_cmt_count" ></span>条评论
+                </span>
+            
+
+            <!-- Post Views -->
+            <span class="post_entry-views">
+            </span>
+        </div>
+    </div>
+</div>
+
+            
+            
+        
+    
+
+    
+
+    
+        <script type="text/ls-javascript" id="thumbnail-script">
+    var randomNum;
+
+    var locatePost = $('.locate-thumbnail-symbol').next();
+    for(var i = 0; i < 10; i++) {
+        randomNum = Math.floor(Math.random() * 19 + 1);
+
+        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
+        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
+
+        locatePost = locatePost.next();
+    }
 </script>
 
-        
-    
-            <p class="article-headline-p">
-                阿里云搭建私有git服务
-            </p>
-        </div>
-
-
-
-
-
-                
-                    <!-- Paradox Post Info -->
-                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
-
-    <!-- Author Avatar -->
-    <div id="author-avatar">
-        <img src="/img/avatar.jpg" width="44px" height="44px" alt="Author Avatar"/>
-    </div>
-    <!-- Author Name & Date -->
-    <div>
-        <strong>Squirrel Chen</strong>
-        <span>11月 03, 2017</span>
-    </div>
-
-    <div class="section-spacer"></div>
-
-    <!-- Favorite -->
-    <!--
-        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
-            <i class="material-icons" role="presentation">favorite</i>
-            <span class="visuallyhidden">favorites</span>
-        </button>
-    -->
-
-    <!-- Qrcode -->
-    
-
-    <!-- Tags (bookmark) -->
-    
-    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-        <i class="material-icons" role="presentation">bookmark</i>
-        <span class="visuallyhidden">bookmark</span>
-    </button>
-    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
-        <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/git/">git</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/阿里云/">阿里云</a>
-    </ul>
-    
-
-    <!-- Share -->
-    
-        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-    <i class="material-icons" role="presentation">share</i>
-    <span class="visuallyhidden">share</span>
-</button>
-<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
-    
-    <!-- Leancloud Views -->
-        <a class="post_share-link" href="#">
-            <li class="mdl-menu__item">
-                <span id="/2017/11/03/linux/" class="leancloud-views_num" data-flag-title="阿里云搭建私有git服务">
-     &nbsp;浏览量
-</span>
-
-            </li>
-        </a>
-    
-
-    
-        
-            <!-- Busuanzi Views -->
-            <a class="post_share-link" href="#">
-                <li class="mdl-menu__item">
-                    <span id="busuanzi_container_page_pv">
-                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
-                    </span>
-                </li>
-            </a>
-        
-    
-
-    <!-- Share Weibo -->
-    
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=阿里云搭建私有git服务&url=http://yoursite.com/2017/11/03/linux/index.html&pic=http://yoursite.com/favicon/favicon.jpeg&searchPic=false&style=simple" target="_blank">
-            <li class="mdl-menu__item">
-                分享到微博
-            </li>
-        </a>
-    
-
-    <!-- Share Twitter -->
-    
-
-    <!-- Share Facebook -->
-    
-
-    <!-- Share Google+ -->
-    
-
-    <!-- Share LinkedIn -->
-    
-
-    <!-- Share QQ -->
-    
-
-    <!-- Share Telegram -->
-    
-</ul>
-
     
 </div>
-
-                
-
-                <!-- Post Content -->
-                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
-    
-        <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>如果觉得github上的代码托管私有仓库比较贵,又不想托管到公共的仓库的话,可以通过自己买一台云服务器.搭建自己的个性化服务器.不仅仅可以用git服务,还可以用比如apache,网站搭建的都可以.下面就说说怎么使用服务器搭建git私有仓库也就是git服务器</p>
-<h2 id="详细步骤"><a href="#详细步骤" class="headerlink" title="详细步骤"></a>详细步骤</h2><h3 id="SSH服务的安装与开启"><a href="#SSH服务的安装与开启" class="headerlink" title="SSH服务的安装与开启"></a>SSH服务的安装与开启</h3><p>确保自己的服务器开启了SSH服务.如果没有,那就安装SSH服务吧.使用下列命令</p>
-<pre><code>sudo service ssh start
-</code></pre><p>打开ssh服务如果出现unkown service表示没有安装ssh服务.使用下列命令</p>
-<pre><code>sudo apt-get install ssh
-或者
-sudo apt-get install open-ssh
-</code></pre><p>然后系统会自动运行ssh服务,如果没有运行,那就手动启动.</p>
-<pre><code>sudo service ssh start
-</code></pre><h3 id="安装git服务"><a href="#安装git服务" class="headerlink" title="安装git服务"></a>安装git服务</h3><pre><code>sudo apt-get install git
-</code></pre><p>配置git用户<br>为了方便使用git服务以及管理git,需要另外建立一个git 用户,专门用来管理git.</p>
-<pre><code>sudo adduser git
-</code></pre><p>然后输入密码.用户就建立了,切换到该用户主目录下.</p>
-<pre><code>cd /home/git
-</code></pre><p>建立.ssh 文件夹,请注意这里有个点.</p>
-<pre><code>mkdir .ssh
-cd .ssh 
-touch authorized_keys
-</code></pre><p>公匙存放<br>收集好要连接该git服务器的用户的SSH公匙,通常存放在用户主目录下.ssh/id_rsa.pub文件中.</p>
-<pre><code>cat id_rsa.pub &gt;&gt; authorized_keys
-</code></pre><p>请别忘记,是每一个用户都要导入,且一个一行!<br>仓库建立<br>然后在该目录下建立一个空的文件夹作为仓库</p>
-<pre><code>cd /home/git 
-mkdir gitproject
-cd gitproject 
-sudo git init --bare sample.git 
-sudo chown -R git:git sample.git
-</code></pre><p>克隆仓库到本地<br>1.7 然后就可以使用git clone 该仓库了</p>
-<pre><code>git clone git@xxx.xxx.xxx.xxx: /home/git/gitproject/sample.git
-</code></pre><p>大概就这样,请注意 xxx.xxx.xxx.xxx为你的服务器的ip地址.<br>受限git用户<br>为了安全性,请让git用户的权利受限.出于安全考虑,创建的git用户不允许登录shell,这可以通过编辑/etc/passwd文件完成.找到类似下面的一行：</p>
-<pre><code>git:x:1001:1001:,,,:/home/git:/bin/bash
-</code></pre><p>改为：</p>
-<pre><code>git:x:1001:1001:,,,:/home/git:/usr/bin/git-shell
-</code></pre><p>番外篇<br>如何在ssh连接时给服务器起别名,不用输入一长串的ip地址.首先这个是需要在客户端上更改的,而不是服务端.我就犯了这个错误.客户端上切换到用户主目录.诸如这样:</p>
-<pre class="line-numbers language-shell"><code class="language-shell">cd /home/squirrel-chen
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>使用ll -a 可以看见有一个.ssh 文件夹</p>
-<pre class="line-numbers language-shell"><code class="language-shell">cd .ssh
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>会有一个config文件 如果没有可以新建</p>
-<pre class="line-numbers language-shell"><code class="language-shell">touch config 
-sudo vi config
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>输入以下的内容</p>
-<pre><code>Host squirrel-chen 
-HostName xxx.xxx.xxx.xxx
-User admin
-Port 22
-</code></pre><p>Host 是指要连接的服务器名称<br>HostName 指定服务器的ip地址<br>User 以什么的身份登陆服务器<br>Port 就是端口 一般都是22<br>然后就可以直接使用<code>ssh squirrel-chen</code>连接了,当然要输入密码的.如果不想输入密码的话,可以在生成公匙秘匙对的时候,一路敲回车,采用默认的方式,这样的话 <code>ssh xxx</code>连接时就不用输入密码了.</p>
-<h1 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h1><p>此次的博客就写到这儿，Talk is cheap,show me the code.Goodbye!</p>
-
-        
-                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
-                    <p><strong>
-                         
-                            Copyright© Squirrel's Blog
-                        </strong>
-                        <br>
-                        <strong>本文链接：</strong><a href="http://yoursite.com/2017/11/03/linux/">http://yoursite.com/2017/11/03/linux/</a>
-                    </p>
-                </blockquote>
-        
-    
-
-    
-</div>
-
-
-                
-
-                <!-- Post Comments -->
-                
-                    
-    <!-- 使用 changyan -->
-<div id="changyan-comment">
-    <!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="2017/11/03/linux/"  ></div>
-<script type="text/javascript">
-(function(){
-var appid = 'cysD2L3UA';
-var conf = '';
-var width = window.innerWidth || document.documentElement.clientWidth;
-if (width < 960) {
-window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
-
-</div>
-<style>
-    #changyan-comment{
-        background-color: #eee;
-        padding: 2pc;
-    }
-</style>
-
-                
-            </div>
-
-            <!-- Post Prev & Next Nav -->
-            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
-    <!-- Prev Nav -->
-    
-        <a href="/2017/11/05/sb/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
-
-    <!-- Section Spacer -->
-    <div class="section-spacer"></div>
-
-    <!-- Next Nav -->
-    
-        <a href="/2017/11/02/java1/" id="post_nav-older" class="next-content">
-            旧篇
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_forward</i>
-            </button>
-        </a>
-    
-</nav>
-
-        </div>
-    </div>
-
 
 
                     
@@ -853,14 +613,6 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
-
-                    
-                        <!-- Footer Top Button -->
-                        <div id="back-to-top" class="toTop-wrap">
-    <a href="#top" class="toTop">
-        <i class="material-icons footer_top-i">expand_less</i>
-    </a>
-</div>
 
                     
 
@@ -1099,10 +851,6 @@ It will not impact the appearance and can give developers a lot of support :)
 <!-- Import prettify js  -->
 
     
-        
-            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
-        
-    
 
 
 
@@ -1115,11 +863,6 @@ It will not impact the appearance and can give developers a lot of support :)
     });
 
     
-        
-            $(function() {
-                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
-                prettyPrint();
-                })
         
     
     

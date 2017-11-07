@@ -1,0 +1,323 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"git",
+				"github"
+			],
+			[
+				"a",
+				"atom"
+			],
+			[
+				"tu",
+				"true"
+			],
+			[
+				"t",
+				"true"
+			],
+			[
+				"tag",
+				"tags"
+			],
+			[
+				"move",
+				"moveForward"
+			],
+			[
+				"alet",
+				"alert"
+			],
+			[
+				"len",
+				"length"
+			],
+			[
+				"pro",
+				"prompt"
+			],
+			[
+				"set",
+				"setInterval"
+			],
+			[
+				"text",
+				"text"
+			],
+			[
+				"conso",
+				"Console"
+			],
+			[
+				"pr",
+				"prompt"
+			],
+			[
+				"console",
+				"consoleInsert"
+			],
+			[
+				"be",
+				"before"
+			],
+			[
+				"up",
+				"updatePromptDisplay"
+			],
+			[
+				"get",
+				"getlines"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"jquery-console-pro",
+				"jquery-console-prompt-box"
+			],
+			[
+				"vi",
+				"vidiv"
+			],
+			[
+				"com",
+				"command"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 359.0,
+		"last_filter": "sider",
+		"selected_items":
+		[
+			[
+				"sider",
+				"Side Bar: Refresh"
+			],
+			[
+				"mp",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 504.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+			"import  urllib.request,os;pf='Package Control.sublime-package';ipp=sublime.installed_packages_path();urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler()));open(os.path.join(ipp,pf),'wb').write(urllib.request.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read())",
+			"import urllib.request,os,hashlib; h = '2deb499853c4371624f5a07e27c334aa' + 'bf8c4e67d14fb0525ba4f89698a6d7e1'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/squirrel-chen/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/squirrel-chen/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/squirrel-chen/myblog/_config.yml",
+		"/home/squirrel-chen/myblog/themes/material/_config.yml",
+		"/home/squirrel-chen/myblog/source/_data/links.yaml",
+		"/home/squirrel-chen/myblog/source/links/index.md",
+		"/home/squirrel-chen/myblog/source/_data/links.yml",
+		"/home/squirrel-chen/myblog/links/index.html",
+		"/home/squirrel-chen/myblog/source/_posts/linux.md",
+		"/home/squirrel-chen/Downloads/zeta-zsh-theme-master/zeta.zsh-theme",
+		"/home/squirrel-chen/Downloads/jquery-console-master/demo.html",
+		"/home/squirrel-chen/Downloads/jquery-console-master/jquery.console.js",
+		"/home/squirrel-chen/Downloads/markdown-0.6.0-beta1/index.html",
+		"/home/squirrel-chen/Downloads/jquery-console-master/demop.html",
+		"/home/squirrel-chen/Downloads/jq-console-master/demos/index.html",
+		"/home/squirrel-chen/IdeaProjects/evbs/src/main/resources/static/js/jquery.console.js",
+		"/home/squirrel-chen/IdeaProjects/evbs/src/main/resources/templates/vipage.html",
+		"/home/squirrel-chen/demo.html",
+		"/home/squirrel-chen/Downloads/jq-console-master/css/style.css",
+		"/home/squirrel-chen/Downloads/用jQuery实现弹出窗口弹出div层 (1).txt",
+		"/home/squirrel-chen/Downloads/jq-console-master/css/ansi.css",
+		"/home/squirrel-chen/Downloads/jq-console-master/style.css",
+		"/home/squirrel-chen/Downloads/jquery.terminal-master/examples/rpc-demo.html",
+		"/home/squirrel-chen/hello.txt",
+		"/home/squirrel-chen/Java/Redis/redis-3.2.9/redis.conf",
+		"/home/squirrel-chen/evbs/etc/shadow",
+		"/home/squirrel-chen/evbs/etc/passwd",
+		"/home/squirrel-chen/evbs/passfile.json",
+		"/home/squirrel-chen/Desktop/work.txt",
+		"/usr/share/man/man1/vimtutor.1.gz",
+		"/home/squirrel-chen/Java/Maven/apache-maven-3.5.0/conf/settings.xml",
+		"/usr/bin/vimtutor",
+		"/home/squirrel-chen/dd  d.txt"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 75.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"license",
+			"sitemap",
+			"search",
+			"feed",
+			"page",
+			"updatePromptDisplay",
+			"cancelHandle",
+			"cancelExecution",
+			"keyCodes",
+			"          (shiftCodes[keyCode])();",
+			"shiftCodes[keyCode]",
+			"acceptInput",
+			"updatePromptDisplay",
+			"promptText",
+			"text",
+			"promptText",
+			"settimeout",
+			"updatePromptDisplay",
+			"jquery-console-prompt",
+			"console.log",
+			"promptText",
+			"updatePromptDisplay",
+			"text",
+			"line",
+			"promptText",
+			"config",
+			"&",
+			"vi"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
