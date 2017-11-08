@@ -1,456 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-    
-    <entry>
-      <title><![CDATA[git]]></title>
-      <url>/2017/11/05/git/</url>
-      <content type="html"><![CDATA[<p>#This is my website </p>
-]]></content>
-      
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[神级文本编辑器(The God of Text Editor) ST的安装和使用]]></title>
-      <url>/2017/11/05/sb/</url>
-      <content type="html"><![CDATA[<h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><h1 id="Let’s-learning-ST"><a href="#Let’s-learning-ST" class="headerlink" title="Let’s learning ST"></a>Let’s learning ST</h1><p>Q:what’s the st?<br>A:The God of Text Editor</p>
-<h2 id="ST-的安装"><a href="#ST-的安装" class="headerlink" title="ST 的安装"></a>ST 的安装</h2><ol>
-<li>for windows<br>在windows下安装</li>
-<li>for linux<br>在linux下安装</li>
-</ol>
-<h2 id="ST-的激活key"><a href="#ST-的激活key" class="headerlink" title="ST 的激活key"></a>ST 的激活key</h2><h2 id="ST-的常用快捷键"><a href="#ST-的常用快捷键" class="headerlink" title="ST 的常用快捷键"></a>ST 的常用快捷键</h2><h2 id="ST-的插件使用"><a href="#ST-的插件使用" class="headerlink" title="ST 的插件使用"></a>ST 的插件使用</h2><p>hello world </p>
-<h3 id="ST插件包安装"><a href="#ST插件包安装" class="headerlink" title="ST插件包安装"></a>ST插件包安装</h3><p>hello world </p>
-<h3 id="ST常用插件"><a href="#ST常用插件" class="headerlink" title="ST常用插件"></a>ST常用插件</h3><h1 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h1>]]></content>
-      
-        <categories>
-            
-            <category> ST </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> ST </tag>
-            
-            <tag> 文本编辑器 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[阿里云搭建私有git服务]]></title>
-      <url>/2017/11/03/linux/</url>
-      <content type="html"><![CDATA[<h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>如果觉得github上的代码托管私有仓库比较贵,又不想托管到公共的仓库的话,可以通过自己买一台云服务器.搭建自己的个性化服务器.不仅仅可以用git服务,还可以用比如apache,网站搭建的都可以.下面就说说怎么使用服务器搭建git私有仓库也就是git服务器</p>
-<h2 id="详细步骤"><a href="#详细步骤" class="headerlink" title="详细步骤"></a>详细步骤</h2><h3 id="SSH服务的安装与开启"><a href="#SSH服务的安装与开启" class="headerlink" title="SSH服务的安装与开启"></a>SSH服务的安装与开启</h3><p>确保自己的服务器开启了SSH服务.如果没有,那就安装SSH服务吧.使用下列命令</p>
-<pre><code>sudo service ssh start
-</code></pre><p>打开ssh服务如果出现unkown service表示没有安装ssh服务.使用下列命令</p>
-<pre><code>sudo apt-get install ssh
-或者
-sudo apt-get install open-ssh
-</code></pre><p>然后系统会自动运行ssh服务,如果没有运行,那就手动启动.</p>
-<pre><code>sudo service ssh start
-</code></pre><h3 id="安装git服务"><a href="#安装git服务" class="headerlink" title="安装git服务"></a>安装git服务</h3><pre><code>sudo apt-get install git
-</code></pre><p>配置git用户<br>为了方便使用git服务以及管理git,需要另外建立一个git 用户,专门用来管理git.</p>
-<pre><code>sudo adduser git
-</code></pre><p>然后输入密码.用户就建立了,切换到该用户主目录下.</p>
-<pre><code>cd /home/git
-</code></pre><p>建立.ssh 文件夹,请注意这里有个点.</p>
-<pre><code>mkdir .ssh
-cd .ssh 
-touch authorized_keys
-</code></pre><p>公匙存放<br>收集好要连接该git服务器的用户的SSH公匙,通常存放在用户主目录下.ssh/id_rsa.pub文件中.</p>
-<pre><code>cat id_rsa.pub &gt;&gt; authorized_keys
-</code></pre><p>请别忘记,是每一个用户都要导入,且一个一行!<br>仓库建立<br>然后在该目录下建立一个空的文件夹作为仓库</p>
-<pre><code>cd /home/git 
-mkdir gitproject
-cd gitproject 
-sudo git init --bare sample.git 
-sudo chown -R git:git sample.git
-</code></pre><p>克隆仓库到本地<br>1.7 然后就可以使用git clone 该仓库了</p>
-<pre><code>git clone git@xxx.xxx.xxx.xxx: /home/git/gitproject/sample.git
-</code></pre><p>大概就这样,请注意 xxx.xxx.xxx.xxx为你的服务器的ip地址.<br>受限git用户<br>为了安全性,请让git用户的权利受限.出于安全考虑,创建的git用户不允许登录shell,这可以通过编辑/etc/passwd文件完成.找到类似下面的一行：</p>
-<pre><code>git:x:1001:1001:,,,:/home/git:/bin/bash
-</code></pre><p>改为：</p>
-<pre><code>git:x:1001:1001:,,,:/home/git:/usr/bin/git-shell
-</code></pre><p>番外篇<br>如何在ssh连接时给服务器起别名,不用输入一长串的ip地址.首先这个是需要在客户端上更改的,而不是服务端.我就犯了这个错误.客户端上切换到用户主目录.诸如这样:</p>
-<pre class="line-numbers language-shell"><code class="language-shell">cd /home/squirrel-chen
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>使用ll -a 可以看见有一个.ssh 文件夹</p>
-<pre class="line-numbers language-shell"><code class="language-shell">cd .ssh
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>会有一个config文件 如果没有可以新建</p>
-<pre class="line-numbers language-shell"><code class="language-shell">touch config 
-sudo vi config
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>输入以下的内容</p>
-<pre><code>Host squirrel-chen 
-HostName xxx.xxx.xxx.xxx
-User admin
-Port 22
-</code></pre><p>Host 是指要连接的服务器名称<br>HostName 指定服务器的ip地址<br>User 以什么的身份登陆服务器<br>Port 就是端口 一般都是22<br>然后就可以直接使用<code>ssh squirrel-chen</code>连接了,当然要输入密码的.如果不想输入密码的话,可以在生成公匙秘匙对的时候,一路敲回车,采用默认的方式,这样的话 <code>ssh xxx</code>连接时就不用输入密码了.</p>
-<h1 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h1><p>此次的博客就写到这儿，Talk is cheap,show me the code.Goodbye!</p>
-]]></content>
-      
-        <categories>
-            
-            <category> git </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 阿里云 </tag>
-            
-            <tag> git </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Java学习随记(一)]]></title>
-      <url>/2017/11/02/java1/</url>
-      <content type="html"><![CDATA[<h1 id="Java随记一"><a href="#Java随记一" class="headerlink" title="Java随记一"></a>Java随记一</h1><h2 id="问"><a href="#问" class="headerlink" title="问"></a>问</h2><p>Java开发中经常有在项目路径<code>Build Path</code>中导入jar包 或者在<code>/WEB-INF/lib</code>目录下导入jar包.那么这两种有什么区别呢?为什么我在<code>Build Path</code>导入的包在诸如tomcat中运行的时候不起作用呢？</p>
-<h2 id="答"><a href="#答" class="headerlink" title="答"></a>答</h2><p>通俗的讲是和<code>classLoader</code>有关,对于纯java项目,它不存在<code>WEB-INF</code>目录,所以在引入jar包的时候一般都是通过<code>buildpath</code>直接引入.例如我要引入<code>Spring3X</code>,那么先定义一个<code>user library</code>然后通过build path引入.<br>纯java项目使用的本地自己的``JRE<code>,那么</code>classLoader<code>在加载jar和class时候是分开的,对于我们自己编写的class,会在</code>APP_HOME/bin<code>下.导入的jar包或者</code>user library<code>的配置信息会出现在</code>APP_HOME/.classpath<code>文件中,</code>ClassLoader```会很智能去加载这些classes和jar.其实是由于不同的类加载器决定的,对于服务器容器诸如tomcat之类的,是有它自己的类加载器的.</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token number">1</span><span class="token punctuation">.</span>common CommonClassLoader
-<span class="token number">2</span><span class="token punctuation">.</span>server CatalinaClassLoader
-<span class="token number">3</span><span class="token punctuation">.</span>shared SharedClassLoader
-<span class="token number">4</span><span class="token punctuation">.</span>webapps <span class="token function">webappClassLoader</span><span class="token punctuation">(</span>加载WEB<span class="token operator">-</span>INF下的jar<span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>因此是完全不会加载本地java项目的jar包的,也就是说在<code>build path</code>下导入的jar包并不会加载.但是存在于<code>/WEB-INF/lib</code>下的jar就会加载了.这就是说为什么我们在部署JavaEE项目时.使用框架jar包会在<code>/WEB-INF/lib</code>下.</p>
-]]></content>
-      
-        <categories>
-            
-            <category> Java学习 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Java </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Java学习随记(二)]]></title>
-      <url>/2017/11/02/java2/</url>
-      <content type="html"><![CDATA[<h1 id="String-StringBuilder-StringBUffer-之间的区别"><a href="#String-StringBuilder-StringBUffer-之间的区别" class="headerlink" title="String StringBuilder StringBUffer 之间的区别"></a>String StringBuilder StringBUffer 之间的区别</h1><pre><code>    String 是不可变的对象类,其内容改变的时候,对象也会改变,当其内容发生改变的时候,就会产生一个新的对象包含新的内容,其原来的对象就会被抛弃,被CG给回收掉.而StringBuilder,StringBuffer则是属于可变的对象,其内容改变的时候,其对象也不会改变.都是一个对象.
-</code></pre><pre><code>    StringBuilder是可变的字符串序列.主要操作是append(),insert()操作 其次不是线程安全的,通常用于单线程的情况.StringBuffer是线程安全的可变的字符串序列.在StringBuffer中append() 插入字符串末端,insert()在指定的位置插入指定的字符.从0开始.初始字符串容量为16.
-</code></pre><pre><code>    三者在执行速度方面的比较：StringBuilder &gt; StringBuffer &gt; String
-</code></pre>]]></content>
-      
-        
-        <tags>
-            
-            <tag> Java </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Java学习－网络编程(一)]]></title>
-      <url>/2017/11/01/java3/</url>
-      <content type="html"><![CDATA[<h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>大家都会发现,在工作当中,网络编程是基础的,也是很必要的.比如我们经常会用<code>socket</code>通信,<code>HTTP协议</code>,<code>UDP协议</code>之类的.那么今天我们将会学习到如何用<code>HttpURLConnection</code>这个类进行网络编程.</p>
-<h1 id="API解释"><a href="#API解释" class="headerlink" title="API解释"></a>API解释</h1><p>首先我们在官网查下<code>HttpURLConnetcion</code>的API，官网解释如下：</p>
-<pre><code>A URLConnection with support for HTTP-specific features. See the spec for details.
-Each HttpURLConnection instance is used to make a single request but the underlying network connection to the HTTP server may be transparently shared by other instances. Calling the close() methods on the InputStream or OutputStream of an HttpURLConnection after a request may free network resources associated with this instance but has no effect on any shared persistent connection. Calling the disconnect() method may close the underlying socket if a persistent connection is otherwise idle at that time.
-The HTTP protocol handler has a few settings that can be accessed through System Properties. This covers Proxy settings as well as &gt;various other settings.
-</code></pre><p>大概的意思则是与<code>HTTP</code>特定功能的支持一个<code>URLConnection</code>.详情请参阅规范.每个<code>HttpURLConnection</code>实例是用来制造单个请求,但基础网络连接到<code>HTTP</code>服务器可以通过其他实例可以透明共用,呼吁一个<code>HttpURLConnection</code>类的的<code>InputStream</code>和<code>OutputStream</code>的密切方法的请求后,可能释放与此实例关联的网络资源,但对任何共享的持久连接没有任何影响.如果一个持久连接就是在那个时候闲置的调用<code>disconnect()</code>方法可以关闭基础套接字.<code>HTTP</code>协议处理程序,可以通过系统属性来访问一些设置.这包括代理设置,以及其他各种设置.而在上述叙述中,我们发现<code>HttpURLConnection</code>是有一个父类的<code>URLConnetcion</code>API文档描述如下:</p>
-<pre><code>The abstract class URLConnection is the superclass of all classes that represent a communications link between the application and a URL. Instances of this class can be used both to read from and to write to the resource referenced by the URL. In general, creating a connection to a URL is a multistep process
-</code></pre><p>翻译如下就是</p>
-<pre><code>抽象类URLConnection是代表应用程序和URL之间的通信链路的所有类的超类.这个类的实例既可以用来读取和写入由URL引用的资源.一般况下,创建一个URL连接是一个多步骤的过程.
-</code></pre><h1 id="举个栗子"><a href="#举个栗子" class="headerlink" title="举个栗子"></a>举个栗子</h1><p>那么现在废话少说，查看例子是怎么使用的吧：</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>baoquan<span class="token punctuation">.</span>upload<span class="token punctuation">;</span>
-<span class="token keyword">import</span> java<span class="token punctuation">.</span>io<span class="token punctuation">.</span>DataOutputStream<span class="token punctuation">;</span>
-<span class="token keyword">import</span> java<span class="token punctuation">.</span>io<span class="token punctuation">.</span>OutputStream<span class="token punctuation">;</span>
-<span class="token keyword">import</span> java<span class="token punctuation">.</span>net<span class="token punctuation">.</span>HttpURLConnection<span class="token punctuation">;</span>
-<span class="token keyword">import</span> java<span class="token punctuation">.</span>net<span class="token punctuation">.</span>URL<span class="token punctuation">;</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DataUpload</span> <span class="token keyword">implements</span> <span class="token class-name">Upload</span> <span class="token punctuation">{</span>
-        <span class="token annotation punctuation">@Override</span>
-       <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">fileupload</span><span class="token punctuation">(</span>String filename<span class="token punctuation">,</span> String url<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token comment" spellcheck="true">// TODO Auto-generated method stub</span>
-              <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-   <span class="token punctuation">}</span>
-       <span class="token annotation punctuation">@Override</span>
-       <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">dataupload</span><span class="token punctuation">(</span>String url<span class="token punctuation">,</span> String data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token comment" spellcheck="true">// TODO Auto-generated method stub </span>
-                <span class="token keyword">try</span><span class="token punctuation">{</span>
-            <span class="token comment" spellcheck="true">//创建URL连接</span>
-            URL uploadurl<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">URL</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span>
-                     <span class="token comment" spellcheck="true">//打开端口通信</span>
-                HttpURLConnection con<span class="token operator">=</span><span class="token punctuation">(</span>HttpURLConnection<span class="token punctuation">)</span>uploadurl<span class="token punctuation">.</span><span class="token function">openConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                    <span class="token comment" spellcheck="true">//设置相关属性设置 输入输出流打开 </span>
-                con<span class="token punctuation">.</span><span class="token function">setDoInput</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                con<span class="token punctuation">.</span><span class="token function">setDoOutput</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                  <span class="token comment" spellcheck="true">//设置请求方式 包括POST GET</span>
-                 con<span class="token punctuation">.</span><span class="token function">setRequestMethod</span><span class="token punctuation">(</span><span class="token string">"POST"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                   <span class="token comment" spellcheck="true">//设置请求头属性</span>
-                 con<span class="token punctuation">.</span><span class="token function">setRequestProperty</span><span class="token punctuation">(</span><span class="token string">"Connection"</span><span class="token punctuation">,</span><span class="token string">"keep-Alive"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                 con<span class="token punctuation">.</span><span class="token function">setRequestProperty</span><span class="token punctuation">(</span><span class="token string">"User-Agent"</span><span class="token punctuation">,</span> <span class="token string">"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/51.0.2704.79 Chrome/51.0.2704.79 Safari/537.36"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                 con<span class="token punctuation">.</span><span class="token function">setRequestProperty</span><span class="token punctuation">(</span><span class="token string">"Charset"</span><span class="token punctuation">,</span> <span class="token string">"UTF-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                     <span class="token comment" spellcheck="true">//打开输出流</span>
-                 OutputStream out<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">DataOutputStream</span><span class="token punctuation">(</span>con<span class="token punctuation">.</span><span class="token function">getOutputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   
-                        <span class="token comment" spellcheck="true">//写入数据</span>
-                 out<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                     <span class="token comment" spellcheck="true">//清空缓冲区</span>
-                 out<span class="token punctuation">.</span><span class="token function">flush</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                    <span class="token comment" spellcheck="true">//关闭输出流</span>
-                 out<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                 System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>con<span class="token punctuation">.</span><span class="token function">getResponseCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                 <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-               <span class="token keyword">catch</span><span class="token punctuation">(</span>Exception e<span class="token punctuation">)</span>
-              <span class="token punctuation">{</span>
-                 System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"POST请求异常"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                 e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-               <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-
-        <span class="token punctuation">}</span>
-        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span>
-  <span class="token punctuation">{</span>
-                 DataUpload dataup<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">DataUpload</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                 dataup<span class="token punctuation">.</span><span class="token function">dataupload</span><span class="token punctuation">(</span><span class="token string">"http://localhost:8080/Server/servlet/UploadServlet"</span><span class="token punctuation">,</span> <span class="token string">"你好世界"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>由以上代码 可以看出</p>
-<pre><code>1. 创建URL对象
-2. URL打开URL地址连接也就是openConnection()
-3. 设置请求的相关方式POST/GET
-4. 设置请求的头的相关属性
-5. 获取输入/输出流
-6. 读取/写入数据
-7. 清空缓冲区
-8. 关闭连接
-</code></pre><h1 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h1><p>大概就是这么的一个过程,大家都明白了吧.其实<code>HttpURLConnection</code>也是采用<code>socket</code>通信的.它内部封装了关于<code>socket</code>的相关信息.因此熟悉<code>socket</code>的通信相关编程知识的,也就能发现其实<code>HttpURLConnection</code>也是类似的编程步骤.好了.暂时写到这儿.有什么不对或者问题,请务必告知本人.谢谢.</p>
-]]></content>
-      
-        <categories>
-            
-            <category> Java学习 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Java </tag>
-            
-            <tag> 网络编程 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[CSS实现简单的时间轴效果]]></title>
-      <url>/2017/11/01/css/</url>
-      <content type="html"><![CDATA[<h1 id="利用CSS3实现简单的时间轴效果"><a href="#利用CSS3实现简单的时间轴效果" class="headerlink" title="利用CSS3实现简单的时间轴效果"></a>利用CSS3实现简单的时间轴效果</h1><h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>  首先我们需要参考别人写的时间轴效果的网页代码,我们可以通过chrome浏览器,按F12,打开开发者模式.然后可以在右边的选项卡中选择Elements.这个上半部分可以显示代码,下半部分可以显示盒子模型等CSS效果的展示.<br>因此我觉得如果需要学习别人的前端的好看的效果可以使用chrome一步步的看代码以及对应的效果展示.这样学习的方式比较容易的多.<br>我们可以看见整个网页被分成了三个部分:头部,中间,尾部.这就是一个典型的三段式网页的内容<br>由于头部和尾部比较简单并且可以根据自己的需要随时去个性化.因此我们暂时不考虑它们.我们的主要内容在于中间 也就是显示时间轴效果的内容和代码.<br>闲话少说.我们可以在chrome发现时间轴的效果.大概被分成了几个部分:</p>
-<pre><code>    中间的时间线
-    圆形图标
-    圆角方块内容
-    小型三角形
-</code></pre><h1 id="主要代码实现"><a href="#主要代码实现" class="headerlink" title="主要代码实现"></a>主要代码实现</h1><p>那么我们现在就开始把每一部分做好吧.然后再集中起来.<br>首先我们实现时间轴内容的大盒子.也就是我们中间内容整体的大盒子</p>
-<h2 id="大盒子的实现"><a href="#大盒子的实现" class="headerlink" title="大盒子的实现"></a>大盒子的实现</h2><pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token id">#timeline</span> </span><span class="token punctuation">{</span>
-    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">98%</span><span class="token punctuation">;</span>
-    <span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">40</span>px auto<span class="token punctuation">;</span>
-    <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
-    <span class="token property">-webkit-transition</span><span class="token punctuation">:</span> all <span class="token number">0.4</span>s ease<span class="token punctuation">;</span>
-    <span class="token property">-moz-transition</span><span class="token punctuation">:</span> all <span class="token number">0.4</span>s ease<span class="token punctuation">;</span>
-    <span class="token property">-ms-transition</span><span class="token punctuation">:</span> all <span class="token number">0.4</span>s ease<span class="token punctuation">;</span>
-    <span class="token property">transition</span><span class="token punctuation">:</span> all <span class="token number">0.4</span>s ease<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="时间线的实现"><a href="#时间线的实现" class="headerlink" title="时间线的实现"></a>时间线的实现</h2><pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token id">#timeline</span><span class="token pseudo-element">:before</span> </span><span class="token punctuation">{</span>
-    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">3</span>px<span class="token punctuation">;</span>
-    <span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">50%</span><span class="token punctuation">;</span>
-    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">;</span>
-    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
-    <span class="token property">background</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span>
-    <span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="时间轴方块内容边线的效果"><a href="#时间轴方块内容边线的效果" class="headerlink" title="时间轴方块内容边线的效果"></a>时间轴方块内容边线的效果</h2><pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token id">#timeline</span> <span class="token class">.timeline-item</span><span class="token pseudo-element">:after</span>, <span class="token id">#timeline</span> <span class="token class">.timeline-item</span><span class="token pseudo-element">:before</span> </span><span class="token punctuation">{</span>
-    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">;</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
-    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
-    <span class="token property">clear</span><span class="token punctuation">:</span> both<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="时间轴上的图标效果"><a href="#时间轴上的图标效果" class="headerlink" title="时间轴上的图标效果"></a>时间轴上的图标效果</h2><pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token id">#timeline</span> <span class="token class">.timeline-item</span> <span class="token class">.timeline-icon</span> </span><span class="token punctuation">{</span>
-    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">50</span>px<span class="token punctuation">;</span>
-    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">50</span>px<span class="token punctuation">;</span>
-    <span class="token property">background</span><span class="token punctuation">:</span> orange<span class="token punctuation">;</span>
-    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
-    <span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">50%</span><span class="token punctuation">;</span>
-    <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
-    <span class="token property">margin-left</span><span class="token punctuation">:</span> -<span class="token number">25</span>px<span class="token punctuation">;</span>
-    <span class="token property">-webkit-border-radius</span><span class="token punctuation">:</span> <span class="token number">50%</span><span class="token punctuation">;</span>
-    <span class="token property">-moz-border-radius</span><span class="token punctuation">:</span> <span class="token number">50%</span><span class="token punctuation">;</span>
-    <span class="token property">-ms-border-radius</span><span class="token punctuation">:</span> <span class="token number">50%</span><span class="token punctuation">;</span>
-    <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token number">50%</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="图标居中显示效果"><a href="#图标居中显示效果" class="headerlink" title="图标居中显示效果"></a>图标居中显示效果</h2><pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token id">#timeline</span> <span class="token class">.timeline-item</span> <span class="token class">.timeline-icon</span> img </span><span class="token punctuation">{</span>
-    <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
-    <span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">9</span>px<span class="token punctuation">;</span>
-    <span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">9</span>px<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="时间轴左侧方块内容显示效果"><a href="#时间轴左侧方块内容显示效果" class="headerlink" title="时间轴左侧方块内容显示效果"></a>时间轴左侧方块内容显示效果</h2><pre class="line-numbers language-css"><code class="language-css"><span class="token comment" spellcheck="true">/*左侧方块右侧边的小型三角形*/</span>
-
-<span class="token selector"><span class="token id">#timeline</span> <span class="token class">.timeline-item</span> <span class="token class">.timeline-content</span><span class="token pseudo-element">:before</span> </span><span class="token punctuation">{</span>
-    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">;</span>
-    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
-    <span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">45%</span><span class="token punctuation">;</span>
-    <span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">20</span>px<span class="token punctuation">;</span>
-    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token property">border-top</span><span class="token punctuation">:</span> <span class="token number">8</span>px solid transparent<span class="token punctuation">;</span>
-    <span class="token property">border-bottom</span><span class="token punctuation">:</span> <span class="token number">8</span>px solid transparent<span class="token punctuation">;</span>
-    <span class="token property">border-left</span><span class="token punctuation">:</span> <span class="token number">8</span>px solid green<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token comment" spellcheck="true">/* 左侧方块的上部分的标题效果*/</span>
-<span class="token selector"><span class="token id">#timeline</span> <span class="token class">.timeline-item</span> <span class="token class">.timeline-content</span> h2 </span><span class="token punctuation">{</span>
-    <span class="token property">background</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span>
-    <span class="token property">font-family</span><span class="token punctuation">:</span> Georgia, <span class="token string">"Times New Roman"</span>, Times, serif<span class="token punctuation">;</span>
-    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">20</span>px<span class="token punctuation">;</span>
-    <span class="token property">margin</span><span class="token punctuation">:</span> -<span class="token number">25</span>px -<span class="token number">25</span>px <span class="token number">0</span> -<span class="token number">25</span>px<span class="token punctuation">;</span>
-    <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">15</span>px <span class="token number">0</span> <span class="token number">15</span>px <span class="token number">25</span>px<span class="token punctuation">;</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
-    <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span>
-    <span class="token property">-moz-border-radius</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span>
-    <span class="token property">-webkit-border-radius</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span>
-    <span class="token property">-ms-border-radius</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token comment" spellcheck="true">/* 左侧方块的下部分内容效果*/</span>
-<span class="token selector"><span class="token id">#timeline</span> <span class="token class">.timeline-item</span> <span class="token class">.timeline-content</span> p </span><span class="token punctuation">{</span>
-    <span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">15</span>px <span class="token number">0</span> <span class="token number">0</span> <span class="token number">5</span>px<span class="token punctuation">;</span>
-    <span class="token property">font-family</span><span class="token punctuation">:</span> Helvetica<span class="token punctuation">;</span>
-    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">16</span>px<span class="token punctuation">;</span>
-    <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
-    <span class="token property">color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token comment" spellcheck="true">/* 左边方块的内容的整体效果*/</span>
-<span class="token selector"><span class="token id">#timeline</span> <span class="token class">.timeline-item</span> <span class="token class">.timeline-content</span> </span><span class="token punctuation">{</span>
-    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">45%</span><span class="token punctuation">;</span>
-    <span class="token property">background</span><span class="token punctuation">:</span> black<span class="token punctuation">;</span>
-    <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">25</span>px<span class="token punctuation">;</span>
-    <span class="token property">-webkit-box-shadow</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token number">3</span>px <span class="token number">0</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span>,<span class="token number">0</span>,<span class="token number">0</span>,<span class="token number">0.1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token property">-moz-box-shadow</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token number">3</span>px <span class="token number">0</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span>,<span class="token number">0</span>,<span class="token number">0</span>,<span class="token number">0.1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token property">-ms-box-shadow</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token number">3</span>px <span class="token number">0</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span>,<span class="token number">0</span>,<span class="token number">0</span>,<span class="token number">0.1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token property">box-shadow</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token number">3</span>px <span class="token number">0</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span>,<span class="token number">0</span>,<span class="token number">0</span>,<span class="token number">0.1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token property">-webkit-border-radius</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span>
-    <span class="token property">-moz-border-radius</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span>
-    <span class="token property">-ms-border-radius</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span>
-    <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span>
-    <span class="token property">-webkit-transition</span><span class="token punctuation">:</span> all <span class="token number">0.3</span>s ease<span class="token punctuation">;</span>
-    <span class="token property">-moz-transition</span><span class="token punctuation">:</span> all <span class="token number">0.3</span>s ease<span class="token punctuation">;</span>
-    <span class="token property">-ms-transition</span><span class="token punctuation">:</span> all <span class="token number">0.3</span>s ease<span class="token punctuation">;</span>
-    <span class="token property">transition</span><span class="token punctuation">:</span> all <span class="token number">0.3</span>s ease<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token comment" spellcheck="true">/*方块之间清除浮动并用条形框隔离*/</span>
-<span class="token selector"><span class="token id">#timeline</span> <span class="token class">.timeline-item</span><span class="token pseudo-element">:after</span>, <span class="token id">#timeline</span> <span class="token class">.timeline-item</span><span class="token pseudo-element">:before</span> </span><span class="token punctuation">{</span>
-    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">;</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
-    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
-    <span class="token property">clear</span><span class="token punctuation">:</span> both<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token selector"><span class="token id">#timeline</span> <span class="token class">.timeline-item</span> </span><span class="token punctuation">{</span>
-    <span class="token property">margin-bottom</span><span class="token punctuation">:</span> <span class="token number">40</span>px<span class="token punctuation">;</span>
-    <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="时间轴右侧方块里面的内容显示效果"><a href="#时间轴右侧方块里面的内容显示效果" class="headerlink" title="时间轴右侧方块里面的内容显示效果"></a>时间轴右侧方块里面的内容显示效果</h2><pre class="line-numbers language-css"><code class="language-css"><span class="token comment" spellcheck="true">/*右侧的左边的小型三角形效果*/</span>
-<span class="token selector"><span class="token id">#timeline</span> <span class="token class">.timeline-item</span> <span class="token class">.timeline-content-right</span><span class="token pseudo-element">:before</span> </span><span class="token punctuation">{</span>
-    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">;</span>
-    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
-    <span class="token property">right</span><span class="token punctuation">:</span> <span class="token number">45%</span><span class="token punctuation">;</span>
-    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">20</span>px<span class="token punctuation">;</span>
-    <span class="token property">border-top</span><span class="token punctuation">:</span> <span class="token number">8</span>px solid transparent<span class="token punctuation">;</span>
-    <span class="token property">border-bottom</span><span class="token punctuation">:</span> <span class="token number">8</span>px solid transparent<span class="token punctuation">;</span>
-    <span class="token property">border-right</span><span class="token punctuation">:</span> <span class="token number">8</span>px solid green<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token comment" spellcheck="true">/*右侧的上部分的标题栏效果*/</span>
-<span class="token selector"><span class="token id">#timeline</span> <span class="token class">.timeline-item</span> <span class="token class">.timeline-content-right</span> h2 </span><span class="token punctuation">{</span>
-    <span class="token property">background</span><span class="token punctuation">:</span> black<span class="token punctuation">;</span>
-    <span class="token property">font-family</span><span class="token punctuation">:</span> Georgia, <span class="token string">"Times New Roman"</span>, Times, serif<span class="token punctuation">;</span>
-    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">20</span>px<span class="token punctuation">;</span>
-    <span class="token property">margin</span><span class="token punctuation">:</span> -<span class="token number">25</span>px -<span class="token number">25</span>px <span class="token number">0</span> -<span class="token number">25</span>px<span class="token punctuation">;</span>
-    <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">15</span>px <span class="token number">0</span> <span class="token number">15</span>px <span class="token number">25</span>px<span class="token punctuation">;</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
-    <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span>
-    <span class="token property">-moz-border-radius</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span>
-    <span class="token property">-webkit-border-radius</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span>
-    <span class="token property">-ms-border-radius</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token comment" spellcheck="true">/*右侧的下部分的主要内容效果*/</span>
-<span class="token selector"><span class="token id">#timeline</span> <span class="token class">.timeline-item</span> <span class="token class">.timeline-content-right</span> p </span><span class="token punctuation">{</span>
-    <span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">15</span>px <span class="token number">0</span> <span class="token number">0</span> <span class="token number">5</span>px<span class="token punctuation">;</span>
-    <span class="token property">font-family</span><span class="token punctuation">:</span> Helvetica<span class="token punctuation">;</span>
-    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">16</span>px<span class="token punctuation">;</span>
-    <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
-    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token comment" spellcheck="true">/*右侧方块部分的整体效果*/</span>
-<span class="token selector"><span class="token id">#timeline</span> <span class="token class">.timeline-item</span> <span class="token class">.timeline-content-right</span> </span><span class="token punctuation">{</span>
-    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">45%</span><span class="token punctuation">;</span>
-    <span class="token property">background</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span>
-    <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">25</span>px<span class="token punctuation">;</span>
-    <span class="token property">-webkit-box-shadow</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token number">3</span>px <span class="token number">0</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span>,<span class="token number">0</span>,<span class="token number">0</span>,<span class="token number">0.1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token property">-moz-box-shadow</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token number">3</span>px <span class="token number">0</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span>,<span class="token number">0</span>,<span class="token number">0</span>,<span class="token number">0.1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token property">-ms-box-shadow</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token number">3</span>px <span class="token number">0</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span>,<span class="token number">0</span>,<span class="token number">0</span>,<span class="token number">0.1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token property">box-shadow</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token number">3</span>px <span class="token number">0</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span>,<span class="token number">0</span>,<span class="token number">0</span>,<span class="token number">0.1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token property">-webkit-border-radius</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span>
-    <span class="token property">-moz-border-radius</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span>
-    <span class="token property">-ms-border-radius</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span>
-    <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span>
-    <span class="token property">-webkit-transition</span><span class="token punctuation">:</span> all <span class="token number">0.3</span>s ease<span class="token punctuation">;</span>
-    <span class="token property">-moz-transition</span><span class="token punctuation">:</span> all <span class="token number">0.3</span>s ease<span class="token punctuation">;</span>
-    <span class="token property">-ms-transition</span><span class="token punctuation">:</span> all <span class="token number">0.3</span>s ease<span class="token punctuation">;</span>
-    <span class="token property">transition</span><span class="token punctuation">:</span> all <span class="token number">0.3</span>s ease<span class="token punctuation">;</span>
-    <span class="token property">float</span><span class="token punctuation">:</span> right<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>以上就是主要的代码的实现，当然有些不太重要的细节代码已经省略掉了。我们应该主要看他的主要实现方式，思路，以及代码。</p>
-<h2 id="PS"><a href="#PS" class="headerlink" title="PS"></a>PS</h2><pre><code>-webkit-xxxx 是针对采用webkit内核的浏览器的CSS代码
--moz-xxxx 是针对采用Mozilla内核的浏览器的CSS代码
--ms-xxxx 则是针对采用微软内核的浏览器的CSS代码
-</code></pre><h1 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h1><p>完整代码可以去我的 github 上下载,如果有用,请<code>star</code>一下,谢谢!</p>
-]]></content>
-      
-        <categories>
-            
-            <category> Web前端 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> CSS3 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-  
-  
+<search>
+  <entry>
+    <title><![CDATA[git]]></title>
+    <url>%2F2017%2F11%2F05%2Fgit%2F</url>
+    <content type="text"><![CDATA[#This is my website]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[神级文本编辑器(The God of Text Editor) ST的安装和使用]]></title>
+    <url>%2F2017%2F11%2F05%2Fsb%2F</url>
+    <content type="text"><![CDATA[序Let’s learning STQ:what’s the st?A:The God of Text Editor ST 的安装 for windows在windows下安装 for linux在linux下安装 ST 的激活keyST 的常用快捷键ST 的插件使用hello world ST插件包安装hello world ST常用插件结束]]></content>
+      <categories>
+        <category>ST</category>
+      </categories>
+      <tags>
+        <tag>ST</tag>
+        <tag>文本编辑器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[阿里云搭建私有git服务]]></title>
+    <url>%2F2017%2F11%2F03%2Flinux%2F</url>
+    <content type="text"><![CDATA[序如果觉得github上的代码托管私有仓库比较贵,又不想托管到公共的仓库的话,可以通过自己买一台云服务器.搭建自己的个性化服务器.不仅仅可以用git服务,还可以用比如apache,网站搭建的都可以.下面就说说怎么使用服务器搭建git私有仓库也就是git服务器 详细步骤SSH服务的安装与开启确保自己的服务器开启了SSH服务.如果没有,那就安装SSH服务吧.使用下列命令 sudo service ssh start 打开ssh服务如果出现unkown service表示没有安装ssh服务.使用下列命令 sudo apt-get install ssh 或者 sudo apt-get install open-ssh 然后系统会自动运行ssh服务,如果没有运行,那就手动启动. sudo service ssh start 安装git服务sudo apt-get install git 配置git用户为了方便使用git服务以及管理git,需要另外建立一个git 用户,专门用来管理git. sudo adduser git 然后输入密码.用户就建立了,切换到该用户主目录下. cd /home/git 建立.ssh 文件夹,请注意这里有个点. mkdir .ssh cd .ssh touch authorized_keys 公匙存放收集好要连接该git服务器的用户的SSH公匙,通常存放在用户主目录下.ssh/id_rsa.pub文件中. cat id_rsa.pub &gt;&gt; authorized_keys 请别忘记,是每一个用户都要导入,且一个一行!仓库建立然后在该目录下建立一个空的文件夹作为仓库 cd /home/git mkdir gitproject cd gitproject sudo git init --bare sample.git sudo chown -R git:git sample.git 克隆仓库到本地1.7 然后就可以使用git clone 该仓库了 git clone git@xxx.xxx.xxx.xxx: /home/git/gitproject/sample.git 大概就这样,请注意 xxx.xxx.xxx.xxx为你的服务器的ip地址.受限git用户为了安全性,请让git用户的权利受限.出于安全考虑,创建的git用户不允许登录shell,这可以通过编辑/etc/passwd文件完成.找到类似下面的一行： git:x:1001:1001:,,,:/home/git:/bin/bash 改为： git:x:1001:1001:,,,:/home/git:/usr/bin/git-shell 番外篇如何在ssh连接时给服务器起别名,不用输入一长串的ip地址.首先这个是需要在客户端上更改的,而不是服务端.我就犯了这个错误.客户端上切换到用户主目录.诸如这样: cd /home/squirrel-chen 使用ll -a 可以看见有一个.ssh 文件夹 cd .ssh 会有一个config文件 如果没有可以新建 touch config sudo vi config 输入以下的内容 Host squirrel-chen HostName xxx.xxx.xxx.xxx User admin Port 22 Host 是指要连接的服务器名称HostName 指定服务器的ip地址User 以什么的身份登陆服务器Port 就是端口 一般都是22然后就可以直接使用ssh squirrel-chen连接了,当然要输入密码的.如果不想输入密码的话,可以在生成公匙秘匙对的时候,一路敲回车,采用默认的方式,这样的话 ssh xxx连接时就不用输入密码了. 结束此次的博客就写到这儿，Talk is cheap,show me the code.Goodbye!]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>阿里云</tag>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Java学习随记(一)]]></title>
+    <url>%2F2017%2F11%2F02%2Fjava1%2F</url>
+    <content type="text"><![CDATA[Java随记一问Java开发中经常有在项目路径Build Path中导入jar包 或者在/WEB-INF/lib目录下导入jar包.那么这两种有什么区别呢?为什么我在Build Path导入的包在诸如tomcat中运行的时候不起作用呢？ 答通俗的讲是和classLoader有关,对于纯java项目,它不存在WEB-INF目录,所以在引入jar包的时候一般都是通过buildpath直接引入.例如我要引入Spring3X,那么先定义一个user library然后通过build path引入.纯java项目使用的本地自己的``JRE,那么classLoader在加载jar和class时候是分开的,对于我们自己编写的class,会在APP_HOME/bin下.导入的jar包或者user library的配置信息会出现在APP_HOME/.classpath文件中,ClassLoader```会很智能去加载这些classes和jar.其实是由于不同的类加载器决定的,对于服务器容器诸如tomcat之类的,是有它自己的类加载器的. 1.common CommonClassLoader 2.server CatalinaClassLoader 3.shared SharedClassLoader 4.webapps webappClassLoader(加载WEB-INF下的jar) 因此是完全不会加载本地java项目的jar包的,也就是说在build path下导入的jar包并不会加载.但是存在于/WEB-INF/lib下的jar就会加载了.这就是说为什么我们在部署JavaEE项目时.使用框架jar包会在/WEB-INF/lib下.]]></content>
+      <categories>
+        <category>Java学习</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Java学习随记(二)]]></title>
+    <url>%2F2017%2F11%2F02%2Fjava2%2F</url>
+    <content type="text"><![CDATA[String StringBuilder StringBUffer 之间的区别 String 是不可变的对象类,其内容改变的时候,对象也会改变,当其内容发生改变的时候,就会产生一个新的对象包含新的内容,其原来的对象就会被抛弃,被CG给回收掉.而StringBuilder,StringBuffer则是属于可变的对象,其内容改变的时候,其对象也不会改变.都是一个对象. StringBuilder是可变的字符串序列.主要操作是append(),insert()操作 其次不是线程安全的,通常用于单线程的情况.StringBuffer是线程安全的可变的字符串序列.在StringBuffer中append() 插入字符串末端,insert()在指定的位置插入指定的字符.从0开始.初始字符串容量为16. 三者在执行速度方面的比较：StringBuilder &gt; StringBuffer &gt; String]]></content>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Java学习－网络编程(一)]]></title>
+    <url>%2F2017%2F11%2F01%2Fjava3%2F</url>
+    <content type="text"><![CDATA[序大家都会发现,在工作当中,网络编程是基础的,也是很必要的.比如我们经常会用socket通信,HTTP协议,UDP协议之类的.那么今天我们将会学习到如何用HttpURLConnection这个类进行网络编程. API解释首先我们在官网查下HttpURLConnetcion的API，官网解释如下： A URLConnection with support for HTTP-specific features. See the spec for details. Each HttpURLConnection instance is used to make a single request but the underlying network connection to the HTTP server may be transparently shared by other instances. Calling the close() methods on the InputStream or OutputStream of an HttpURLConnection after a request may free network resources associated with this instance but has no effect on any shared persistent connection. Calling the disconnect() method may close the underlying socket if a persistent connection is otherwise idle at that time. The HTTP protocol handler has a few settings that can be accessed through System Properties. This covers Proxy settings as well as &gt;various other settings. 大概的意思则是与HTTP特定功能的支持一个URLConnection.详情请参阅规范.每个HttpURLConnection实例是用来制造单个请求,但基础网络连接到HTTP服务器可以通过其他实例可以透明共用,呼吁一个HttpURLConnection类的的InputStream和OutputStream的密切方法的请求后,可能释放与此实例关联的网络资源,但对任何共享的持久连接没有任何影响.如果一个持久连接就是在那个时候闲置的调用disconnect()方法可以关闭基础套接字.HTTP协议处理程序,可以通过系统属性来访问一些设置.这包括代理设置,以及其他各种设置.而在上述叙述中,我们发现HttpURLConnection是有一个父类的URLConnetcionAPI文档描述如下: The abstract class URLConnection is the superclass of all classes that represent a communications link between the application and a URL. Instances of this class can be used both to read from and to write to the resource referenced by the URL. In general, creating a connection to a URL is a multistep process 翻译如下就是 抽象类URLConnection是代表应用程序和URL之间的通信链路的所有类的超类.这个类的实例既可以用来读取和写入由URL引用的资源.一般况下,创建一个URL连接是一个多步骤的过程. 举个栗子那么现在废话少说，查看例子是怎么使用的吧： package com.baoquan.upload; import java.io.DataOutputStream; import java.io.OutputStream; import java.net.HttpURLConnection; import java.net.URL; public class DataUpload implements Upload { @Override public boolean fileupload(String filename, String url) { // TODO Auto-generated method stub return false; } @Override public boolean dataupload(String url, String data) { // TODO Auto-generated method stub try{ //创建URL连接 URL uploadurl=new URL(url); //打开端口通信 HttpURLConnection con=(HttpURLConnection)uploadurl.openConnection(); //设置相关属性设置 输入输出流打开 con.setDoInput(true); con.setDoOutput(true); //设置请求方式 包括POST GET con.setRequestMethod("POST"); //设置请求头属性 con.setRequestProperty("Connection","keep-Alive"); con.setRequestProperty("User-Agent", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/51.0.2704.79 Chrome/51.0.2704.79 Safari/537.36"); con.setRequestProperty("Charset", "UTF-8"); //打开输出流 OutputStream out=new DataOutputStream(con.getOutputStream()); //写入数据 out.write(data.getBytes()); //清空缓冲区 out.flush(); //关闭输出流 out.close(); System.out.println(con.getResponseCode()); return true; } catch(Exception e) { System.out.println("POST请求异常"); e.printStackTrace(); } return false; } public static void main(String[] args) { DataUpload dataup=new DataUpload(); dataup.dataupload("http://localhost:8080/Server/servlet/UploadServlet", "你好世界"); } } 由以上代码 可以看出 1. 创建URL对象 2. URL打开URL地址连接也就是openConnection() 3. 设置请求的相关方式POST/GET 4. 设置请求的头的相关属性 5. 获取输入/输出流 6. 读取/写入数据 7. 清空缓冲区 8. 关闭连接 结束大概就是这么的一个过程,大家都明白了吧.其实HttpURLConnection也是采用socket通信的.它内部封装了关于socket的相关信息.因此熟悉socket的通信相关编程知识的,也就能发现其实HttpURLConnection也是类似的编程步骤.好了.暂时写到这儿.有什么不对或者问题,请务必告知本人.谢谢.]]></content>
+      <categories>
+        <category>Java学习</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>网络编程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CSS实现简单的时间轴效果]]></title>
+    <url>%2F2017%2F11%2F01%2Fcss%2F</url>
+    <content type="text"><![CDATA[利用CSS3实现简单的时间轴效果序 首先我们需要参考别人写的时间轴效果的网页代码,我们可以通过chrome浏览器,按F12,打开开发者模式.然后可以在右边的选项卡中选择Elements.这个上半部分可以显示代码,下半部分可以显示盒子模型等CSS效果的展示.因此我觉得如果需要学习别人的前端的好看的效果可以使用chrome一步步的看代码以及对应的效果展示.这样学习的方式比较容易的多.我们可以看见整个网页被分成了三个部分:头部,中间,尾部.这就是一个典型的三段式网页的内容由于头部和尾部比较简单并且可以根据自己的需要随时去个性化.因此我们暂时不考虑它们.我们的主要内容在于中间 也就是显示时间轴效果的内容和代码.闲话少说.我们可以在chrome发现时间轴的效果.大概被分成了几个部分: 中间的时间线 圆形图标 圆角方块内容 小型三角形 主要代码实现那么我们现在就开始把每一部分做好吧.然后再集中起来.首先我们实现时间轴内容的大盒子.也就是我们中间内容整体的大盒子 大盒子的实现#timeline { width: 98%; margin: 40px auto; position: relative; -webkit-transition: all 0.4s ease; -moz-transition: all 0.4s ease; -ms-transition: all 0.4s ease; transition: all 0.4s ease; } 时间线的实现#timeline:before { width: 3px; left: 50%; content: ""; height: 100%; background: green; top: 0; position: absolute; } 时间轴方块内容边线的效果#timeline .timeline-item:after, #timeline .timeline-item:before { content: ''; display: block; width: 100%; clear: both; } 时间轴上的图标效果#timeline .timeline-item .timeline-icon { width: 50px; height: 50px; background: orange; position: absolute; top: 0; left: 50%; overflow: hidden; margin-left: -25px; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; border-radius: 50%; } 图标居中显示效果#timeline .timeline-item .timeline-icon img { position: relative; top: 9px; left: 9px; } 时间轴左侧方块内容显示效果/*左侧方块右侧边的小型三角形*/ #timeline .timeline-item .timeline-content:before { content: ""; position: absolute; left: 45%; top: 20px; width: 0; height: 0; border-top: 8px solid transparent; border-bottom: 8px solid transparent; border-left: 8px solid green; } /* 左侧方块的上部分的标题效果*/ #timeline .timeline-item .timeline-content h2 { background: white; font-family: Georgia, "Times New Roman", Times, serif; font-size: 20px; margin: -25px -25px 0 -25px; padding: 15px 0 15px 25px; display: block; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; -ms-border-radius: 5px; } /* 左侧方块的下部分内容效果*/ #timeline .timeline-item .timeline-content p { margin: 15px 0 0 5px; font-family: Helvetica; font-size: 16px; padding: 5px; display: block; color: white; } /* 左边方块的内容的整体效果*/ #timeline .timeline-item .timeline-content { width: 45%; background: black; padding: 25px; -webkit-box-shadow: 0 3px 0 rgba(0,0,0,0.1); -moz-box-shadow: 0 3px 0 rgba(0,0,0,0.1); -ms-box-shadow: 0 3px 0 rgba(0,0,0,0.1); box-shadow: 0 3px 0 rgba(0,0,0,0.1); -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; border-radius: 5px; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; -ms-transition: all 0.3s ease; transition: all 0.3s ease; } /*方块之间清除浮动并用条形框隔离*/ #timeline .timeline-item:after, #timeline .timeline-item:before { content: ''; display: block; width: 100%; clear: both; } #timeline .timeline-item { margin-bottom: 40px; position: relative; } 时间轴右侧方块里面的内容显示效果/*右侧的左边的小型三角形效果*/ #timeline .timeline-item .timeline-content-right:before { content: ""; position: absolute; right: 45%; height: 0; width: 0; top: 20px; border-top: 8px solid transparent; border-bottom: 8px solid transparent; border-right: 8px solid green; } /*右侧的上部分的标题栏效果*/ #timeline .timeline-item .timeline-content-right h2 { background: black; font-family: Georgia, "Times New Roman", Times, serif; font-size: 20px; margin: -25px -25px 0 -25px; padding: 15px 0 15px 25px; display: block; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; -ms-border-radius: 5px; } /*右侧的下部分的主要内容效果*/ #timeline .timeline-item .timeline-content-right p { margin: 15px 0 0 5px; font-family: Helvetica; font-size: 16px; padding: 5px; display: block; color: ; } /*右侧方块部分的整体效果*/ #timeline .timeline-item .timeline-content-right { width: 45%; background: white; padding: 25px; -webkit-box-shadow: 0 3px 0 rgba(0,0,0,0.1); -moz-box-shadow: 0 3px 0 rgba(0,0,0,0.1); -ms-box-shadow: 0 3px 0 rgba(0,0,0,0.1); box-shadow: 0 3px 0 rgba(0,0,0,0.1); -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; border-radius: 5px; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; -ms-transition: all 0.3s ease; transition: all 0.3s ease; float: right; } 以上就是主要的代码的实现，当然有些不太重要的细节代码已经省略掉了。我们应该主要看他的主要实现方式，思路，以及代码。 PS-webkit-xxxx 是针对采用webkit内核的浏览器的CSS代码 -moz-xxxx 是针对采用Mozilla内核的浏览器的CSS代码 -ms-xxxx 则是针对采用微软内核的浏览器的CSS代码 未完待续完整代码可以去我的 github 上下载,如果有用,请star一下,谢谢!]]></content>
+      <categories>
+        <category>Web前端</category>
+      </categories>
+      <tags>
+        <tag>CSS3</tag>
+      </tags>
+  </entry>
 </search>
