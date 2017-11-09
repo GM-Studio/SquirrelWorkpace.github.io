@@ -7,7 +7,15 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/2017/11/05/sb/</loc>
+        <loc>http://yoursite.com/2017/11/08/st4/</loc>
+        <lastmod>2017-11-09T13:29:44.537Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/2017/11/05/st/</loc>
         <lastmod>2017-11-09T13:20:19.689Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -15,7 +23,7 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/2017/11/07/st1/</loc>
+        <loc>http://yoursite.com/2017/11/07/st3/</loc>
         <lastmod>2017-11-09T13:20:15.217Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -23,16 +31,8 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/2017/11/06/st/</loc>
-        <lastmod>2017-11-09T13:20:12.969Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://yoursite.com/2017/11/06/st2/</loc>
-        <lastmod>2017-11-09T13:19:11.141Z</lastmod>
+        <lastmod>2017-11-09T13:20:12.969Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

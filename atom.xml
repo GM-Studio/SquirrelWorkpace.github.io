@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-09T13:20:15.217Z</updated>
+  <updated>2017-11-09T13:29:44.537Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,9 +17,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Sublime Text(ST) 高级玩法</title>
+    <link href="http://yoursite.com/2017/11/08/st4/"/>
+    <id>http://yoursite.com/2017/11/08/st4/</id>
+    <published>2017-11-07T16:00:00.000Z</published>
+    <updated>2017-11-09T13:29:44.537Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;ST的个性化配置&quot;&gt;&lt;a href=&quot;#ST的个性化配置&quot; class=&quot;headerlink&quot; title=&quot;ST的个性化配置&quot;&gt;&lt;/a&gt;ST的个性化配置&lt;/h1&gt;&lt;h2 id=&quot;配置浏览器即时浏览&quot;&gt;&lt;a href=&quot;#配置浏览器即时浏览&quot; class=&quot;he
+      
+    
+    </summary>
+    
+      <category term="ST" scheme="http://yoursite.com/categories/ST/"/>
+    
+    
+      <category term="ST" scheme="http://yoursite.com/tags/ST/"/>
+    
+      <category term="文本编辑器" scheme="http://yoursite.com/tags/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Sublime Text(ST) 进阶玩法</title>
-    <link href="http://yoursite.com/2017/11/07/st1/"/>
-    <id>http://yoursite.com/2017/11/07/st1/</id>
+    <link href="http://yoursite.com/2017/11/07/st3/"/>
+    <id>http://yoursite.com/2017/11/07/st3/</id>
     <published>2017-11-06T16:00:00.000Z</published>
     <updated>2017-11-09T13:20:15.217Z</updated>
     
@@ -43,8 +68,8 @@
   
   <entry>
     <title>Sublime Text(ST) 初级玩法</title>
-    <link href="http://yoursite.com/2017/11/06/st/"/>
-    <id>http://yoursite.com/2017/11/06/st/</id>
+    <link href="http://yoursite.com/2017/11/06/st2/"/>
+    <id>http://yoursite.com/2017/11/06/st2/</id>
     <published>2017-11-05T16:00:00.000Z</published>
     <updated>2017-11-09T13:20:12.969Z</updated>
     
@@ -53,31 +78,6 @@
       
       
         &lt;h1 id=&quot;ST-的常用快捷键&quot;&gt;&lt;a href=&quot;#ST-的常用快捷键&quot; class=&quot;headerlink&quot; title=&quot;ST 的常用快捷键&quot;&gt;&lt;/a&gt;ST 的常用快捷键&lt;/h1&gt;&lt;h2 id=&quot;选择类&quot;&gt;&lt;a href=&quot;#选择类&quot; class=&quot;headerlink
-      
-    
-    </summary>
-    
-      <category term="ST" scheme="http://yoursite.com/categories/ST/"/>
-    
-    
-      <category term="ST" scheme="http://yoursite.com/tags/ST/"/>
-    
-      <category term="文本编辑器" scheme="http://yoursite.com/tags/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sublime Text(ST) 高级玩法</title>
-    <link href="http://yoursite.com/2017/11/06/st2/"/>
-    <id>http://yoursite.com/2017/11/06/st2/</id>
-    <published>2017-11-05T16:00:00.000Z</published>
-    <updated>2017-11-09T13:19:11.141Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;ST的个性化配置&quot;&gt;&lt;a href=&quot;#ST的个性化配置&quot; class=&quot;headerlink&quot; title=&quot;ST的个性化配置&quot;&gt;&lt;/a&gt;ST的个性化配置&lt;/h1&gt;&lt;h2 id=&quot;配置浏览器即时浏览&quot;&gt;&lt;a href=&quot;#配置浏览器即时浏览&quot; class=&quot;he
       
     
     </summary>
@@ -113,8 +113,8 @@
   
   <entry>
     <title>Sublime Text(ST)&quot;The God of Text Editor&quot;安装和使用</title>
-    <link href="http://yoursite.com/2017/11/05/sb/"/>
-    <id>http://yoursite.com/2017/11/05/sb/</id>
+    <link href="http://yoursite.com/2017/11/05/st/"/>
+    <id>http://yoursite.com/2017/11/05/st/</id>
     <published>2017-11-04T16:00:00.000Z</published>
     <updated>2017-11-09T13:20:19.689Z</updated>
     
