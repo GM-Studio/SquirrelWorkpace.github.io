@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-09T13:29:44.537Z</updated>
+  <updated>2017-11-10T15:23:29.696Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hi</title>
+    <link href="http://yoursite.com/2017/11/08/mdd/"/>
+    <id>http://yoursite.com/2017/11/08/mdd/</id>
+    <published>2017-11-07T16:00:00.000Z</published>
+    <updated>2017-11-10T15:23:29.696Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="md" scheme="http://yoursite.com/categories/md/"/>
+    
+    
+      <category term="md" scheme="http://yoursite.com/tags/md/"/>
+    
+  </entry>
   
   <entry>
     <title>Sublime Text(ST) 高级玩法</title>
