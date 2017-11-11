@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-10T15:23:29.696Z</updated>
+  <updated>2017-11-09T13:29:44.537Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,24 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>hi</title>
-    <link href="http://yoursite.com/2017/11/08/mdd/"/>
-    <id>http://yoursite.com/2017/11/08/mdd/</id>
-    <published>2017-11-07T16:00:00.000Z</published>
-    <updated>2017-11-10T15:23:29.696Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="md" scheme="http://yoursite.com/categories/md/"/>
-    
-    
-      <category term="md" scheme="http://yoursite.com/tags/md/"/>
-    
-  </entry>
   
   <entry>
     <title>Sublime Text(ST) 高级玩法</title>
@@ -56,6 +38,33 @@
       <category term="ST" scheme="http://yoursite.com/tags/ST/"/>
     
       <category term="文本编辑器" scheme="http://yoursite.com/tags/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows下VB的Linux虚拟机的使用</title>
+    <link href="http://yoursite.com/2017/11/08/mdd/"/>
+    <id>http://yoursite.com/2017/11/08/mdd/</id>
+    <published>2017-11-07T16:00:00.000Z</published>
+    <updated>2017-11-11T03:51:57.351Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;序&quot;&gt;&lt;a href=&quot;#序&quot; class=&quot;headerlink&quot; title=&quot;序&quot;&gt;&lt;/a&gt;序&lt;/h1&gt;&lt;p&gt;大家都有过在&lt;code&gt;Windows&lt;/code&gt;操作系统下使用&lt;code&gt;Virtual Box&lt;/code&gt;软件运行虚拟机的经历.特别是对&lt;c
+      
+    
+    </summary>
+    
+      <category term="虚拟机" scheme="http://yoursite.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    
+    
+      <category term="Windows" scheme="http://yoursite.com/tags/Windows/"/>
+    
+      <category term="VB" scheme="http://yoursite.com/tags/VB/"/>
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
     
   </entry>
   

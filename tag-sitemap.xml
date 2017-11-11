@@ -51,8 +51,22 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/tags/md/</loc>
-        <lastmod>2017-11-10T15:23:29.696Z</lastmod>
+        <loc>http://yoursite.com/tags/Windows/</loc>
+        <lastmod>2017-11-11T03:51:57.351Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/tags/VB/</loc>
+        <lastmod>2017-11-11T03:51:57.351Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/tags/Linux/</loc>
+        <lastmod>2017-11-11T03:51:57.351Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
