@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Windows下VB的Linux虚拟机的使用]]></title>
+    <url>%2F2017%2F11%2F09%2Fmdd%2F</url>
+    <content type="text"><![CDATA[序大家都有过在Windows操作系统下使用Virtual Box软件运行虚拟机的经历.特别是对Linux新手用户而言.通常新手们为了更好的完成从Windows到Linux的更好的过渡,当然只是为了体验Linux操作的人大有人在.但不管是为了啥,总之在VB安装linux虚拟机系统这一操作是很普遍的.这不笔者最近在VB装了centos7.x,但是遇见了一个问题,什么问题呢?让我们一起来一探究竟吧. 实体机和虚拟机的文件共享通常我们在使用虚拟机的情况时候,都会遇见一个情况.就是假如我们需要使用实体机的文件,怎么才能让虚拟机能访问呢?这就是实体机和虚拟机的文件共享问题.举个栗子.我在虚拟机Coding中,这个时候我发现我需要一个名为123.jar文件,而这个123.jar文件在虚拟机没有.只有实体机里才有.而且放在某个地方.比如是Ｃ:Myfile/123.jar.那么怎么才能让虚拟机访问这个文件呢?这就是虚实系统之间的文件共享.既然问题已经出现,我们怎么解决它呢? 实体机创建共享的文件夹举个栗子 C:Myfile/centos VB上设置共享文件夹上方菜单栏 设置-&gt;共享文件夹 填写共享文件夹的路径名,设置访问权限. VB安装增强功能在上方菜单栏 设备-&gt;安装增强功能 Centos安装增强功能打开虚拟机就可以看见桌面有一个名为VBox_GAs_5.2.1的镜像文件,挂载这个镜像.运行autorun.sh 或者runasroot.sh的脚本完成安装. 问题出现当我们这些都做完了时候,我们居然发现,我们当前的普通用户根本没办法访问共享文件夹.这是什么原因呢?这是因为共享的文件夹在Linux虚拟机里面其权限是属于vboxsf的,而我们普通用户sc并不属于这个用户组,因此就不具备相关权限.就谈不上访问文件了. 问题解决1.先尝试用root用户更改文件夹权限 sudo chmod 777 /media/sf_centos 亲测无效,普通用户仍然不能访问.2.再尝试将普通用户加入root用户组,因为root身份是可以访问的. sudo usermod -aG root 亲测无效,普通用户还是不能访问该文件夹.3.再尝试将普通用户加入vboxsf用户组,这个用户组是完全控制该共享文件夹的. sudo usermod -aG vboxsf 亲测有效,可以访问. 结束感想1.遇见了问题莫慌.仔细的分析问题产生的原因.2.自己尝试去解决问题3.如果解决了当然皆大欢喜.若没有解决就去百度 or Google吧4.问题解决之后写下笔记,以备后续使用.]]></content>
+      <categories>
+        <category>虚拟机</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>VB</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Sublime Text(ST) 高级玩法]]></title>
     <url>%2F2017%2F11%2F08%2Fst4%2F</url>
     <content type="text"><![CDATA[ST的个性化配置配置浏览器即时浏览 首先需要安装SiderBarEnhancements插件 在Preferences菜单栏下选择Key Bindings 打开User文件 添加一下代码 { &quot;keys&quot;: [&quot;f2&quot;], &quot;command&quot;: &quot;side_bar_files_open_with&quot;, &quot;args&quot;: { &quot;paths&quot;: [], &quot;application&quot;: &quot;C:/Program Files (x86)/Google/Chrome/Application/chrome.exe&quot;, &quot;extensions&quot;:&quot;.*&quot; } } PS: 在windows下可以打开浏览器的执行文件位置一般都是exe执行程序.在linux下,此举尚行不通.因此这个问题暂时没有办法解决.若有读者有良好的办法,请务必告知. 配置markdown环境 安装Markdown Editing,Markdown Preview，auto-save 插件 按下ctrl+shift+P打开快速菜单,键入’mp’,之后选择markdown即可打开你的默认浏览器来预览刚才的内容. 开挂!实现浏览器自动刷新对于浏览器而言,我们让它自动刷新只需在md文件最下面加入一行： &lt;meta http-equiv=&quot;refresh&quot; content=&quot;0.1&quot;&gt; 0.1负责表示刷新间隔,单位是秒,个人觉得这是一个比较稳妥的设定值.太快的话我们难以滚动页面,太慢的话有可能体验很差.为了不让滚动时编辑的新文字触底,我们在最后一行的刷新代码之上打好几个占空间的行即可.由于空行不会被解析,我们在每一行之前放一个字符#或者打三个以上的减号表示分割线. 实现md文档到html文件的自动更新.这里我们用到了一个叫做auto-save的插件,它可以针对一个文档实现空闲x秒后自动保存.我们打开auto-save的默认设置和用户设置文件: Preference-&gt;Package Settings-&gt;Auto-save-&gt; 打开 Settings-Defualt和Settings-User将Default的内容复制粘贴到User里面，然后修改等待时长: &quot;auto_save_delay_in_seconds&quot;: 0.15 经过实测,0.15是一个比较能接受的值,不会对磁盘造成频繁读写的影响,延迟也不大.最后就是打开本文档的自动保存功能了:按下ctrl+shift+P打开快速菜单,键入’auto’选择到current file only按下回车至此,自动保存将在文档更改0.15秒后触发一次,停止自动保存就将上述步骤再做一次即可.现在我们就能够开双侧窗口一边编辑一边预览了~ 结束关于Sublime Text的基本常用的知识就写道这里了,若有帮助,请多多支持.若有错误,请务必指正.谢谢大家!]]></content>
@@ -10,19 +23,6 @@
       <tags>
         <tag>ST</tag>
         <tag>文本编辑器</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Windows下VB的Linux虚拟机的使用]]></title>
-    <url>%2F2017%2F11%2F08%2Fmdd%2F</url>
-    <content type="text"><![CDATA[序大家都有过在Windows操作系统下使用Virtual Box软件运行虚拟机的经历.特别是对Linux新手用户而言.通常新手们为了更好的完成从Windows到Linux的更好的过渡,当然只是为了体验Linux操作的人大有人在.但不管是为了啥,总之在VB安装linux虚拟机系统这一操作是很普遍的.这不笔者最近在VB装了centos7.x,但是遇见了一个问题,什么问题呢?让我们一起来一探究竟吧. 实体机和虚拟机的文件共享通常我们在使用虚拟机的情况时候,都会遇见一个情况.就是假如我们需要使用实体机的文件,怎么才能让虚拟机能访问呢?这就是实体机和虚拟机的文件共享问题.举个栗子.我在虚拟机Coding中,这个时候我发现我需要一个名为123.jar文件,而这个123.jar文件在虚拟机没有.只有实体机里才有.而且放在某个地方.比如是Ｃ:Myfile/123.jar.那么怎么才能让虚拟机访问这个文件呢?这就是虚实系统之间的文件共享.既然问题已经出现,我们怎么解决它呢? 实体机创建共享的文件夹举个栗子 C:Myfile/centos VB上设置共享文件夹上方菜单栏 设置-&gt;共享文件夹 填写共享文件夹的路径名,设置访问权限. VB安装增强功能在上方菜单栏 设备-&gt;安装增强功能 Centos安装增强功能打开虚拟机就可以看见桌面有一个名为VBox_GAs_5.2.1的镜像文件,挂载这个镜像.运行autorun.sh 或者runasroot.sh的脚本完成安装. 问题出现当我们这些都做完了时候,我们居然发现,我们当前的普通用户根本没办法访问共享文件夹.这是什么原因呢?这是因为共享的文件夹在Linux虚拟机里面其权限是属于vboxsf的,而我们普通用户sc并不属于这个用户组,因此就不具备相关权限.就谈不上访问文件了. 问题解决1.先尝试用root用户更改文件夹权限 sudo chmod 777 /media/sf_centos 亲测无效,普通用户仍然不能访问.2.再尝试将普通用户加入root用户组,因为root身份是可以访问的. sudo usermod -aG root 亲测无效,普通用户还是不能访问该文件夹.3.再尝试将普通用户加入vboxsf用户组,这个用户组是完全控制该共享文件夹的. sudo usermod -aG vboxsf 亲测有效,可以访问. 结束感想 遇见了问题莫慌.仔细的分析问题产生的原因. 自己尝试去解决问题 如果解决了当然皆大欢喜.若没有解决就去百度 or Google吧 问题解决之后写下笔记,以备后续使用.]]></content>
-      <categories>
-        <category>虚拟机</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
-        <tag>VB</tag>
-        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
