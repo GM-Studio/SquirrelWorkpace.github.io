@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-11T12:24:28.192Z</updated>
+  <updated>2017-11-12T14:00:09.706Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Why ?</title>
+    <link href="http://yoursite.com/2017/11/10/hello/"/>
+    <id>http://yoursite.com/2017/11/10/hello/</id>
+    <published>2017-11-09T16:00:00.000Z</published>
+    <updated>2017-11-12T14:00:09.706Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;This-is-Hello-World&quot;&gt;&lt;a href=&quot;#This-is-Hello-World&quot; class=&quot;headerlink&quot; title=&quot;This is Hello World&quot;&gt;&lt;/a&gt;This is Hello World&lt;/h1&gt;
+      
+    
+    </summary>
+    
+      <category term="hello" scheme="http://yoursite.com/categories/hello/"/>
+    
+    
+      <category term="hello" scheme="http://yoursite.com/tags/hello/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows下VB的Linux虚拟机的使用</title>
