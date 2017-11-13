@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[git学习笔记(一)]]></title>
+    <url>%2F2017%2F11%2F11%2Fgit1%2F</url>
+    <content type="text"><![CDATA[序这是一篇序]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Why ?]]></title>
     <url>%2F2017%2F11%2F10%2Fhello%2F</url>
     <content type="text"><![CDATA[This is Hello World]]></content>
@@ -85,8 +97,8 @@
         <category>git</category>
       </categories>
       <tags>
-        <tag>阿里云</tag>
         <tag>git</tag>
+        <tag>阿里云</tag>
       </tags>
   </entry>
   <entry>
