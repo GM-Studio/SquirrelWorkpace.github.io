@@ -73,14 +73,14 @@
 
     <url>
         <loc>http://yoursite.com/tags/git/</loc>
-        <lastmod>2017-11-13T13:53:15.003Z</lastmod>
+        <lastmod>2017-11-13T13:56:48.587Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-        <lastmod>2017-11-13T13:53:15.003Z</lastmod>
+        <lastmod>2017-11-13T13:56:48.587Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
