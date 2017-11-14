@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[git学习笔记(二)远程仓库下载的压缩包的后续操作]]></title>
     <url>%2F2017%2F11%2F12%2Fgit2%2F</url>
-    <content type="text"><![CDATA[序当我们在github官网上使用下载zip形式的压缩包下载仓库代码时,我们知道当其解压缩的时候.并不含有仓库.只含有源代码.那么对于后续的push以及pull操作怎么实现呢? 后续操作 首先需要初始化仓库.也就是git init完成仓库的初始化,让其成为git仓库. 其次添加远程仓库.也就是git remote add origin git@github.com:SquirrelStudio/demo.git.形如这样的命令行. 如果本地仓库没有任何文件,也就是说是一个空仓库.那么就可以使用git pull来拉取远程的仓库代码到本地.然后就执行后续的第５步操作了. 如果本地仓库有文件,且是远程仓库的一个副本.那么我们就需要使用git add以及git commit先把本地的提交上去.(注意暂时不是push到远程,而是放在暂存区). 未完待续git学习笔记系列尚未结束,还有连载.请各位老司机不慌下车,没准后续更精彩…………..]]></content>
+    <content type="text"><![CDATA[序当我们在github官网上使用下载zip形式的压缩包下载仓库代码时,我们知道当其解压缩的时候.并不含有仓库.只含有源代码.那么对于后续的push以及pull操作怎么实现呢? 后续操作 首先需要初始化仓库.也就是git init完成仓库的初始化,让其成为git仓库. 其次添加远程仓库.也就是git remote add origin git@github.com:SquirrelStudio/demo.git.形如这样的命令行. 如果本地仓库没有任何文件,也就是说是一个空仓库.那么就可以使用git pull来拉取远程的仓库代码到本地.然后就执行后续的第５步操作了. 如果本地仓库有文件,且是远程仓库的一个副本.那么我们就需要使用git add以及git commit先把本地的提交上去.(注意暂时不是push到远程,而是放在暂存区).然后git pull origin master --allow-unrelated-histories来拉取远程的仓库代码.直接使用git pull是不行的.会报错.因为在git看来,本地仓库和远程仓库是不相关联的,也就是说没有共同祖先,也就没办法pull了. 现在就可以尽情的使用pull以及push操作了. 未完待续git学习笔记系列尚未结束,还有连载.请各位老司机不慌下车,没准后续更精彩…………..]]></content>
       <categories>
         <category>git</category>
       </categories>
