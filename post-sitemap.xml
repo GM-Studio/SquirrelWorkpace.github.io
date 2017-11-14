@@ -7,8 +7,16 @@
     </url>
 
     <url>
+        <loc>http://yoursite.com/2017/11/12/git2/</loc>
+        <lastmod>2017-11-14T13:25:17.912Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://yoursite.com/2017/11/11/git1/</loc>
-        <lastmod>2017-11-13T13:56:48.587Z</lastmod>
+        <lastmod>2017-11-13T14:00:50.231Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

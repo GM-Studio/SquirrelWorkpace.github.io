@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[git学习笔记(二)远程仓库下载的压缩包的后续操作]]></title>
+    <url>%2F2017%2F11%2F12%2Fgit2%2F</url>
+    <content type="text"><![CDATA[序当我们在github官网上使用下载zip形式的压缩包下载仓库代码时,我们知道当其解压缩的时候.并不含有仓库.只含有源代码.那么对于后续的push以及pull操作怎么实现呢? 后续操作未完待续git学习笔记系列尚未结束,还有连载.请各位老司机不慌下车,没准后续更精彩…………..]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[git学习笔记(一)]]></title>
     <url>%2F2017%2F11%2F11%2Fgit1%2F</url>
     <content type="text"><![CDATA[序这是我在学习git过程中遇见的一个小问题以及总结. 内容对于git远程仓库使用下载以及克隆这两种操作有什么区别吗? 下载当我们在github官网上对于别人的远程仓库代码进行下载的时候,也就是下载别人的仓库代码时.下载下来是一个名为xxx-master.zip的压缩包.master(主分支).当你解压缩的时候,使用git相关命令时,却表示这不是一个git仓库.因此从官网下载下来时是没有仓库的.需要自己本地git init. 克隆https协议克隆当我们在github官网上对于别人的远程仓库代码进行克隆时.用的https协议时候.本地是默认有仓库的.也就是可以直接更改,然后push和pull.但是请注意使用https协议每次push的时候都会让你输入用户和密码.极其不方便. git协议克隆当我们在github官网上对于别人的远程仓库代码进行克隆时.用的git协议时候.本地是默认有仓库的.也就是可以直接更改,然后push和pull.但是请注意使用git协议时候和使用https协议时候是不一样的.不需要每次push时候都输入用户和密码.直接push.很方便的操作. 结尾git学习笔记暂时就写到这儿.后续还有很多文(gan)章(huo).敬请关注!]]></content>
