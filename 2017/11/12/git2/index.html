@@ -253,7 +253,7 @@
 
     
         <meta property="article:published_time" content="Sun Nov 12 2017 00:00:00 GMT+0800" />
-        <meta property="article:modified_time" content="Tue Nov 14 2017 21:25:17 GMT+0800" />
+        <meta property="article:modified_time" content="Tue Nov 14 2017 21:34:20 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
@@ -280,7 +280,7 @@
     "mainEntityOfPage": "http://yoursite.com/2017/11/12/git2/index.html",
     "headline": "git学习笔记(二)远程仓库下载的压缩包的后续操作",
     "datePublished": "Sun Nov 12 2017 00:00:00 GMT+0800",
-    "dateModified": "Tue Nov 14 2017 21:25:17 GMT+0800",
+    "dateModified": "Tue Nov 14 2017 21:34:20 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Squirrel Chen",
@@ -516,8 +516,14 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>当我们在github官网上使用下载zip形式的压缩包下载仓库代码时,我们知道当其解压缩的时候.并不含有仓库.只含有源代码.那么对于后续的push以及pull操作怎么实现呢?</p>
-<h1 id="后续操作"><a href="#后续操作" class="headerlink" title="后续操作"></a>后续操作</h1><h1 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h1><p>git学习笔记系列尚未结束,还有连载.请各位老司机不慌下车,没准后续更精彩…………..</p>
+        <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>当我们在<code>github</code>官网上使用下载zip形式的压缩包下载仓库代码时,我们知道当其解压缩的时候.并不含有仓库.只含有源代码.那么对于后续的<code>push</code>以及<code>pull</code>操作怎么实现呢?</p>
+<h1 id="后续操作"><a href="#后续操作" class="headerlink" title="后续操作"></a>后续操作</h1><ol>
+<li>首先需要初始化仓库.也就是<code>git init</code>完成仓库的初始化,让其成为git仓库.</li>
+<li>其次添加远程仓库.也就是<code>git remote add origin git@github.com:SquirrelStudio/demo.git</code>.形如这样的命令行.</li>
+<li>如果本地仓库没有任何文件,也就是说是一个空仓库.那么就可以使用<code>git pull</code>来拉取远程的仓库代码到本地.然后就执行后续的第５步操作了.</li>
+<li>如果本地仓库有文件,且是远程仓库的一个副本.那么我们就需要使用<code>git add</code>以及<code>git commit</code>先把本地的提交上去.(注意暂时不是<code>push</code>到远程,而是放在暂存区).</li>
+</ol>
+<h1 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h1><p>git学习笔记系列尚未结束,还有连载.请各位老司机不慌下车,没准后续更精彩…………..</p>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
