@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-14T13:39:17.928Z</updated>
+  <updated>2017-11-14T13:42:03.808Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="http://yoursite.com/2017/11/12/git2/"/>
     <id>http://yoursite.com/2017/11/12/git2/</id>
     <published>2017-11-11T16:00:00.000Z</published>
-    <updated>2017-11-14T13:39:17.928Z</updated>
+    <updated>2017-11-14T13:42:03.808Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;序&quot;&gt;&lt;a href=&quot;#序&quot; class=&quot;headerlink&quot; title=&quot;序&quot;&gt;&lt;/a&gt;序&lt;/h1&gt;&lt;p&gt;当我们在&lt;code&gt;github&lt;/code&gt;官网上使用下载zip形式的压缩包下载仓库代码时,我们知道当其解压缩的时候.并不含有仓库.只含有源代码.
+        &lt;h1 id=&quot;序&quot;&gt;&lt;a href=&quot;#序&quot; class=&quot;headerlink&quot; title=&quot;序&quot;&gt;&lt;/a&gt;序&lt;/h1&gt;&lt;p&gt;当我们在&lt;code&gt;github&lt;/code&gt;官网上使用下载&lt;code&gt;zip&lt;/code&gt;形式的压缩包下载仓库代码时,我们知道当其解压缩的时候.并
       
     
     </summary>
