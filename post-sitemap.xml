@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://yoursite.com/2017/11/09/vb/</loc>
+        <lastmod>2017-11-15T13:19:13.669Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://yoursite.com/2017/11/11/git1/</loc>
         <lastmod>2017-11-14T13:45:31.256Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -17,22 +25,6 @@
     <url>
         <loc>http://yoursite.com/2017/11/12/git2/</loc>
         <lastmod>2017-11-14T13:42:03.808Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://yoursite.com/2017/11/10/hello/</loc>
-        <lastmod>2017-11-12T14:00:09.706Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://yoursite.com/2017/11/09/vb/</loc>
-        <lastmod>2017-11-11T12:24:28.192Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -73,14 +65,6 @@
     <url>
         <loc>http://yoursite.com/2017/11/01/java3/</loc>
         <lastmod>2017-11-05T07:51:51.250Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://yoursite.com/2017/11/05/git/</loc>
-        <lastmod>2017-11-05T05:06:28.742Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

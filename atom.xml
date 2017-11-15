@@ -64,34 +64,11 @@
   </entry>
   
   <entry>
-    <title>Why ?</title>
-    <link href="http://yoursite.com/2017/11/10/hello/"/>
-    <id>http://yoursite.com/2017/11/10/hello/</id>
-    <published>2017-11-09T16:00:00.000Z</published>
-    <updated>2017-11-12T14:00:09.706Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;This-is-Hello-World&quot;&gt;&lt;a href=&quot;#This-is-Hello-World&quot; class=&quot;headerlink&quot; title=&quot;This is Hello World&quot;&gt;&lt;/a&gt;This is Hello World&lt;/h1&gt;
-      
-    
-    </summary>
-    
-      <category term="hello" scheme="http://yoursite.com/categories/hello/"/>
-    
-    
-      <category term="hello" scheme="http://yoursite.com/tags/hello/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Windows下VB的Linux虚拟机的使用</title>
     <link href="http://yoursite.com/2017/11/09/vb/"/>
     <id>http://yoursite.com/2017/11/09/vb/</id>
     <published>2017-11-08T16:00:00.000Z</published>
-    <updated>2017-11-11T12:24:28.192Z</updated>
+    <updated>2017-11-15T13:19:13.669Z</updated>
     
     <summary type="html">
     
@@ -104,8 +81,6 @@
     
       <category term="虚拟机" scheme="http://yoursite.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     
-    
-      <category term="Windows" scheme="http://yoursite.com/tags/Windows/"/>
     
       <category term="VB" scheme="http://yoursite.com/tags/VB/"/>
     
@@ -185,26 +160,6 @@
       <category term="ST" scheme="http://yoursite.com/tags/ST/"/>
     
       <category term="文本编辑器" scheme="http://yoursite.com/tags/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>git</title>
-    <link href="http://yoursite.com/2017/11/05/git/"/>
-    <id>http://yoursite.com/2017/11/05/git/</id>
-    <published>2017-11-05T05:05:53.000Z</published>
-    <updated>2017-11-05T05:06:28.742Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;#This is my website &lt;/p&gt;
-
-      
-    
-    </summary>
-    
     
   </entry>
   

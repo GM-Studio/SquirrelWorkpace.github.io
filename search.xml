@@ -23,17 +23,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Why ?]]></title>
-    <url>%2F2017%2F11%2F10%2Fhello%2F</url>
-    <content type="text"><![CDATA[This is Hello World]]></content>
-      <categories>
-        <category>hello</category>
-      </categories>
-      <tags>
-        <tag>hello</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Windows下VB的Linux虚拟机的使用]]></title>
     <url>%2F2017%2F11%2F09%2Fvb%2F</url>
     <content type="text"><![CDATA[序大家都有过在Windows操作系统下使用Virtual Box软件运行虚拟机的经历.特别是对Linux新手用户而言.通常新手们为了更好的完成从Windows到Linux的更好的过渡,当然只是为了体验Linux操作的人大有人在.但不管是为了啥,总之在VB安装linux虚拟机系统这一操作是很普遍的.这不笔者最近在VB装了centos7.x,但是遇见了一个问题,什么问题呢?让我们一起来一探究竟吧. 实体机和虚拟机的文件共享通常我们在使用虚拟机的情况时候,都会遇见一个情况.就是假如我们需要使用实体机的文件,怎么才能让虚拟机能访问呢?这就是实体机和虚拟机的文件共享问题.举个栗子.我在虚拟机Coding中,这个时候我发现我需要一个名为123.jar文件,而这个123.jar文件在虚拟机没有.只有实体机里才有.而且放在某个地方.比如是Ｃ:Myfile/123.jar.那么怎么才能让虚拟机访问这个文件呢?这就是虚实系统之间的文件共享.既然问题已经出现,我们怎么解决它呢? 实体机创建共享的文件夹举个栗子 C:Myfile/centos VB上设置共享文件夹上方菜单栏 设置-&gt;共享文件夹 填写共享文件夹的路径名,设置访问权限. VB安装增强功能在上方菜单栏 设备-&gt;安装增强功能 Centos安装增强功能打开虚拟机就可以看见桌面有一个名为VBox_GAs_5.2.1的镜像文件,挂载这个镜像.运行autorun.sh 或者runasroot.sh的脚本完成安装. 问题出现当我们这些都做完了时候,我们居然发现,我们当前的普通用户根本没办法访问共享文件夹.这是什么原因呢?这是因为共享的文件夹在Linux虚拟机里面其权限是属于vboxsf的,而我们普通用户sc并不属于这个用户组,因此就不具备相关权限.就谈不上访问文件了. 问题解决1.先尝试用root用户更改文件夹权限 sudo chmod 777 /media/sf_centos 亲测无效,普通用户仍然不能访问.2.再尝试将普通用户加入root用户组,因为root身份是可以访问的. sudo usermod -aG root 亲测无效,普通用户还是不能访问该文件夹.3.再尝试将普通用户加入vboxsf用户组,这个用户组是完全控制该共享文件夹的. sudo usermod -aG vboxsf 亲测有效,可以访问. 结束感想1.遇见了问题莫慌.仔细的分析问题产生的原因.2.自己尝试去解决问题3.如果解决了当然皆大欢喜.若没有解决就去百度 or Google吧4.问题解决之后写下笔记,以备后续使用.]]></content>
@@ -41,7 +30,6 @@
         <category>虚拟机</category>
       </categories>
       <tags>
-        <tag>Windows</tag>
         <tag>VB</tag>
         <tag>Linux</tag>
       </tags>
@@ -81,11 +69,6 @@
         <tag>ST</tag>
         <tag>文本编辑器</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[git]]></title>
-    <url>%2F2017%2F11%2F05%2Fgit%2F</url>
-    <content type="text"><![CDATA[#This is my website]]></content>
   </entry>
   <entry>
     <title><![CDATA[Sublime Text(ST)"The God of Text Editor"安装和使用]]></title>
