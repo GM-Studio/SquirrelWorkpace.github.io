@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-15T14:05:09.424Z</updated>
+  <updated>2017-11-15T14:06:46.128Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>linux学习笔记(一)设置快捷键</title>
-    <link href="http://yoursite.com/2017/11/12/linux1/"/>
-    <id>http://yoursite.com/2017/11/12/linux1/</id>
-    <published>2017-11-11T16:00:00.000Z</published>
-    <updated>2017-11-15T14:05:09.424Z</updated>
+    <link href="http://yoursite.com/2017/11/13/linux1/"/>
+    <id>http://yoursite.com/2017/11/13/linux1/</id>
+    <published>2017-11-12T16:00:00.000Z</published>
+    <updated>2017-11-15T14:06:46.128Z</updated>
     
     <summary type="html">
     
