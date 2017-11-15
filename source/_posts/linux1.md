@@ -1,6 +1,6 @@
 ---
 title: linux学习笔记(一)设置快捷键
-date: 2017.11.12
+date: 2017.11.13
 tags: [linux]
 categories: linux
 ---
@@ -11,6 +11,12 @@ categories: linux
 # 步骤
 
 ## 明确一点
-
+我们所运行的应用程序其桌面图标或者说运行脚本都放在了```/usr/share/applications```这个文件夹中.
+## 打开系统设置
+菜单栏搜索```System Settings```,找到```Keyboard```,点击打开.找到```Shortscuts->Custom Shortscuts```点击下方的+号.
+## 开始设置快捷键
+```Name``` 填写应用程序的名称 ex:```谷歌浏览器```就填写```Chrome```
+```Command``` 填写在```/usr/share/applications``` 中找到了```chrome```图标右击鼠标,打开属性```Command``` 这一栏的内容,复制粘粘到快捷键设置就好.
 
 # 未完待续
+linux学习笔记系列暂时就写到这儿了,还有后续哦,敬请期待吧...........
