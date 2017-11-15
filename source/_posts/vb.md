@@ -1,7 +1,7 @@
 ---
 title: Windows下VB的Linux虚拟机的使用
 date: 2017.11.9
-tag: [Windows,VB,Linux]
+tag: [VB,Linux]
 categories: 虚拟机
 ---
 # 序
