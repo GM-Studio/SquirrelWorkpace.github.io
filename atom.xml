@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-17T12:34:55.932Z</updated>
+  <updated>2017-11-17T12:37:53.687Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,13 +21,17 @@
     <link href="http://yoursite.com/2017/11/13/lesson/"/>
     <id>http://yoursite.com/2017/11/13/lesson/</id>
     <published>2017-11-12T16:00:00.000Z</published>
-    <updated>2017-11-17T12:34:55.932Z</updated>
+    <updated>2017-11-17T12:37:53.687Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;hello&quot;&gt;&lt;a href=&quot;#hello&quot; class=&quot;headerlink&quot; title=&quot;hello&quot;&gt;&lt;/a&gt;hello&lt;/h1&gt;
+        &lt;ol&gt;
+&lt;li&gt;晚上不超过11点就睡觉,保持有个良好的健康的身体.&lt;/li&gt;
+&lt;li&gt;不要为了钱,什么都去做,什么都去接.要考虑自己的环境条件(时间,精力)&lt;/li&gt;
+&lt;/ol&gt;
+
       
     
     </summary>
