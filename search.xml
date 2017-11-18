@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[git学习笔记]]></title>
     <url>%2F2017%2F11%2F14%2Fgit3%2F</url>
-    <content type="text"><![CDATA[序大家在使用git的时候,会经常看见git add -A 抑或是 git add . 或是 git add ./ 那么这几个命令有什么区别呢?我就来为大家讲讲. 内容git add -A 将git目录下的所有文件修改提交到暂存区 包括新建的文件 删除的文件 修改的文件git add . 将项目目录下的修改的文件,新建的文件添加到暂存区.不包括已删除的文件git add ./ 与git add . 命令相同对于需要删除的文件,最好使用git add -A 未完待续git学习笔记暂时就写到这了,未完待续…….]]></content>
+    <content type="text"><![CDATA[序大家在使用git的时候,会经常看见git add -A抑或是git add . 或是git add ./ 那么这几个命令有什么区别呢?我就来为大家讲讲. 内容git add -A 将git目录下的所有文件修改提交到暂存区,包括新建的文件,删除的文件,修改的文件等等.git add . 将项目目录下的修改的文件,新建的文件添加到暂存区.不包括已删除的文件git add ./ 与 git add . 命令相同对于需要删除的文件,最好使用git add -A命令 未完待续git学习笔记暂时就写到这了,未完待续…….]]></content>
       <categories>
         <category>git</category>
       </categories>
