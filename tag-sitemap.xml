@@ -44,13 +44,6 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/tags/git/</loc>
-        <lastmod>2017-11-14T13:45:31.256Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://yoursite.com/tags/VB/</loc>
         <lastmod>2017-11-15T13:19:13.669Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -74,6 +67,13 @@
     <url>
         <loc>http://yoursite.com/tags/%E6%95%99%E8%AE%AD/</loc>
         <lastmod>2017-11-18T09:40:35.978Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/tags/git/</loc>
+        <lastmod>2017-11-18T11:50:24.551Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
