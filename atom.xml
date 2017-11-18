@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-18T11:50:24.551Z</updated>
+  <updated>2017-11-18T12:04:16.079Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="http://yoursite.com/2017/11/14/git3/"/>
     <id>http://yoursite.com/2017/11/14/git3/</id>
     <published>2017-11-13T16:00:00.000Z</published>
-    <updated>2017-11-18T11:50:24.551Z</updated>
+    <updated>2017-11-18T12:04:16.079Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;序&quot;&gt;&lt;a href=&quot;#序&quot; class=&quot;headerlink&quot; title=&quot;序&quot;&gt;&lt;/a&gt;序&lt;/h1&gt;&lt;h1 id=&quot;内容&quot;&gt;&lt;a href=&quot;#内容&quot; class=&quot;headerlink&quot; title=&quot;内容&quot;&gt;&lt;/a&gt;内容&lt;/h1&gt;&lt;h1 id=&quot;未完
+        &lt;h1 id=&quot;序&quot;&gt;&lt;a href=&quot;#序&quot; class=&quot;headerlink&quot; title=&quot;序&quot;&gt;&lt;/a&gt;序&lt;/h1&gt;&lt;h1 id=&quot;内容&quot;&gt;&lt;a href=&quot;#内容&quot; class=&quot;headerlink&quot; title=&quot;内容&quot;&gt;&lt;/a&gt;内容&lt;/h1&gt;&lt;p&gt;git add
       
     
     </summary>
@@ -36,6 +36,29 @@
     
     
       <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux学习笔记(一)设置快捷键</title>
+    <link href="http://yoursite.com/2017/11/13/linux1/"/>
+    <id>http://yoursite.com/2017/11/13/linux1/</id>
+    <published>2017-11-12T16:00:00.000Z</published>
+    <updated>2017-11-15T14:06:46.128Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;序&quot;&gt;&lt;a href=&quot;#序&quot; class=&quot;headerlink&quot; title=&quot;序&quot;&gt;&lt;/a&gt;序&lt;/h1&gt;&lt;p&gt;在linux操作系统中,一切皆文件.那么当我们程序装的很多的时候,我们要去桌面or应用栏去一个个找需要打开的应用程序的图标.对我们程序员来说.时间就
+      
+    
+    </summary>
+    
+      <category term="linux" scheme="http://yoursite.com/categories/linux/"/>
+    
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
     
   </entry>
   
@@ -63,29 +86,6 @@
     
     
       <category term="教训" scheme="http://yoursite.com/tags/%E6%95%99%E8%AE%AD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux学习笔记(一)设置快捷键</title>
-    <link href="http://yoursite.com/2017/11/13/linux1/"/>
-    <id>http://yoursite.com/2017/11/13/linux1/</id>
-    <published>2017-11-12T16:00:00.000Z</published>
-    <updated>2017-11-15T14:06:46.128Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;序&quot;&gt;&lt;a href=&quot;#序&quot; class=&quot;headerlink&quot; title=&quot;序&quot;&gt;&lt;/a&gt;序&lt;/h1&gt;&lt;p&gt;在linux操作系统中,一切皆文件.那么当我们程序装的很多的时候,我们要去桌面or应用栏去一个个找需要打开的应用程序的图标.对我们程序员来说.时间就
-      
-    
-    </summary>
-    
-      <category term="linux" scheme="http://yoursite.com/categories/linux/"/>
-    
-    
-      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
     
   </entry>
   
