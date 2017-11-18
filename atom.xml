@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-17T12:47:42.055Z</updated>
+  <updated>2017-11-15T14:06:46.128Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,33 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/2017/11/13/lesson/"/>
-    <id>http://yoursite.com/2017/11/13/lesson/</id>
-    <published>2017-11-12T16:00:00.000Z</published>
-    <updated>2017-11-17T12:47:42.055Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ol&gt;
-&lt;li&gt;晚上不超过11点就睡觉,保持有个良好的健康的身体.&lt;/li&gt;
-&lt;li&gt;不要为了钱,什么都去做,什么都去接.要考虑自己的环境条件(时间,精力)&lt;/li&gt;
-&lt;li&gt;一定务必要弄清楚客户爸爸的要求,不能逮着半截就开跑.务必明白了再做.&lt;/li&gt;
-&lt;li&gt;凡是都应该有预
-      
-    
-    </summary>
-    
-      <category term="教训" scheme="http://yoursite.com/categories/%E6%95%99%E8%AE%AD/"/>
-    
-    
-      <category term="教训" scheme="http://yoursite.com/tags/%E6%95%99%E8%AE%AD/"/>
-    
-  </entry>
   
   <entry>
     <title>linux学习笔记(一)设置快捷键</title>
@@ -63,6 +36,33 @@
     
     
       <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/11/13/lesson/"/>
+    <id>http://yoursite.com/2017/11/13/lesson/</id>
+    <published>2017-11-12T16:00:00.000Z</published>
+    <updated>2017-11-18T09:33:29.786Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;晚上不超过11点就睡觉,保持有个良好的健康的身体.&lt;/li&gt;
+&lt;li&gt;不要为了钱,什么都去做,什么都去接.要考虑自己的环境条件(时间,精力)&lt;/li&gt;
+&lt;li&gt;一定务必要弄清楚客户爸爸的要求,不能逮着半截就开跑.务必明白了再做.&lt;/li&gt;
+&lt;li&gt;凡是都应该有预
+      
+    
+    </summary>
+    
+      <category term="教训" scheme="http://yoursite.com/categories/%E6%95%99%E8%AE%AD/"/>
+    
+    
+      <category term="教训" scheme="http://yoursite.com/tags/%E6%95%99%E8%AE%AD/"/>
     
   </entry>
   
