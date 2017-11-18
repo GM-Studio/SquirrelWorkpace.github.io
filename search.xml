@@ -3,23 +3,12 @@
   <entry>
     <title><![CDATA[git学习笔记]]></title>
     <url>%2F2017%2F11%2F14%2Fgit3%2F</url>
-    <content type="text"><![CDATA[序内容git add -A 将git目录下的所有文件修改提交到暂存区 包括新建的文件 删除的文件 修改的文件 未完待续]]></content>
+    <content type="text"><![CDATA[序内容git add -A 将git目录下的所有文件修改提交到暂存区 包括新建的文件 删除的文件 修改的文件git add . 将项目目录下的修改的文件,新建的文件添加到暂存区.不包括已删除的文件 未完待续]]></content>
       <categories>
         <category>git</category>
       </categories>
       <tags>
         <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[linux学习笔记(一)设置快捷键]]></title>
-    <url>%2F2017%2F11%2F13%2Flinux1%2F</url>
-    <content type="text"><![CDATA[序在linux操作系统中,一切皆文件.那么当我们程序装的很多的时候,我们要去桌面or应用栏去一个个找需要打开的应用程序的图标.对我们程序员来说.时间就是金钱.我们特别注重效率.那么我们有什么办法可以直接打开我们所需要运行的app纳?答案就是设置快捷键.如何设置纳?请看下面的老司机的步骤. 步骤明确一点我们所运行的应用程序其桌面图标或者说运行脚本都放在了/usr/share/applications这个文件夹中. 打开系统设置菜单栏搜索System Settings,找到Keyboard,点击打开.找到Shortscuts-&gt;Custom Shortscuts点击下方的+号. 开始设置快捷键Name 填写应用程序的名称 ex:谷歌浏览器就填写ChromeCommand 填写在/usr/share/applications 中找到了chrome图标右击鼠标,打开属性Command 这一栏的内容,复制粘粘到快捷键设置就好. 未完待续linux学习笔记系列暂时就写到这儿了,还有后续哦,敬请期待吧………..]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
@@ -31,6 +20,17 @@
       </categories>
       <tags>
         <tag>教训</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[linux学习笔记(一)设置快捷键]]></title>
+    <url>%2F2017%2F11%2F13%2Flinux1%2F</url>
+    <content type="text"><![CDATA[序在linux操作系统中,一切皆文件.那么当我们程序装的很多的时候,我们要去桌面or应用栏去一个个找需要打开的应用程序的图标.对我们程序员来说.时间就是金钱.我们特别注重效率.那么我们有什么办法可以直接打开我们所需要运行的app纳?答案就是设置快捷键.如何设置纳?请看下面的老司机的步骤. 步骤明确一点我们所运行的应用程序其桌面图标或者说运行脚本都放在了/usr/share/applications这个文件夹中. 打开系统设置菜单栏搜索System Settings,找到Keyboard,点击打开.找到Shortscuts-&gt;Custom Shortscuts点击下方的+号. 开始设置快捷键Name 填写应用程序的名称 ex:谷歌浏览器就填写ChromeCommand 填写在/usr/share/applications 中找到了chrome图标右击鼠标,打开属性Command 这一栏的内容,复制粘粘到快捷键设置就好. 未完待续linux学习笔记系列暂时就写到这儿了,还有后续哦,敬请期待吧………..]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
