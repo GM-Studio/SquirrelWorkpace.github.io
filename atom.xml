@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-18T12:22:23.543Z</updated>
+  <updated>2017-11-18T12:25:32.431Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="http://yoursite.com/2017/11/14/git3/"/>
     <id>http://yoursite.com/2017/11/14/git3/</id>
     <published>2017-11-13T16:00:00.000Z</published>
-    <updated>2017-11-18T12:22:23.543Z</updated>
+    <updated>2017-11-18T12:25:32.431Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;序&quot;&gt;&lt;a href=&quot;#序&quot; class=&quot;headerlink&quot; title=&quot;序&quot;&gt;&lt;/a&gt;序&lt;/h1&gt;&lt;h1 id=&quot;内容&quot;&gt;&lt;a href=&quot;#内容&quot; class=&quot;headerlink&quot; title=&quot;内容&quot;&gt;&lt;/a&gt;内容&lt;/h1&gt;&lt;p&gt;git add
+        &lt;h1 id=&quot;序&quot;&gt;&lt;a href=&quot;#序&quot; class=&quot;headerlink&quot; title=&quot;序&quot;&gt;&lt;/a&gt;序&lt;/h1&gt;&lt;p&gt;大家在使用git的时候,会经常看见git add -A　抑或是　git add . 或是 git add ./ 那么这几个命令有什么区别呢?&lt;br&gt;
       
     
     </summary>
