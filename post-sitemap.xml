@@ -7,6 +7,30 @@
     </url>
 
     <url>
+        <loc>http://yoursite.com/2017/11/04/java1/</loc>
+        <lastmod>2017-11-19T13:22:52.732Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/2017/11/03/java2/</loc>
+        <lastmod>2017-11-19T13:22:22.660Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/2017/11/02/java3/</loc>
+        <lastmod>2017-11-19T13:22:01.288Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://yoursite.com/2017/11/14/git3/</loc>
         <lastmod>2017-11-18T12:50:22.447Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -87,32 +111,8 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/2017/11/01/java3/</loc>
-        <lastmod>2017-11-05T07:51:51.250Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://yoursite.com/2017/11/03/linux/</loc>
         <lastmod>2017-11-05T03:19:45.562Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://yoursite.com/2017/11/02/java2/</loc>
-        <lastmod>2017-11-05T03:19:39.746Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://yoursite.com/2017/11/02/java1/</loc>
-        <lastmod>2017-11-05T03:19:37.170Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
