@@ -1,6 +1,6 @@
 ---
 title: Sublime Text(ST)"The God of Text Editor"安装和使用
-date: 2017.11.5
+date: 2017.11.6
 tags: [ST,文本编辑器]
 categories: ST
 ---
