@@ -58,13 +58,6 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/tags/Java/</loc>
-        <lastmod>2017-11-19T13:22:52.732Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://yoursite.com/tags/git/</loc>
         <lastmod>2017-11-19T13:24:20.608Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -74,6 +67,13 @@
     <url>
         <loc>http://yoursite.com/tags/%E9%98%BF%E9%87%8C%E4%BA%91/</loc>
         <lastmod>2017-11-19T13:24:20.608Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/tags/Java/</loc>
+        <lastmod>2017-11-19T13:26:31.156Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
