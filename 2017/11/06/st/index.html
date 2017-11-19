@@ -43,7 +43,7 @@
     
     <title>
         
-            阿里云搭建私有git服务 | 
+            Sublime Text(ST)&#34;The God of Text Editor&#34;安装和使用 | 
         
         Squirrel&#39;Blog
     </title>
@@ -55,7 +55,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Squirrel Chen">
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",git,阿里云">
+    <meta name="keywords" content=",ST,文本编辑器">
 
     <!-- Import lsloader -->
     <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
@@ -246,18 +246,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="阿里云搭建私有git服务 | Squirrel&#39;Blog">
+    <meta property="og:title" content="Sublime Text(ST)&#34;The God of Text Editor&#34;安装和使用 | Squirrel&#39;Blog">
     <meta property="og:image" content="http://yoursite.com/favicon/favicon.jpeg" />
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="git"> <meta property="og:article:tag" content="阿里云"> 
+    <meta property="og:article:tag" content="ST"> <meta property="og:article:tag" content="文本编辑器"> 
 
     
-        <meta property="article:published_time" content="Sun Nov 05 2017 00:00:00 GMT+0800" />
-        <meta property="article:modified_time" content="Sun Nov 19 2017 21:29:09 GMT+0800" />
+        <meta property="article:published_time" content="Mon Nov 06 2017 00:00:00 GMT+0800" />
+        <meta property="article:modified_time" content="Sun Nov 19 2017 21:30:51 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="阿里云搭建私有git服务 | Squirrel&#39;Blog">
+    <meta name="twitter:title" content="Sublime Text(ST)&#34;The God of Text Editor&#34;安装和使用 | Squirrel&#39;Blog">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="http://yoursite.com/favicon/favicon.jpeg">
     <meta name="twitter:card" content="summary_large_image" />
@@ -265,7 +265,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2017/11/05/linux/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2017/11/06/st/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -277,10 +277,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2017/11/05/linux/index.html",
-    "headline": "阿里云搭建私有git服务",
-    "datePublished": "Sun Nov 05 2017 00:00:00 GMT+0800",
-    "dateModified": "Sun Nov 19 2017 21:29:09 GMT+0800",
+    "mainEntityOfPage": "http://yoursite.com/2017/11/06/st/index.html",
+    "headline": "Sublime Text(ST)"The God of Text Editor"安装和使用",
+    "datePublished": "Mon Nov 06 2017 00:00:00 GMT+0800",
+    "dateModified": "Sun Nov 19 2017 21:30:51 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Squirrel Chen",
@@ -298,7 +298,7 @@
             "url": "/favicon/favicon.jpeg"
         }
     },
-    "keywords": ",git,阿里云",
+    "keywords": ",ST,文本编辑器",
     "description": "",
 }
 </script>
@@ -369,7 +369,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#序"><span class="post-toc-number">1.</span> <span class="post-toc-text">序</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#详细步骤"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">详细步骤</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#SSH服务的安装与开启"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">SSH服务的安装与开启</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装git服务"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">安装git服务</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#结束"><span class="post-toc-number">2.</span> <span class="post-toc-text">结束</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#序"><span class="post-toc-number">1.</span> <span class="post-toc-text">序</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Let’s-learning-ST"><span class="post-toc-number">2.</span> <span class="post-toc-text">Let’s learning ST</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ST-的安装"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">ST 的安装</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#for-windows"><span class="post-toc-number">2.1.1.</span> <span class="post-toc-text">for windows</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#for-linux-基于debian系列的linux"><span class="post-toc-number">2.1.2.</span> <span class="post-toc-text">for linux(基于debian系列的linux)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#在linux下安装-就比较麻烦一些-首先需要添加gpg源到apt"><span class="post-toc-number">2.1.2.1.</span> <span class="post-toc-text">在linux下安装,就比较麻烦一些.首先需要添加gpg源到apt</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#其次使用https协议链接"><span class="post-toc-number">2.1.2.2.</span> <span class="post-toc-text">其次使用https协议链接</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#选择稳定版本"><span class="post-toc-number">2.1.2.3.</span> <span class="post-toc-text">选择稳定版本</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#apt更新及安装"><span class="post-toc-number">2.1.2.4.</span> <span class="post-toc-text">apt更新及安装</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ST-的激活key"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">ST 的激活key</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#未完待续"><span class="post-toc-number">3.</span> <span class="post-toc-text">未完待续</span></a></li></ol>
     </ul>
     
 
@@ -401,7 +401,7 @@
         
     
             <p class="article-headline-p">
-                阿里云搭建私有git服务
+                Sublime Text(ST)"The God of Text Editor"安装和使用
             </p>
         </div>
 
@@ -420,7 +420,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Squirrel Chen</strong>
-        <span>11月 05, 2017</span>
+        <span>11月 06, 2017</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -444,7 +444,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/git/">git</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/阿里云/">阿里云</a>
+        <a class="post_tag-link" href="/tags/ST/">ST</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/文本编辑器/">文本编辑器</a>
     </ul>
     
 
@@ -459,7 +459,7 @@
     <!-- Leancloud Views -->
         <a class="post_share-link" href="#">
             <li class="mdl-menu__item">
-                <span id="/2017/11/05/linux/" class="leancloud-views_num" data-flag-title="阿里云搭建私有git服务">
+                <span id="/2017/11/06/st/" class="leancloud-views_num" data-flag-title="Sublime Text(ST)&#34;The God of Text Editor&#34;安装和使用">
      &nbsp;浏览量
 </span>
 
@@ -482,7 +482,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=阿里云搭建私有git服务&url=http://yoursite.com/2017/11/05/linux/index.html&pic=http://yoursite.com/favicon/favicon.jpeg&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Sublime Text(ST)&#34;The God of Text Editor&#34;安装和使用&url=http://yoursite.com/2017/11/06/st/index.html&pic=http://yoursite.com/favicon/favicon.jpeg&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -516,56 +516,17 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>如果觉得github上的代码托管私有仓库比较贵,又不想托管到公共的仓库的话,可以通过自己买一台云服务器.搭建自己的个性化服务器.不仅仅可以用git服务,还可以用比如apache,网站搭建的都可以.下面就说说怎么使用服务器搭建git私有仓库也就是git服务器</p>
-<h2 id="详细步骤"><a href="#详细步骤" class="headerlink" title="详细步骤"></a>详细步骤</h2><h3 id="SSH服务的安装与开启"><a href="#SSH服务的安装与开启" class="headerlink" title="SSH服务的安装与开启"></a>SSH服务的安装与开启</h3><p>确保自己的服务器开启了SSH服务.如果没有,那就安装SSH服务吧.使用下列命令</p>
-<pre><code>sudo service ssh start
-</code></pre><p>打开ssh服务如果出现unkown service表示没有安装ssh服务.使用下列命令</p>
-<pre><code>sudo apt-get install ssh
-或者
-sudo apt-get install open-ssh
-</code></pre><p>然后系统会自动运行ssh服务,如果没有运行,那就手动启动.</p>
-<pre><code>sudo service ssh start
-</code></pre><h3 id="安装git服务"><a href="#安装git服务" class="headerlink" title="安装git服务"></a>安装git服务</h3><pre><code>sudo apt-get install git
-</code></pre><p>配置git用户<br>为了方便使用git服务以及管理git,需要另外建立一个git 用户,专门用来管理git.</p>
-<pre><code>sudo adduser git
-</code></pre><p>然后输入密码.用户就建立了,切换到该用户主目录下.</p>
-<pre><code>cd /home/git
-</code></pre><p>建立.ssh 文件夹,请注意这里有个点.</p>
-<pre><code>mkdir .ssh
-cd .ssh
-touch authorized_keys
-</code></pre><p>公匙存放<br>收集好要连接该git服务器的用户的SSH公匙,通常存放在用户主目录下.ssh/id_rsa.pub文件中.</p>
-<pre><code>cat id_rsa.pub &gt;&gt; authorized_keys
-</code></pre><p>请别忘记,是每一个用户都要导入,且一个一行!<br>仓库建立<br>然后在该目录下建立一个空的文件夹作为仓库</p>
-<pre><code>cd /home/git
-mkdir gitproject
-cd gitproject
-sudo git init --bare sample.git
-sudo chown -R git:git sample.git
-</code></pre><p>克隆仓库到本地<br>1.7 然后就可以使用git clone 该仓库了</p>
-<pre><code>git clone git@xxx.xxx.xxx.xxx: /home/git/gitproject/sample.git
-</code></pre><p>大概就这样,请注意 xxx.xxx.xxx.xxx为你的服务器的ip地址.<br>受限git用户<br>为了安全性,请让git用户的权利受限.出于安全考虑,创建的git用户不允许登录shell,这可以通过编辑/etc/passwd文件完成.找到类似下面的一行：</p>
-<pre><code>git:x:1001:1001:,,,:/home/git:/bin/bash
-</code></pre><p>改为：</p>
-<pre><code>git:x:1001:1001:,,,:/home/git:/usr/bin/git-shell
-</code></pre><p>番外篇<br>如何在ssh连接时给服务器起别名,不用输入一长串的ip地址.首先这个是需要在客户端上更改的,而不是服务端.我就犯了这个错误.客户端上切换到用户主目录.诸如这样:</p>
-<pre class="line-numbers language-shell"><code class="language-shell">cd /home/squirrel-chen
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>使用ll -a 可以看见有一个.ssh 文件夹</p>
-<pre class="line-numbers language-shell"><code class="language-shell">cd .ssh
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>会有一个config文件 如果没有可以新建</p>
-<pre class="line-numbers language-shell"><code class="language-shell">touch config
-sudo vi config
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>输入以下的内容</p>
-<pre><code>Host squirrel-chen
-HostName xxx.xxx.xxx.xxx
-User admin
-Port 22
-</code></pre><p>Host 是指要连接的服务器名称<br>HostName 指定服务器的ip地址<br>User 以什么的身份登陆服务器<br>Port 就是端口 一般都是22<br>然后就可以直接使用<code>ssh squirrel-chen</code>连接了,当然要输入密码的.如果不想输入密码的话,可以在生成公匙秘匙对的时候,一路敲回车,采用默认的方式,这样的话 <code>ssh xxx</code>连接时就不用输入密码了.</p>
-<h1 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h1><p>此次的博客就写到这儿，Talk is cheap,show me the code.Goodbye!</p>
-
+        <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>在各种IDE大行其道的今天,如何在极快的时间内打开编辑器写代码变得非常重要.轻量级文本编辑器便显得非常重要.不仅仅打开很快,极大的提高了代码编写的效率.同时也提高了程序员的时间利用率,使其劳动工作更加的高效.那么在各种提高效率的今天,有什么极好的文本编辑器or代码编辑器推荐呢?这就是接下来我推荐的良心软件(bing bu liang xin)Sublime Text.堪称最优秀的代码文本编辑器.(此处应有一万字以及广大程序员的鼓掌).</p>
+<h1 id="Let’s-learning-ST"><a href="#Let’s-learning-ST" class="headerlink" title="Let’s learning ST"></a>Let’s learning ST</h1><p>Q:what’s the st?<br>A:The God of Text Editor</p>
+<h2 id="ST-的安装"><a href="#ST-的安装" class="headerlink" title="ST 的安装"></a>ST 的安装</h2><h3 id="for-windows"><a href="#for-windows" class="headerlink" title="for windows"></a>for windows</h3><p>在windows下安装,在<a href="https://www.sublimetext.com/3" target="_blank" rel="external">官方网站</a>下载exe执行安装包,就可以了.</p>
+<h3 id="for-linux-基于debian系列的linux"><a href="#for-linux-基于debian系列的linux" class="headerlink" title="for linux(基于debian系列的linux)"></a>for linux(基于debian系列的linux)</h3><h4 id="在linux下安装-就比较麻烦一些-首先需要添加gpg源到apt"><a href="#在linux下安装-就比较麻烦一些-首先需要添加gpg源到apt" class="headerlink" title="在linux下安装,就比较麻烦一些.首先需要添加gpg源到apt"></a>在linux下安装,就比较麻烦一些.首先需要添加gpg源到apt</h4><pre><code>wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+</code></pre><h4 id="其次使用https协议链接"><a href="#其次使用https协议链接" class="headerlink" title="其次使用https协议链接"></a>其次使用https协议链接</h4><pre><code>sudo apt-get install apt-transport-https
+</code></pre><h4 id="选择稳定版本"><a href="#选择稳定版本" class="headerlink" title="选择稳定版本"></a>选择稳定版本</h4><pre><code>echo &quot;deb https://download.sublimetext.com/ apt/stable/&quot; | sudo tee /etc/apt/sources.list.d/sublime-text.list
+</code></pre><h4 id="apt更新及安装"><a href="#apt更新及安装" class="headerlink" title="apt更新及安装"></a>apt更新及安装</h4><pre><code>sudo apt-get update
+sudo apt-get install sublime-text
+</code></pre><h2 id="ST-的激活key"><a href="#ST-的激活key" class="headerlink" title="ST 的激活key"></a>ST 的激活key</h2><p>由于st版本经常更新,版本不同导致license key 经常变化,不能统一使用key激活.因此最好按照版本号去百度license key 然后再激活.此处便不再赘述.</p>
+<h1 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h1><pre><code>老司机的车还没开完,车门已焊死,谁都别想下车.未完待续.............
+</code></pre>
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
                     <p><strong>
@@ -573,7 +534,7 @@ Port 22
                             Copyright© Squirrel's Blog
                         </strong>
                         <br>
-                        <strong>本文链接：</strong><a href="http://yoursite.com/2017/11/05/linux/">http://yoursite.com/2017/11/05/linux/</a>
+                        <strong>本文链接：</strong><a href="http://yoursite.com/2017/11/06/st/">http://yoursite.com/2017/11/06/st/</a>
                     </p>
                 </blockquote>
         
@@ -591,7 +552,7 @@ Port 22
     <!-- 使用 changyan -->
 <div id="changyan-comment">
     <!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="2017/11/05/linux/"  ></div>
+<div id="SOHUCS" sid="2017/11/06/st/"  ></div>
 <script type="text/javascript">
 (function(){
 var appid = 'cysD2L3UA';
@@ -615,7 +576,7 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2017/11/06/st/" id="post_nav-newer" class="prev-content">
+        <a href="/2017/11/07/st2/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -629,7 +590,7 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
 
     <!-- Next Nav -->
     
-        <a href="/2017/11/04/java1/" id="post_nav-older" class="next-content">
+        <a href="/2017/11/05/linux/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
