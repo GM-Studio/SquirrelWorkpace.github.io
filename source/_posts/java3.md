@@ -1,6 +1,6 @@
 ---
 title: Java学习－网络编程(一)
-date: 2017-11-01 18:48:29
+date: 2017-11-02
 tags: [Java,网络编程]
 categories: Java学习
 ---
@@ -45,13 +45,13 @@ public class DataUpload implements Upload {
    }
        @Override
        public boolean dataupload(String url, String data) {
-            // TODO Auto-generated method stub 
+            // TODO Auto-generated method stub
                 try{
             //创建URL连接
             URL uploadurl=new URL(url);
                      //打开端口通信
                 HttpURLConnection con=(HttpURLConnection)uploadurl.openConnection();
-                    //设置相关属性设置 输入输出流打开 
+                    //设置相关属性设置 输入输出流打开
                 con.setDoInput(true);
                 con.setDoOutput(true);
                   //设置请求方式 包括POST GET
@@ -77,14 +77,14 @@ public class DataUpload implements Upload {
                  e.printStackTrace();
             }
                return false;
-           
+
         }
         public static void main(String[] args)
   {
                  DataUpload dataup=new DataUpload();
                  dataup.dataupload("http://localhost:8080/Server/servlet/UploadServlet", "你好世界");
         }
-      
+
 }
 
 ```
@@ -104,4 +104,3 @@ public class DataUpload implements Upload {
 
 # 结束
 大概就是这么的一个过程,大家都明白了吧.其实```HttpURLConnection```也是采用```socket```通信的.它内部封装了关于```socket```的相关信息.因此熟悉```socket```的通信相关编程知识的,也就能发现其实```HttpURLConnection```也是类似的编程步骤.好了.暂时写到这儿.有什么不对或者问题,请务必告知本人.谢谢.
-

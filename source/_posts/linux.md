@@ -1,6 +1,6 @@
 ---
 title: 阿里云搭建私有git服务
-date: 2017-11-03 18:48:29
+date: 2017-11-05
 tags: [阿里云,git]
 categories: git
 ---
@@ -51,7 +51,7 @@ cd /home/git
 
 ```
 mkdir .ssh
-cd .ssh 
+cd .ssh
 touch authorized_keys
 ```
 公匙存放
@@ -65,10 +65,10 @@ cat id_rsa.pub >> authorized_keys
 然后在该目录下建立一个空的文件夹作为仓库
 
 ```
-cd /home/git 
+cd /home/git
 mkdir gitproject
-cd gitproject 
-sudo git init --bare sample.git 
+cd gitproject
+sudo git init --bare sample.git
 sudo chown -R git:git sample.git
 ```
 克隆仓库到本地
@@ -105,13 +105,13 @@ cd .ssh
 会有一个config文件 如果没有可以新建
 
 ```shell
-touch config 
+touch config
 sudo vi config
 ```
 输入以下的内容
 
 ```
-Host squirrel-chen 
+Host squirrel-chen
 HostName xxx.xxx.xxx.xxx
 User admin
 Port 22
@@ -125,4 +125,3 @@ Port 就是端口 一般都是22
 
 # 结束
 此次的博客就写到这儿，Talk is cheap,show me the code.Goodbye!
-

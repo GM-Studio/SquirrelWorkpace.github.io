@@ -1,6 +1,6 @@
 ---
 title: Java学习随记(一)
-date: 2017-11-02 18:48:29
+date: 2017-11-04 
 tags: [Java]
 categories: Java学习
 ---
@@ -22,5 +22,3 @@ Java开发中经常有在项目路径```Build Path```中导入jar包 或者在``
 ```
 
 因此是完全不会加载本地java项目的jar包的,也就是说在```build path```下导入的jar包并不会加载.但是存在于```/WEB-INF/lib```下的jar就会加载了.这就是说为什么我们在部署JavaEE项目时.使用框架jar包会在```/WEB-INF/lib```下.
-
-

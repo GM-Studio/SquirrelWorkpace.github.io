@@ -1,8 +1,8 @@
 ---
 title: Java学习随记(二)
-date: 2017-11-02 
+date: 2017-11-03
 tags: [Java]
-categroies: Java学习
+categories: Java学习
 ---
 
 # String StringBuilder StringBUffer 之间的区别
