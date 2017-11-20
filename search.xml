@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Java学习笔记(四)Java文件操作(读文件)]]></title>
+    <url>%2F2017%2F11%2F15%2Fjava4%2F</url>
+    <content type="text"><![CDATA[序文件操作对于编程来说都是很基础很基础的知识,可是我很久没用写有关文件操作的程序.今天心血来潮的突然写一个.一来巩固下基础.二来学习了性能分析和内存优化等等的知识. 内容按字节流读取文件按字符流读取文件按行读取文件未完待续Java学习笔记系列还没完结,老司机的车会一直开下去哦.下次再见……….]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[git学习笔记]]></title>
     <url>%2F2017%2F11%2F14%2Fgit3%2F</url>
     <content type="text"><![CDATA[序大家在使用git的时候,会经常看见git add -A抑或是git add . 或是git add ./ 那么这几个命令有什么区别呢?我就来为大家讲讲. 内容git add * //提交项目所有的文件,包括修改的文件,添加的文件,并不包括删除文件. git add -A //将git目录下的所有文件修改提交到暂存区,包括新建的文件,删除的文件,修改的文件等等. git add . //将项目目录下的修改的文件,新建的文件添加到暂存区.不包括已删除的文件 git add ./ 与 git add . 命令相同 //对于需要删除的文件,最好使用```git add -A```命令 未完待续git学习笔记暂时就写到这了,未完待续…….]]></content>
@@ -12,17 +23,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[学习教训]]></title>
-    <url>%2F2017%2F11%2F13%2Flesson%2F</url>
-    <content type="text"><![CDATA[晚上不超过11点就睡觉,保持有个良好的健康的身体. 不要为了钱,什么都去做,什么都去接.要考虑自己的环境条件(时间,精力) 一定务必要弄清楚客户爸爸的要求,不能逮着半截就开跑.务必明白了再做. 凡是都应该有预备的应急预案,比如plan A/plan B.这样遇见事了才不能慌 自己能解决的,自己解决.不能解决的,靠google或者Baidu.不能临到头了,才让别人给你擦屁股. 基础知识真的非常重要,务必要掌握基础知识.像数据结构，算法，语言语法,语言设计,etc…… 程序做完了一定要进行多方面的测试,确保不存在致命的bug以及充分做到了满足客户的需求.才能提交给客户.才能完成交易.]]></content>
-      <categories>
-        <category>教训</category>
-      </categories>
-      <tags>
-        <tag>教训</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[linux学习笔记(一)设置快捷键]]></title>
     <url>%2F2017%2F11%2F13%2Flinux1%2F</url>
     <content type="text"><![CDATA[序在linux操作系统中,一切皆文件.那么当我们程序装的很多的时候,我们要去桌面or应用栏去一个个找需要打开的应用程序的图标.对我们程序员来说.时间就是金钱.我们特别注重效率.那么我们有什么办法可以直接打开我们所需要运行的app纳?答案就是设置快捷键.如何设置纳?请看下面的老司机的步骤. 步骤明确一点我们所运行的应用程序其桌面图标或者说运行脚本都放在了/usr/share/applications这个文件夹中. 打开系统设置菜单栏搜索System Settings,找到Keyboard,点击打开.找到Shortscuts-&gt;Custom Shortscuts点击下方的+号. 开始设置快捷键Name 填写应用程序的名称 ex:谷歌浏览器就填写ChromeCommand 填写在/usr/share/applications 中找到了chrome图标右击鼠标,打开属性Command 这一栏的内容,复制粘粘到快捷键设置就好. 未完待续linux学习笔记系列暂时就写到这儿了,还有后续哦,敬请期待吧………..]]></content>
@@ -31,6 +31,17 @@
       </categories>
       <tags>
         <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[学习教训]]></title>
+    <url>%2F2017%2F11%2F13%2Flesson%2F</url>
+    <content type="text"><![CDATA[晚上不超过11点就睡觉,保持有个良好的健康的身体. 不要为了钱,什么都去做,什么都去接.要考虑自己的环境条件(时间,精力) 一定务必要弄清楚客户爸爸的要求,不能逮着半截就开跑.务必明白了再做. 凡是都应该有预备的应急预案,比如plan A/plan B.这样遇见事了才不能慌 自己能解决的,自己解决.不能解决的,靠google或者Baidu.不能临到头了,才让别人给你擦屁股. 基础知识真的非常重要,务必要掌握基础知识.像数据结构，算法，语言语法,语言设计,etc…… 程序做完了一定要进行多方面的测试,确保不存在致命的bug以及充分做到了满足客户的需求.才能提交给客户.才能完成交易.]]></content>
+      <categories>
+        <category>教训</category>
+      </categories>
+      <tags>
+        <tag>教训</tag>
       </tags>
   </entry>
   <entry>

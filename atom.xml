@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-18T12:50:22.447Z</updated>
+  <updated>2017-11-20T13:24:55.886Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java学习笔记(四)Java文件操作(读文件)</title>
+    <link href="http://yoursite.com/2017/11/15/java4/"/>
+    <id>http://yoursite.com/2017/11/15/java4/</id>
+    <published>2017-11-14T16:00:00.000Z</published>
+    <updated>2017-11-20T13:24:55.886Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;序&quot;&gt;&lt;a href=&quot;#序&quot; class=&quot;headerlink&quot; title=&quot;序&quot;&gt;&lt;/a&gt;序&lt;/h1&gt;&lt;p&gt;文件操作对于编程来说都是很基础很基础的知识,可是我很久没用写有关文件操作的程序.今天心血来潮的突然写一个.一来巩固下基础.二来学习了性能分析和内存优
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>git学习笔记</title>
@@ -36,6 +59,29 @@
     
     
       <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux学习笔记(一)设置快捷键</title>
+    <link href="http://yoursite.com/2017/11/13/linux1/"/>
+    <id>http://yoursite.com/2017/11/13/linux1/</id>
+    <published>2017-11-12T16:00:00.000Z</published>
+    <updated>2017-11-15T14:06:46.128Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;序&quot;&gt;&lt;a href=&quot;#序&quot; class=&quot;headerlink&quot; title=&quot;序&quot;&gt;&lt;/a&gt;序&lt;/h1&gt;&lt;p&gt;在linux操作系统中,一切皆文件.那么当我们程序装的很多的时候,我们要去桌面or应用栏去一个个找需要打开的应用程序的图标.对我们程序员来说.时间就
+      
+    
+    </summary>
+    
+      <category term="linux" scheme="http://yoursite.com/categories/linux/"/>
+    
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
     
   </entry>
   
@@ -63,29 +109,6 @@
     
     
       <category term="教训" scheme="http://yoursite.com/tags/%E6%95%99%E8%AE%AD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux学习笔记(一)设置快捷键</title>
-    <link href="http://yoursite.com/2017/11/13/linux1/"/>
-    <id>http://yoursite.com/2017/11/13/linux1/</id>
-    <published>2017-11-12T16:00:00.000Z</published>
-    <updated>2017-11-15T14:06:46.128Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;序&quot;&gt;&lt;a href=&quot;#序&quot; class=&quot;headerlink&quot; title=&quot;序&quot;&gt;&lt;/a&gt;序&lt;/h1&gt;&lt;p&gt;在linux操作系统中,一切皆文件.那么当我们程序装的很多的时候,我们要去桌面or应用栏去一个个找需要打开的应用程序的图标.对我们程序员来说.时间就
-      
-    
-    </summary>
-    
-      <category term="linux" scheme="http://yoursite.com/categories/linux/"/>
-    
-    
-      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
     
   </entry>
   
