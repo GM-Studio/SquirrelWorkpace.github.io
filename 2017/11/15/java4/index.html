@@ -253,7 +253,7 @@
 
     
         <meta property="article:published_time" content="Wed Nov 15 2017 00:00:00 GMT+0800" />
-        <meta property="article:modified_time" content="Mon Nov 20 2017 21:24:55 GMT+0800" />
+        <meta property="article:modified_time" content="Mon Nov 20 2017 21:33:20 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
@@ -280,7 +280,7 @@
     "mainEntityOfPage": "http://yoursite.com/2017/11/15/java4/index.html",
     "headline": "Java学习笔记(四)Java文件操作(读文件)",
     "datePublished": "Wed Nov 15 2017 00:00:00 GMT+0800",
-    "dateModified": "Mon Nov 20 2017 21:24:55 GMT+0800",
+    "dateModified": "Mon Nov 20 2017 21:33:20 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Squirrel Chen",
@@ -517,7 +517,40 @@
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>文件操作对于编程来说都是很基础很基础的知识,可是我很久没用写有关文件操作的程序.今天心血来潮的突然写一个.一来巩固下基础.二来学习了性能分析和内存优化等等的知识.</p>
-<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><h3 id="按字节流读取文件"><a href="#按字节流读取文件" class="headerlink" title="按字节流读取文件"></a>按字节流读取文件</h3><h3 id="按字符流读取文件"><a href="#按字符流读取文件" class="headerlink" title="按字符流读取文件"></a>按字符流读取文件</h3><h3 id="按行读取文件"><a href="#按行读取文件" class="headerlink" title="按行读取文件"></a>按行读取文件</h3><h2 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h2><p>Java学习笔记系列还没完结,老司机的车会一直开下去哦.下次再见……….</p>
+<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><h3 id="按字节流读取文件"><a href="#按字节流读取文件" class="headerlink" title="按字节流读取文件"></a>按字节流读取文件</h3><pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">readFileByByte</span><span class="token punctuation">(</span>String filename<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+       System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"按照字节读取"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+       File file <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span>filename<span class="token punctuation">)</span><span class="token punctuation">;</span>
+       <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> buffer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">byte</span><span class="token punctuation">[</span><span class="token number">1024</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+       <span class="token keyword">if</span> <span class="token punctuation">(</span>file<span class="token punctuation">.</span><span class="token function">exists</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+           <span class="token keyword">if</span> <span class="token punctuation">(</span>file<span class="token punctuation">.</span><span class="token function">isDirectory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+               System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"This is directory "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+           <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+               <span class="token keyword">int</span> read <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+               <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                   FileInputStream input <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileInputStream</span><span class="token punctuation">(</span>file<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                   read <span class="token operator">=</span> input<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>buffer<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1024</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                   System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"This is file content "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                   <span class="token keyword">while</span> <span class="token punctuation">(</span>read <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                       <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">1024</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                           System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>buffer<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                       <span class="token punctuation">}</span>
+
+                       System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span>buffer<span class="token punctuation">,</span> <span class="token string">"UTF-8"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                       read <span class="token operator">=</span> input<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>buffer<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1024</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                   <span class="token punctuation">}</span>
+
+                   System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"按字节读取完毕"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+               <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                   e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+               <span class="token punctuation">}</span>
+           <span class="token punctuation">}</span>
+       <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>存在的问题:<br>１. 打印<code>buffer</code>缓冲区的时候,请不要直接打印<code>buffer</code>，因为直接打印出来的是一个对象值,并不是所含数组的值.<br>２. 编码问题,因为是按照字节读取的.byte字节没有编码格式.读取的是默认的<code>ASCII</code>码.那么当读取中文的时候,就会出现乱码.因此为了解决这个问题.可以使<code>byte</code>转<code>String</code>,然后设置<code>UTF-8</code>格式.这样就能正常的读取中文并输出.(其实质是输出的时候转码了,并不是读的就是<code>UTF-8</code>)</p>
+<h3 id="按字符流读取文件"><a href="#按字符流读取文件" class="headerlink" title="按字符流读取文件"></a>按字符流读取文件</h3><h3 id="按行读取文件"><a href="#按行读取文件" class="headerlink" title="按行读取文件"></a>按行读取文件</h3><h2 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h2><p>Java学习笔记系列还没完结,老司机的车会一直开下去哦.下次再见……….</p>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
