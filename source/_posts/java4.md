@@ -120,5 +120,12 @@ static void readFileByLine(String filename) {
 
 存在问题:尚未发现
 
+
+### 性能分析工具　
+VisualVM的使用
+
+
+
+
 ## 未完待续
 Java学习笔记系列还没完结,老司机的车会一直开下去哦.下次再见..........
