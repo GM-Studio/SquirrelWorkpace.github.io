@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://yoursite.com/2017/11/16/jprofiler/</loc>
+        <lastmod>2017-11-21T13:24:26.160Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://yoursite.com/2017/11/15/java4/</loc>
         <lastmod>2017-11-21T08:38:52.108Z</lastmod>
         <changefreq>weekly</changefreq>
