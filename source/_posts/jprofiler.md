@@ -22,4 +22,5 @@ Monitor:　监视器　以图形化的显示Cpu Heap Classes Threads的信息
 Threads: 各种线程的显示包括运行的休息的等待的监视的
 Sampler: 对于各种变量使用的内存进行分析并显示
 
+jprofiler
 # 未完待续
