@@ -3,25 +3,13 @@
   <entry>
     <title><![CDATA[linux学习笔记(二)用户以及shell]]></title>
     <url>%2F2017%2F11%2F17%2Fshell%2F</url>
-    <content type="text"><![CDATA[序当我们对于当前所使用的shell表示不满意的时候,我们可以切换其他比较好的shell,比如oh-my-zsh.接下来我为大家示范一下如何新建一个专门用于新用户的新shell环境. 内容 首先我们以两种常见的Linux系统环境进行示范和分析.一个是ubuntu 16.04另外一个则是centos 7.x.这两个Linux系统都是大家常用的系统.所以我选取了这两个系统进行示范.由于基于不同的系列.所以所使用的命令略微不同. for ubuntu 首先更新软件库 sudo apt-get update sudo apt-get upgrade 安装zsh sudo apt-get install zsh 安装oh-my-zsh via curl sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot; via wget sh -c &quot;$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)&quot; 重启or注销用户 重新登录用户就可以使用oh-my-zsh了 for centos未完待续]]></content>
+    <content type="text"><![CDATA[序当我们对于当前所使用的shell表示不满意的时候,我们可以切换其他比较好的shell,比如oh-my-zsh.接下来我为大家示范一下如何新建一个专门用于新用户的新shell环境. 内容 首先我们以两种常见的Linux系统环境进行示范和分析.一个是ubuntu 16.04另外一个则是centos 7.x.这两个Linux系统都是大家常用的系统.所以我选取了这两个系统进行示范.由于基于不同的系列.所以所使用的命令略微不同. for ubuntu 首先更新软件库 sudo apt-get update sudo apt-get upgrade 安装zsh sudo apt-get install zsh 安装oh-my-zsh via curl sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot; via wget sh -c &quot;$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)&quot; 重启or注销用户 重新登录用户就可以使用oh-my-zsh了 for centos 首先更新软件库 sudo yum update sudo yum upgrade 安装zsh sudo yum install zsh 安装oh-my-zsh via curl sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot; via wget sh -c &quot;$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)&quot; 重启or注销用户 重新登录用户就可以使用oh-my-zsh了 未完待续]]></content>
       <categories>
         <category>Linux</category>
       </categories>
       <tags>
         <tag>学习笔记</tag>
         <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>%2F2017%2F11%2F16%2Fjava5%2F</url>
-    <content type="text"><![CDATA[序我们为什么需要性能分析工具?性能分析能帮助我们什么?我想这几个问题是我这段时间学习Java以来所思考的问题.问题起源于我想针对Java编写的不同方式的读写文件操作的程序进行性能分析,来确定下哪种文件读写操作是比较好的?哪种文件操作方式适合于哪种场合.因此我需要分析程序中方法执行的时间,所使用的内存,所使用的线程等等因素.那么我用什么软件工具比较好呢？ 工具使用VisualVM for linux sudo apt-get install visualvm 安装visualvm 打开IntelliJIEDA安装visualvm的插件 安装好了重启Idea,选择用visualvm来run应用程序. 初次打开visualvm,需要选择visualvm执行文件的路径.默认是/usr/bin/jvisualvm. 然后就可以利用visualvm进行性能分析应用程序了不知道为什么,我的不能分析简单的应用程序.比如helloworld.但是SpringBoot的项目却可以分析.有哪位大神可以帮忙分系解决下这个问题?鄙人感激不尽. JProfiler for linuxhello world thank yourhey gay hello worldhello squirrelchen 未完待续笔记系列尚未完结,未完待续………]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>学习笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -34,6 +22,18 @@
       <tags>
         <tag>Java</tag>
         <tag>性能分析工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2017%2F11%2F16%2Fjava5%2F</url>
+    <content type="text"><![CDATA[序我们为什么需要性能分析工具?性能分析能帮助我们什么?我想这几个问题是我这段时间学习Java以来所思考的问题.问题起源于我想针对Java编写的不同方式的读写文件操作的程序进行性能分析,来确定下哪种文件读写操作是比较好的?哪种文件操作方式适合于哪种场合.因此我需要分析程序中方法执行的时间,所使用的内存,所使用的线程等等因素.那么我用什么软件工具比较好呢？ 工具使用VisualVM for linux sudo apt-get install visualvm 安装visualvm 打开IntelliJIEDA安装visualvm的插件 安装好了重启Idea,选择用visualvm来run应用程序. 初次打开visualvm,需要选择visualvm执行文件的路径.默认是/usr/bin/jvisualvm. 然后就可以利用visualvm进行性能分析应用程序了不知道为什么,我的不能分析简单的应用程序.比如helloworld.但是SpringBoot的项目却可以分析.有哪位大神可以帮忙分系解决下这个问题?鄙人感激不尽. JProfiler for linuxhello world thank yourhey gay hello worldhello squirrelchen 未完待续笔记系列尚未完结,未完待续………]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>学习笔记</tag>
       </tags>
   </entry>
   <entry>
