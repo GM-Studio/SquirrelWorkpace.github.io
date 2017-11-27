@@ -70,5 +70,52 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 4. 重启or注销用户
 5. 重新登录用户就可以使用```oh-my-zsh```了
 
+## for 新用户
+以上的操作都是针对当前所使用的用户而言,也就是说在当前用户下更改```shell```环境.那么如果我们需要更改到其他用户.抑或着专门为了使用这个```shell```而新建的用户所使用呢?这种情况下应该怎么做呢?
+
+1. 新建一个shell用户
+由于ubuntu和centos的不同,新建用户的命令并不一致.
+ubuntu
+```
+sudo adduser oyzsh  //新建名为oyzsh的用户,用于shell
+sudo passwd oyzsh 　//更改oyzsh密码
+```
+由于在ubuntu下,使用useradd命令建立的用户,属于三无用户.即没有密码,没有shell,没有主目录.所以就用adduser来建立了.至于为什么?还有待探究.
+
+centos
+```
+sudo useradd oyzsh
+sudo passwd oyzsh
+```
+
+2. 拷贝```oh-my-zsh```的文件到用户主目录
+由于之前已经克隆了oh-my-zsh的源代码,可以直接拿过来是使用的.方便又快捷.
+
+```
+sudo cp -R /home/sc/.oh-my-zsh /home/oyzsh  //sc为之前所使用用户,前面则为之前使用的用户主目录,后半则是需要用户的主目录
+sudo cp -R /home/sc/.zsh* /home/oyzsh //复制有关zsh相关文件到需要用户的主目录.
+
+```
+
+3. 更改目录以及其文件所属的用户以及用户组
+
+```
+sudo chgrp -R /home/oyzsh
+sudo chown -R /home/oyzsh
+```
+
+4. 编辑zshrc文件启用oh-my-zsh
+
+```
+sudo vi /home/oyzsh/.zshrc
+找到export-path
+更改目录到当前用户所属主目录
+
+```
+5. 重启或注销使其生效
+ 
+
+
+
 # 未完待续
 ```Linux```学习笔记还尚未结束,敬请期待.......
