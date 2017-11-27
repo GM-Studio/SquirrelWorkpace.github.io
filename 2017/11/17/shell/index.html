@@ -253,7 +253,7 @@
 
     
         <meta property="article:published_time" content="Fri Nov 17 2017 00:00:00 GMT+0800" />
-        <meta property="article:modified_time" content="Mon Nov 27 2017 21:32:43 GMT+0800" />
+        <meta property="article:modified_time" content="Mon Nov 27 2017 21:37:05 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
@@ -280,7 +280,7 @@
     "mainEntityOfPage": "http://yoursite.com/2017/11/17/shell/index.html",
     "headline": "linux学习笔记(二)用户以及shell",
     "datePublished": "Fri Nov 17 2017 00:00:00 GMT+0800",
-    "dateModified": "Mon Nov 27 2017 21:32:43 GMT+0800",
+    "dateModified": "Mon Nov 27 2017 21:37:05 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Squirrel Chen",
@@ -578,7 +578,20 @@ sudo passwd oyzsh
 </ol>
 <pre><code>sudo cp -R /home/sc/.oh-my-zsh /home/oyzsh  //sc为之前所使用用户,前面则为之前使用的用户主目录,后半则是需要用户的主目录
 sudo cp -R /home/sc/.zsh* /home/oyzsh //复制有关zsh相关文件到需要用户的主目录.
-</code></pre><p>3.</p>
+</code></pre><ol>
+<li>更改目录以及其文件所属的用户以及用户组</li>
+</ol>
+<pre><code>sudo chgrp -R /home/oyzsh
+sudo chown -R /home/oyzsh
+</code></pre><ol>
+<li>编辑zshrc文件启用oh-my-zsh</li>
+</ol>
+<pre><code>sudo vi /home/oyzsh/.zshrc
+找到export-path
+更改目录到当前用户所属主目录
+</code></pre><ol>
+<li>重启或注销使其生效</li>
+</ol>
 <h1 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h1><p><code>Linux</code>学习笔记还尚未结束,敬请期待…….</p>
 
         
