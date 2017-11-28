@@ -6,26 +6,26 @@ categories: Linux
 ---
 
 # 序
-当我们对于当前所使用的```shell```表示不满意的时候,我们可以切换其他比较好的```shell```,比如```oh-my-zsh```.接下来我为大家示范一下如何新建一个专门用于新用户的新shell环境.
+当我们对于当前所使用的```shell```表示不满意的时候,我们可以切换其他比较好的```shell```,比如```oh-my-zsh```.接下来我为大家示范一下如何新建一个专门用于新用户的新```shell```环境.
 
 # 内容　
 首先我们以两种常见的```Linux```系统环境进行示范和分析.一个是```ubuntu 16.04```另外一个则是```centos 7.x```.这两个```Linux```系统都是大家常用的系统.所以我选取了这两个系统进行示范.由于基于不同的系列.所以所使用的命令略微不同.
 
 ## for ubuntu
 
-1. 首先更新软件库
+1.首先更新软件库
 
 ```
 sudo apt-get update
 sudo apt-get upgrade
 ```
-2. 安装```zsh```
+2.安装```zsh```
 
 ```
 sudo apt-get install zsh
 ```
 
-3. 安装```oh-my-zsh```
+3.安装```oh-my-zsh```
 
 ```
 via curl
@@ -37,25 +37,25 @@ via wget
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 ```
-4. 重启or注销用户
-5. 重新登录用户就可以使用```oh-my-zsh```了
+4.重启or注销用户
+5.重新登录用户就可以使用```oh-my-zsh```了
 
 
 ## for centos
 
-1. 首先更新软件库
+1.首先更新软件库
 
 ```
 sudo yum update
 sudo yum upgrade
 ```
-2. 安装```zsh```
+2.安装```zsh```
 
 ```
 sudo yum install zsh
 ```
 
-3. 安装```oh-my-zsh```
+3.安装```oh-my-zsh```
 
 ```
 via curl
@@ -67,8 +67,8 @@ via wget
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 ```
-4. 重启or注销用户
-5. 重新登录用户就可以使用```oh-my-zsh```了
+4.重启or注销用户
+5.重新登录用户就可以使用```oh-my-zsh```了
 
 ## for 新用户
 以上的操作都是针对当前所使用的用户而言,也就是说在当前用户下更改```shell```环境.那么如果我们需要更改到其他用户.抑或着专门为了使用这个```shell```而新建的用户所使用呢?这种情况下应该怎么做呢?
@@ -113,8 +113,16 @@ sudo vi /home/oyzsh/.zshrc
 
 ```
 5. 重启或注销使其生效
- 
 
+# 番外总结
+不管是什么用户,在使用```shell```环境的时候其实质也是在执行其```shell```脚本.因此用户都应该对这个脚本文件抑或存放这个文件的相关文件夹具有读和可执行的权限.也就是说具备```x```和```r```的权限.不然当使用```shell```的时候,系统就会告诉你权限不够无法使用.
+另外,对于文件权限,我们可以利用数字进行简单的标记.
+
+```
+x->1
+w->2
+r->4
+````
 
 
 # 未完待续
