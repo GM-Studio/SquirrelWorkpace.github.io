@@ -3,25 +3,13 @@
   <entry>
     <title><![CDATA[linux学习笔记(二)用户以及shell]]></title>
     <url>%2F2017%2F11%2F17%2Fshell%2F</url>
-    <content type="text"><![CDATA[序当我们对于当前所使用的shell表示不满意的时候,我们可以切换其他比较好的shell,比如oh-my-zsh.接下来我为大家示范一下如何新建一个专门用于新用户的新shell环境. 内容 首先我们以两种常见的Linux系统环境进行示范和分析.一个是ubuntu 16.04另外一个则是centos 7.x.这两个Linux系统都是大家常用的系统.所以我选取了这两个系统进行示范.由于基于不同的系列.所以所使用的命令略微不同. for ubuntu1.首先更新软件库 sudo apt-get update sudo apt-get upgrade 2.安装zsh sudo apt-get install zsh 3.安装oh-my-zsh via curl sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot; via wget sh -c &quot;$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)&quot; 4.重启or注销用户5.重新登录用户就可以使用oh-my-zsh了 for centos1.首先更新软件库 sudo yum update sudo yum upgrade 2.安装zsh sudo yum install zsh 3.安装oh-my-zsh via curl sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot; via wget sh -c &quot;$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)&quot; 4.重启or注销用户5.重新登录用户就可以使用oh-my-zsh了 for 新用户以上的操作都是针对当前所使用的用户而言,也就是说在当前用户下更改shell环境.那么如果我们需要更改到其他用户.抑或着专门为了使用这个shell而新建的用户所使用呢?这种情况下应该怎么做呢? 新建一个shell用户由于ubuntu和centos的不同,新建用户的命令并不一致.ubuntusudo adduser oyzsh //新建名为oyzsh的用户,用于shell sudo passwd oyzsh //更改oyzsh密码 由于在ubuntu下,使用useradd命令建立的用户,属于三无用户.即没有密码,没有shell,没有主目录.所以就用adduser来建立了.至于为什么?还有待探究. centos sudo useradd oyzsh sudo passwd oyzsh 拷贝oh-my-zsh的文件到用户主目录由于之前已经克隆了oh-my-zsh的源代码,可以直接拿过来是使用的.方便又快捷. sudo cp -R /home/sc/.oh-my-zsh /home/oyzsh //sc为之前所使用用户,前面则为之前使用的用户主目录,后半则是需要用户的主目录 sudo cp -R /home/sc/.zsh* /home/oyzsh //复制有关zsh相关文件到需要用户的主目录. 更改目录以及其文件所属的用户以及用户组 sudo chgrp -R /home/oyzsh sudo chown -R /home/oyzsh 编辑zshrc文件启用oh-my-zsh sudo vi /home/oyzsh/.zshrc 找到export-path 更改目录到当前用户所属主目录 重启或注销使其生效 番外总结不管是什么用户,在使用shell环境的时候其实质也是在执行其shell脚本.因此用户都应该对这个脚本文件抑或存放这个文件的相关文件夹具有读和可执行的权限.也就是说具备x和r的权限.不然当使用shell的时候,系统就会告诉你权限不够无法使用.另外,对于文件权限,我们可以利用数字进行简单的标记. x-&gt;1 w-&gt;2 r-&gt;4 ` 未完待续Linux学习笔记还尚未结束,敬请期待…….]]></content>
+    <content type="text"><![CDATA[序当我们对于当前所使用的shell表示不满意的时候,我们可以切换其他比较好的shell,比如oh-my-zsh.接下来我为大家示范一下如何新建一个专门用于新用户的新shell环境. 内容 首先我们以两种常见的Linux系统环境进行示范和分析.一个是ubuntu 16.04另外一个则是centos 7.x.这两个Linux系统都是大家常用的系统.所以我选取了这两个系统进行示范.由于基于不同的系列.所以所使用的命令略微不同. for ubuntu1.首先更新软件库 sudo apt-get update sudo apt-get upgrade 2.安装zsh sudo apt-get install zsh 3.安装oh-my-zsh via curl sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot; via wget sh -c &quot;$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)&quot; 4.重启or注销用户5.重新登录用户就可以使用oh-my-zsh了 for centos1.首先更新软件库 sudo yum update sudo yum upgrade 2.安装zsh sudo yum install zsh 3.安装oh-my-zsh via curl sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot; via wget sh -c &quot;$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)&quot; 4.重启or注销用户5.重新登录用户就可以使用oh-my-zsh了 for 新用户以上的操作都是针对当前所使用的用户而言,也就是说在当前用户下更改shell环境.那么如果我们需要更改到其他用户.抑或着专门为了使用这个shell而新建的用户所使用呢?这种情况下应该怎么做呢? 新建一个shell用户由于ubuntu和centos的不同,新建用户的命令并不一致.ubuntusudo adduser oyzsh //新建名为oyzsh的用户,用于shell sudo passwd oyzsh //更改oyzsh密码 由于在ubuntu下,使用useradd命令建立的用户,属于三无用户.即没有密码,没有shell,没有主目录.所以就用adduser来建立了.至于为什么?还有待探究. centos sudo useradd oyzsh sudo passwd oyzsh 拷贝oh-my-zsh的文件到用户主目录由于之前已经克隆了oh-my-zsh的源代码,可以直接拿过来是使用的.方便又快捷. sudo cp -R /home/sc/.oh-my-zsh /home/oyzsh //sc为之前所使用用户,前面则为之前使用的用户主目录,后半则是需要用户的主目录 sudo cp -R /home/sc/.zsh* /home/oyzsh //复制有关zsh相关文件到需要用户的主目录. 更改目录以及其文件所属的用户以及用户组 sudo chgrp -R /home/oyzsh sudo chown -R /home/oyzsh 编辑zshrc文件启用oh-my-zsh sudo vi /home/oyzsh/.zshrc 找到export-path 更改目录到当前用户所属主目录 重启或注销使其生效 番外总结不管是什么用户,在使用shell环境的时候其实质也是在执行其shell脚本.因此用户都应该对这个脚本文件抑或存放这个文件的相关文件夹具有读和可执行的权限.也就是说具备x和r的权限.不然当使用shell的时候,系统就会告诉你权限不够无法使用.另外,对于文件权限,我们可以利用数字进行简单的标记. x-&gt;1 w-&gt;2 r-&gt;4 未完待续Linux学习笔记还尚未结束,敬请期待…….]]></content>
       <categories>
         <category>Linux</category>
       </categories>
       <tags>
         <tag>学习笔记</tag>
         <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>%2F2017%2F11%2F16%2Fjava5%2F</url>
-    <content type="text"><![CDATA[序我们为什么需要性能分析工具?性能分析能帮助我们什么?我想这几个问题是我这段时间学习Java以来所思考的问题.问题起源于我想针对Java编写的不同方式的读写文件操作的程序进行性能分析,来确定下哪种文件读写操作是比较好的?哪种文件操作方式适合于哪种场合.因此我需要分析程序中方法执行的时间,所使用的内存,所使用的线程等等因素.那么我用什么软件工具比较好呢？ 工具使用VisualVM for linux sudo apt-get install visualvm 安装visualvm 打开IntelliJIEDA安装visualvm的插件 安装好了重启Idea,选择用visualvm来run应用程序. 初次打开visualvm,需要选择visualvm执行文件的路径.默认是/usr/bin/jvisualvm. 然后就可以利用visualvm进行性能分析应用程序了不知道为什么,我的不能分析简单的应用程序.比如helloworld.但是SpringBoot的项目却可以分析.有哪位大神可以帮忙分系解决下这个问题?鄙人感激不尽. JProfiler for linuxhello world thank yourhey gay hello worldhello squirrelchen 未完待续笔记系列尚未完结,未完待续………]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>学习笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -34,6 +22,18 @@
       <tags>
         <tag>Java</tag>
         <tag>性能分析工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2017%2F11%2F16%2Fjava5%2F</url>
+    <content type="text"><![CDATA[序我们为什么需要性能分析工具?性能分析能帮助我们什么?我想这几个问题是我这段时间学习Java以来所思考的问题.问题起源于我想针对Java编写的不同方式的读写文件操作的程序进行性能分析,来确定下哪种文件读写操作是比较好的?哪种文件操作方式适合于哪种场合.因此我需要分析程序中方法执行的时间,所使用的内存,所使用的线程等等因素.那么我用什么软件工具比较好呢？ 工具使用VisualVM for linux sudo apt-get install visualvm 安装visualvm 打开IntelliJIEDA安装visualvm的插件 安装好了重启Idea,选择用visualvm来run应用程序. 初次打开visualvm,需要选择visualvm执行文件的路径.默认是/usr/bin/jvisualvm. 然后就可以利用visualvm进行性能分析应用程序了不知道为什么,我的不能分析简单的应用程序.比如helloworld.但是SpringBoot的项目却可以分析.有哪位大神可以帮忙分系解决下这个问题?鄙人感激不尽. JProfiler for linuxhello world thank yourhey gay hello worldhello squirrelchen 未完待续笔记系列尚未完结,未完待续………]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>学习笔记</tag>
       </tags>
   </entry>
   <entry>
