@@ -253,7 +253,7 @@
 
     
         <meta property="article:published_time" content="Fri Nov 10 2017 00:00:00 GMT+0800" />
-        <meta property="article:modified_time" content="Sun Nov 19 2017 21:32:06 GMT+0800" />
+        <meta property="article:modified_time" content="Thu Dec 07 2017 21:31:03 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
@@ -280,7 +280,7 @@
     "mainEntityOfPage": "http://yoursite.com/2017/11/10/vb/index.html",
     "headline": "Windows下VB的Linux虚拟机的使用",
     "datePublished": "Fri Nov 10 2017 00:00:00 GMT+0800",
-    "dateModified": "Sun Nov 19 2017 21:32:06 GMT+0800",
+    "dateModified": "Thu Dec 07 2017 21:31:03 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Squirrel Chen",
@@ -517,7 +517,7 @@
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>大家都有过在<code>Windows</code>操作系统下使用<code>Virtual Box</code>软件运行虚拟机的经历.特别是对<code>Linux</code>新手用户而言.通常新手们为了更好的完成从<code>Windows</code>到<code>Linux</code>的更好的过渡,当然只是为了体验<code>Linux</code>操作的人大有人在.但不管是为了啥,总之在<code>VB</code>安装linux虚拟机系统这一操作是很普遍的.这不笔者最近在<code>VB</code>装了<code>centos7.x</code>,但是遇见了一个问题,什么问题呢?让我们一起来一探究竟吧.</p>
-<h1 id="实体机和虚拟机的文件共享"><a href="#实体机和虚拟机的文件共享" class="headerlink" title="实体机和虚拟机的文件共享"></a>实体机和虚拟机的文件共享</h1><p>通常我们在使用虚拟机的情况时候,都会遇见一个情况.就是假如我们需要使用实体机的文件,怎么才能让虚拟机能访问呢?这就是实体机和虚拟机的文件共享问题.<br>举个栗子.我在虚拟机Coding中,这个时候我发现我需要一个名为<code>123.jar</code>文件,而这个<code>123.jar</code>文件在虚拟机没有.只有实体机里才有.而且放在某个地方.比如是<code>Ｃ:Myfile/123.jar</code>.那么怎么才能让虚拟机访问这个文件呢?这就是虚实系统之间的文件共享.既然问题已经出现,我们怎么解决它呢?</p>
+<h1 id="实体机和虚拟机的文件共享"><a href="#实体机和虚拟机的文件共享" class="headerlink" title="实体机和虚拟机的文件共享"></a>实体机和虚拟机的文件共享</h1><p>通常我们在使用虚拟机的情况时候,都会遇见一个情况.就是假如我们需要使用实体机的文件,怎么才能让虚拟机能访问呢?这就是实体机和虚拟机的文件共享问题.<br>举个栗子.我在虚拟机Coding中,这个时候我发现我需要一个名为<code>123.jar</code>文件,而这个<code>123.jar</code>文件在虚拟机没有.只有实体机里才有.而且放在某个地方.比如是<code>Ｃ:Myfile/123.jar</code>.那么怎么才能让虚拟机访问这个文件呢?这就是虚实系统之间的文件共享.既然问题已经出现,所以我们怎么解决它呢?</p>
 <h3 id="实体机创建共享的文件夹"><a href="#实体机创建共享的文件夹" class="headerlink" title="实体机创建共享的文件夹"></a>实体机创建共享的文件夹</h3><p>举个栗子</p>
 <pre><code>C:Myfile/centos
 </code></pre><h3 id="VB上设置共享文件夹"><a href="#VB上设置共享文件夹" class="headerlink" title="VB上设置共享文件夹"></a>VB上设置共享文件夹</h3><p>上方菜单栏 <code>设置-&gt;共享文件夹</code> 填写共享文件夹的路径名,设置访问权限.</p>

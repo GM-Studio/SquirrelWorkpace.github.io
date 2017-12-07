@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://yoursite.com/2017/11/10/vb/</loc>
+        <lastmod>2017-12-07T13:31:03.742Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://yoursite.com/2017/12/04/world/</loc>
         <lastmod>2017-12-06T14:23:35.509Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -41,14 +49,6 @@
     <url>
         <loc>http://yoursite.com/2017/11/15/java4/</loc>
         <lastmod>2017-11-21T08:38:52.108Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://yoursite.com/2017/11/10/vb/</loc>
-        <lastmod>2017-11-19T13:32:06.124Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
