@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://yoursite.com/2017/11/17/shell/</loc>
+        <lastmod>2017-12-12T15:05:13.399Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://yoursite.com/2017/11/16/jprofiler/</loc>
         <lastmod>2017-12-11T12:14:56.403Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -49,14 +57,6 @@
     <url>
         <loc>http://yoursite.com/2017/11/16/java5/</loc>
         <lastmod>2017-12-03T02:32:30.839Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://yoursite.com/2017/11/17/shell/</loc>
-        <lastmod>2017-12-02T15:17:10.665Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
