@@ -18,18 +18,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Java性能分析工具VisualVM教程(一)]]></title>
-    <url>%2F2017%2F11%2F16%2Fjprofiler%2F</url>
-    <content type="text"><![CDATA[序我们程序员不仅仅需要写代码,更多的是如何优化代码.如何优化程序.那么就需要性能分析以及优化工具.使得程序能运行的更快更好.那么好用的性能分析工具有哪些纳?在此.我推荐VisualVM.其他软件没有用过. # 内容 查看内存 查看线程 查看堆栈 查看类以及实例 窗口大体浏览左边:应用程序显示栏 Java所有的应用程序都会显示右边: 应用程序的详细显示 下标:Overview: 应用程序信息概栏Monitor: 监视器 以图形化的显示Cpu Heap Classes Threads的信息Threads: 各种线程的显示包括运行的休息的等待的监视的Sampler: 对于各种变量使用的内存进行分析并显示 jprofiler hello jprofiler 未完待续]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>性能分析工具</tag>
-      </tags>
-  </entry>
-  <entry>
     <title></title>
     <url>%2F2017%2F11%2F16%2Fjava5%2F</url>
     <content type="text"><![CDATA[序我们为什么需要性能分析工具?性能分析能帮助我们什么?我想这几个问题是我这段时间学习Java以来所思考的问题.问题起源于我想针对Java编写的不同方式的读写文件操作的程序进行性能分析,来确定下哪种文件读写操作是比较好的?哪种文件操作方式适合于哪种场合.因此我需要分析程序中方法执行的时间,所使用的内存,所使用的线程等等因素.那么我用什么软件工具比较好呢？ 工具使用VisualVM for linux sudo apt-get install visualvm 安装visualvm 打开IntelliJIEDA安装visualvm的插件 安装好了重启Idea,选择用visualvm来run应用程序. 初次打开visualvm,需要选择visualvm执行文件的路径.默认是/usr/bin/jvisualvm. 然后就可以利用visualvm进行性能分析应用程序了不知道为什么,我的不能分析简单的应用程序.比如helloworld.但是SpringBoot的项目却可以分析.有哪位大神可以帮忙分系解决下这个问题?鄙人感激不尽. JProfiler for linuxhello world thank your 未完待续笔记系列尚未完结,未完待续………]]></content>
@@ -39,6 +27,18 @@
       <tags>
         <tag>Java</tag>
         <tag>学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Java性能分析工具VisualVM教程(一)]]></title>
+    <url>%2F2017%2F11%2F16%2Fjprofiler%2F</url>
+    <content type="text"><![CDATA[序我们程序员不仅仅需要写代码,更多的是如何优化代码.如何优化程序.那么就需要性能分析以及优化工具.使得程序能运行的更快更好.那么好用的性能分析工具有哪些纳?在此.我推荐VisualVM.其他软件没有用过. # 内容 查看内存 查看线程 查看堆栈 查看类以及实例 窗口大体浏览左边:应用程序显示栏 Java所有的应用程序都会显示右边: 应用程序的详细显示 下标:Overview: 应用程序信息概栏Monitor: 监视器 以图形化的显示Cpu Heap Classes Threads的信息Threads: 各种线程的显示包括运行的休息的等待的监视的Sampler: 对于各种变量使用的内存进行分析并显示 jprofiler hello jprofiler 未完待续]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>性能分析工具</tag>
       </tags>
   </entry>
   <entry>
@@ -64,17 +64,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[学习教训]]></title>
-    <url>%2F2017%2F11%2F13%2Flesson%2F</url>
-    <content type="text"><![CDATA[晚上不超过11点就睡觉,保持有个良好的健康的身体. 不要为了钱,什么都去做,什么都去接.要考虑自己的环境条件(时间,精力) 一定务必要弄清楚客户爸爸的要求,不能逮着半截就开跑.务必明白了再做. 凡是都应该有预备的应急预案,比如plan A/plan B.这样遇见事了才不能慌 自己能解决的,自己解决.不能解决的,靠google或者Baidu.不能临到头了,才让别人给你擦屁股. 基础知识真的非常重要,务必要掌握基础知识.像数据结构，算法，语言语法,语言设计,etc…… 程序做完了一定要进行多方面的测试,确保不存在致命的bug以及充分做到了满足客户的需求.才能提交给客户.才能完成交易. 坚持每天看书学习.]]></content>
-      <categories>
-        <category>教训</category>
-      </categories>
-      <tags>
-        <tag>教训</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[linux学习笔记(一)设置快捷键]]></title>
     <url>%2F2017%2F11%2F13%2Flinux1%2F</url>
     <content type="text"><![CDATA[序在linux操作系统中,一切皆文件.那么当我们程序装的很多的时候,我们要去桌面or应用栏去一个个找需要打开的应用程序的图标.对我们程序员来说.时间就是金钱.我们特别注重效率.那么我们有什么办法可以直接打开我们所需要运行的app纳?答案就是设置快捷键.如何设置纳?请看下面的老司机的步骤. 步骤明确一点我们所运行的应用程序其桌面图标或者说运行脚本都放在了/usr/share/applications这个文件夹中. 打开系统设置菜单栏搜索System Settings,找到Keyboard,点击打开.找到Shortscuts-&gt;Custom Shortscuts点击下方的+号. 开始设置快捷键Name 填写应用程序的名称 ex:谷歌浏览器就填写ChromeCommand 填写在/usr/share/applications 中找到了chrome图标右击鼠标,打开属性Command 这一栏的内容,复制粘粘到快捷键设置就好. 未完待续linux学习笔记系列暂时就写到这儿了,还有后续哦,敬请期待吧………..]]></content>
@@ -83,6 +72,17 @@
       </categories>
       <tags>
         <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[学习教训]]></title>
+    <url>%2F2017%2F11%2F13%2Flesson%2F</url>
+    <content type="text"><![CDATA[晚上不超过11点就睡觉,保持有个良好的健康的身体. 不要为了钱,什么都去做,什么都去接.要考虑自己的环境条件(时间,精力) 一定务必要弄清楚客户爸爸的要求,不能逮着半截就开跑.务必明白了再做. 凡是都应该有预备的应急预案,比如plan A/plan B.这样遇见事了才不能慌 自己能解决的,自己解决.不能解决的,靠google或者Baidu.不能临到头了,才让别人给你擦屁股. 基础知识真的非常重要,务必要掌握基础知识.像数据结构，算法，语言语法,语言设计,etc…… 程序做完了一定要进行多方面的测试,确保不存在致命的bug以及充分做到了满足客户的需求.才能提交给客户.才能完成交易. 坚持每天看书学习. 坚持每天都有目标,每天都能完成任务.]]></content>
+      <categories>
+        <category>教训</category>
+      </categories>
+      <tags>
+        <tag>教训</tag>
       </tags>
   </entry>
   <entry>
