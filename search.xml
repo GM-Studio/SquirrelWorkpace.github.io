@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[world]]></title>
     <url>%2F2017%2F12%2F04%2Fworld%2F</url>
-    <content type="text"><![CDATA[Hello World你好！世界！hello squirrelchenhelllo 123摄影相关 解析度 广角和长焦 PPI 变焦 曝光]]></content>
+    <content type="text"><![CDATA[Hello World你好！世界！hello squirrelchenhelllo 123摄影相关 解析度 广角和长焦 PPI 变焦 曝光 屏幕]]></content>
   </entry>
   <entry>
     <title><![CDATA[linux学习笔记(二)用户以及shell]]></title>
@@ -18,18 +18,6 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>%2F2017%2F11%2F16%2Fjava5%2F</url>
-    <content type="text"><![CDATA[序我们为什么需要性能分析工具?性能分析能帮助我们什么?我想这几个问题是我这段时间学习Java以来所思考的问题.问题起源于我想针对Java编写的不同方式的读写文件操作的程序进行性能分析,来确定下哪种文件读写操作是比较好的?哪种文件操作方式适合于哪种场合.因此我需要分析程序中方法执行的时间,所使用的内存,所使用的线程等等因素.那么我用什么软件工具比较好呢？ 工具使用VisualVM for linux sudo apt-get install visualvm 安装visualvm 打开IntelliJIEDA安装visualvm的插件 安装好了重启Idea,选择用visualvm来run应用程序. 初次打开visualvm,需要选择visualvm执行文件的路径.默认是/usr/bin/jvisualvm. 然后就可以利用visualvm进行性能分析应用程序了不知道为什么,我的不能分析简单的应用程序.比如helloworld.但是SpringBoot的项目却可以分析.有哪位大神可以帮忙分系解决下这个问题?鄙人感激不尽. JProfiler for linuxhello world thank your 未完待续笔记系列尚未完结,未完待续………]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>学习笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Java性能分析工具VisualVM教程(一)]]></title>
     <url>%2F2017%2F11%2F16%2Fjprofiler%2F</url>
     <content type="text"><![CDATA[序我们程序员不仅仅需要写代码,更多的是如何优化代码.如何优化程序.那么就需要性能分析以及优化工具.使得程序能运行的更快更好.那么好用的性能分析工具有哪些纳?在此.我推荐VisualVM.其他软件没有用过. # 内容 查看内存 查看线程 查看堆栈 查看类以及实例 窗口大体浏览左边:应用程序显示栏 Java所有的应用程序都会显示右边: 应用程序的详细显示 下标:Overview: 应用程序信息概栏Monitor: 监视器 以图形化的显示Cpu Heap Classes Threads的信息Threads: 各种线程的显示包括运行的休息的等待的监视的Sampler: 对于各种变量使用的内存进行分析并显示 jprofiler hello jprofiler 未完待续]]></content>
@@ -39,6 +27,18 @@
       <tags>
         <tag>Java</tag>
         <tag>性能分析工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2017%2F11%2F16%2Fjava5%2F</url>
+    <content type="text"><![CDATA[序我们为什么需要性能分析工具?性能分析能帮助我们什么?我想这几个问题是我这段时间学习Java以来所思考的问题.问题起源于我想针对Java编写的不同方式的读写文件操作的程序进行性能分析,来确定下哪种文件读写操作是比较好的?哪种文件操作方式适合于哪种场合.因此我需要分析程序中方法执行的时间,所使用的内存,所使用的线程等等因素.那么我用什么软件工具比较好呢？ 工具使用VisualVM for linux sudo apt-get install visualvm 安装visualvm 打开IntelliJIEDA安装visualvm的插件 安装好了重启Idea,选择用visualvm来run应用程序. 初次打开visualvm,需要选择visualvm执行文件的路径.默认是/usr/bin/jvisualvm. 然后就可以利用visualvm进行性能分析应用程序了不知道为什么,我的不能分析简单的应用程序.比如helloworld.但是SpringBoot的项目却可以分析.有哪位大神可以帮忙分系解决下这个问题?鄙人感激不尽. JProfiler for linuxhello world thank your 未完待续笔记系列尚未完结,未完待续………]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>学习笔记</tag>
       </tags>
   </entry>
   <entry>
