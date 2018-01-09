@@ -8,7 +8,7 @@
       <content type="html"><![CDATA[<ol>
 <li>为什么要考研?</li>
 <li>考研专业:软件工程<br>考研院校:主要院校:<br>次要院校:</li>
-<li>考研准备:<br>如何高效的准备?</li>
+<li>考研准备:<br>如何高效的准备?<br>数学一　怎么准备?<br>英语一　怎么准备?<br>政治一　怎么准备?<br>专业课　怎么准备? </li>
 </ol>
 ]]></content>
       
@@ -202,38 +202,6 @@ r-&gt;4
     </entry>
     
     <entry>
-      <title><![CDATA[Java性能分析工具VisualVM教程(一)]]></title>
-      <url>/2017/11/16/jprofiler/</url>
-      <content type="html"><![CDATA[<h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>我们程序员不仅仅需要写代码,更多的是如何优化代码.如何优化程序.那么就需要性能分析以及优化工具.使得程序能运行的更快更好.那么好用的性能分析工具有哪些纳?在此.我推荐VisualVM.其他软件没有用过.</p>
-<p>#　内容</p>
-<ol>
-<li>查看内存</li>
-<li>查看线程</li>
-<li>查看堆栈</li>
-<li>查看类以及实例</li>
-<li>窗口大体浏览<br>左边:应用程序显示栏　Java所有的应用程序都会显示<br>右边: 应用程序的详细显示　下标:<br>Overview: 应用程序信息概栏<br>Monitor:　监视器　以图形化的显示Cpu Heap Classes Threads的信息<br>Threads: 各种线程的显示包括运行的休息的等待的监视的<br>Sampler: 对于各种变量使用的内存进行分析并显示</li>
-</ol>
-<p>jprofiler hello jprofiler </p>
-<h1 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h1>]]></content>
-      
-        <categories>
-            
-            <category> Java </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Java </tag>
-            
-            <tag> 性能分析工具 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title></title>
       <url>/2017/11/16/java5/</url>
       <content type="html"><![CDATA[<h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>我们为什么需要性能分析工具?性能分析能帮助我们什么?我想这几个问题是我这段时间学习Java以来所思考的问题.问题起源于我想针对Java编写的不同方式的读写文件操作的程序进行性能分析,来确定下哪种文件读写操作是比较好的?哪种文件操作方式适合于哪种场合.因此我需要分析程序中方法执行的时间,所使用的内存,所使用的线程等等因素.<br>那么我用什么软件工具比较好呢？</p>
@@ -260,6 +228,38 @@ r-&gt;4
             <tag> Java </tag>
             
             <tag> 学习笔记 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java性能分析工具VisualVM教程(一)]]></title>
+      <url>/2017/11/16/jprofiler/</url>
+      <content type="html"><![CDATA[<h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>我们程序员不仅仅需要写代码,更多的是如何优化代码.如何优化程序.那么就需要性能分析以及优化工具.使得程序能运行的更快更好.那么好用的性能分析工具有哪些纳?在此.我推荐VisualVM.其他软件没有用过.</p>
+<p>#　内容</p>
+<ol>
+<li>查看内存</li>
+<li>查看线程</li>
+<li>查看堆栈</li>
+<li>查看类以及实例</li>
+<li>窗口大体浏览<br>左边:应用程序显示栏　Java所有的应用程序都会显示<br>右边: 应用程序的详细显示　下标:<br>Overview: 应用程序信息概栏<br>Monitor:　监视器　以图形化的显示Cpu Heap Classes Threads的信息<br>Threads: 各种线程的显示包括运行的休息的等待的监视的<br>Sampler: 对于各种变量使用的内存进行分析并显示</li>
+</ol>
+<p>jprofiler hello jprofiler </p>
+<h1 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h1>]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> 性能分析工具 </tag>
             
         </tags>
         
@@ -408,31 +408,6 @@ r-&gt;4
     </entry>
     
     <entry>
-      <title><![CDATA[linux学习笔记(一)设置快捷键]]></title>
-      <url>/2017/11/13/linux1/</url>
-      <content type="html"><![CDATA[<h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>在linux操作系统中,一切皆文件.那么当我们程序装的很多的时候,我们要去桌面or应用栏去一个个找需要打开的应用程序的图标.对我们程序员来说.时间就是金钱.我们特别注重效率.那么我们有什么办法可以直接打开我们所需要运行的app纳?答案就是设置快捷键.如何设置纳?请看下面的老司机的步骤.</p>
-<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><h2 id="明确一点"><a href="#明确一点" class="headerlink" title="明确一点"></a>明确一点</h2><p>我们所运行的应用程序其桌面图标或者说运行脚本都放在了<code>/usr/share/applications</code>这个文件夹中.</p>
-<h2 id="打开系统设置"><a href="#打开系统设置" class="headerlink" title="打开系统设置"></a>打开系统设置</h2><p>菜单栏搜索<code>System Settings</code>,找到<code>Keyboard</code>,点击打开.找到<code>Shortscuts-&gt;Custom Shortscuts</code>点击下方的+号.</p>
-<h2 id="开始设置快捷键"><a href="#开始设置快捷键" class="headerlink" title="开始设置快捷键"></a>开始设置快捷键</h2><p><code>Name</code> 填写应用程序的名称 ex:<code>谷歌浏览器</code>就填写<code>Chrome</code><br><code>Command</code> 填写在<code>/usr/share/applications</code> 中找到了<code>chrome</code>图标右击鼠标,打开属性<code>Command</code> 这一栏的内容,复制粘粘到快捷键设置就好.</p>
-<h1 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h1><p>linux学习笔记系列暂时就写到这儿了,还有后续哦,敬请期待吧………..</p>
-]]></content>
-      
-        <categories>
-            
-            <category> linux </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> linux </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[学习教训]]></title>
       <url>/2017/11/13/lesson/</url>
       <content type="html"><![CDATA[<ol>
@@ -458,6 +433,31 @@ r-&gt;4
         <tags>
             
             <tag> 教训 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[linux学习笔记(一)设置快捷键]]></title>
+      <url>/2017/11/13/linux1/</url>
+      <content type="html"><![CDATA[<h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>在linux操作系统中,一切皆文件.那么当我们程序装的很多的时候,我们要去桌面or应用栏去一个个找需要打开的应用程序的图标.对我们程序员来说.时间就是金钱.我们特别注重效率.那么我们有什么办法可以直接打开我们所需要运行的app纳?答案就是设置快捷键.如何设置纳?请看下面的老司机的步骤.</p>
+<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><h2 id="明确一点"><a href="#明确一点" class="headerlink" title="明确一点"></a>明确一点</h2><p>我们所运行的应用程序其桌面图标或者说运行脚本都放在了<code>/usr/share/applications</code>这个文件夹中.</p>
+<h2 id="打开系统设置"><a href="#打开系统设置" class="headerlink" title="打开系统设置"></a>打开系统设置</h2><p>菜单栏搜索<code>System Settings</code>,找到<code>Keyboard</code>,点击打开.找到<code>Shortscuts-&gt;Custom Shortscuts</code>点击下方的+号.</p>
+<h2 id="开始设置快捷键"><a href="#开始设置快捷键" class="headerlink" title="开始设置快捷键"></a>开始设置快捷键</h2><p><code>Name</code> 填写应用程序的名称 ex:<code>谷歌浏览器</code>就填写<code>Chrome</code><br><code>Command</code> 填写在<code>/usr/share/applications</code> 中找到了<code>chrome</code>图标右击鼠标,打开属性<code>Command</code> 这一栏的内容,复制粘粘到快捷键设置就好.</p>
+<h1 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h1><p>linux学习笔记系列暂时就写到这儿了,还有后续哦,敬请期待吧………..</p>
+]]></content>
+      
+        <categories>
+            
+            <category> linux </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> linux </tag>
             
         </tags>
         
