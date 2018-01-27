@@ -80,6 +80,9 @@
     <span class="token operator">&lt;</span><span class="token operator">/</span>bean<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>beans<span class="token operator">></span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ol>
+<li>总结<br>web.xml 配置springmvc框架的核心DispatcherServlet<br>application.xml 配置应用文件可以写在不同配置文件中然后导入,这样可以减少代码量,层次更加清楚<br>spring-mvc.xml 配置springmvc相关,主要是完成1.注解扫描配置２.视图解析配置3.适配器和控制器的配置4.静态资源映射配置<br>spring-mybatis.xml 配置mybatis相关,主要是完成1.数据源配置2.注解扫描包配置３.事务管理配置.</li>
+</ol>
 ]]></content>
       
         <categories>
@@ -299,38 +302,6 @@ r-&gt;4
     </entry>
     
     <entry>
-      <title><![CDATA[Java性能分析工具VisualVM教程(一)]]></title>
-      <url>/2017/11/16/jprofiler/</url>
-      <content type="html"><![CDATA[<h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>我们程序员不仅仅需要写代码,更多的是如何优化代码.如何优化程序.那么就需要性能分析以及优化工具.使得程序能运行的更快更好.那么好用的性能分析工具有哪些纳?在此.我推荐VisualVM.其他软件没有用过.</p>
-<p>#　内容</p>
-<ol>
-<li>查看内存</li>
-<li>查看线程</li>
-<li>查看堆栈</li>
-<li>查看类以及实例</li>
-<li>窗口大体浏览<br>左边:应用程序显示栏　Java所有的应用程序都会显示<br>右边: 应用程序的详细显示　下标:<br>Overview: 应用程序信息概栏<br>Monitor:　监视器　以图形化的显示Cpu Heap Classes Threads的信息<br>Threads: 各种线程的显示包括运行的休息的等待的监视的<br>Sampler: 对于各种变量使用的内存进行分析并显示</li>
-</ol>
-<p>jprofiler hello jprofiler </p>
-<h1 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h1>]]></content>
-      
-        <categories>
-            
-            <category> Java </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Java </tag>
-            
-            <tag> 性能分析工具 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title></title>
       <url>/2017/11/16/java5/</url>
       <content type="html"><![CDATA[<h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>我们为什么需要性能分析工具?性能分析能帮助我们什么?我想这几个问题是我这段时间学习Java以来所思考的问题.问题起源于我想针对Java编写的不同方式的读写文件操作的程序进行性能分析,来确定下哪种文件读写操作是比较好的?哪种文件操作方式适合于哪种场合.因此我需要分析程序中方法执行的时间,所使用的内存,所使用的线程等等因素.<br>那么我用什么软件工具比较好呢？</p>
@@ -357,6 +328,38 @@ r-&gt;4
             <tag> Java </tag>
             
             <tag> 学习笔记 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java性能分析工具VisualVM教程(一)]]></title>
+      <url>/2017/11/16/jprofiler/</url>
+      <content type="html"><![CDATA[<h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>我们程序员不仅仅需要写代码,更多的是如何优化代码.如何优化程序.那么就需要性能分析以及优化工具.使得程序能运行的更快更好.那么好用的性能分析工具有哪些纳?在此.我推荐VisualVM.其他软件没有用过.</p>
+<p>#　内容</p>
+<ol>
+<li>查看内存</li>
+<li>查看线程</li>
+<li>查看堆栈</li>
+<li>查看类以及实例</li>
+<li>窗口大体浏览<br>左边:应用程序显示栏　Java所有的应用程序都会显示<br>右边: 应用程序的详细显示　下标:<br>Overview: 应用程序信息概栏<br>Monitor:　监视器　以图形化的显示Cpu Heap Classes Threads的信息<br>Threads: 各种线程的显示包括运行的休息的等待的监视的<br>Sampler: 对于各种变量使用的内存进行分析并显示</li>
+</ol>
+<p>jprofiler hello jprofiler </p>
+<h1 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h1>]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> 性能分析工具 </tag>
             
         </tags>
         
