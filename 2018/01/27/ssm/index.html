@@ -253,7 +253,7 @@
 
     
         <meta property="article:published_time" content="Sat Jan 27 2018 00:00:00 GMT+0800" />
-        <meta property="article:modified_time" content="Sat Jan 27 2018 15:42:33 GMT+0800" />
+        <meta property="article:modified_time" content="Sat Jan 27 2018 15:44:16 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
@@ -280,7 +280,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/01/27/ssm/index.html",
     "headline": "SSM框架集成基础（一）配置文件",
     "datePublished": "Sat Jan 27 2018 00:00:00 GMT+0800",
-    "dateModified": "Sat Jan 27 2018 15:42:33 GMT+0800",
+    "dateModified": "Sat Jan 27 2018 15:44:16 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Squirrel Chen",
@@ -527,6 +527,12 @@
    <span class="token operator">&lt;</span>url<span class="token operator">-</span>pattern<span class="token operator">></span><span class="token operator">/</span><span class="token operator">&lt;</span><span class="token operator">/</span>url<span class="token operator">-</span>pattern<span class="token operator">></span>
  <span class="token operator">&lt;</span><span class="token operator">/</span>servlet<span class="token operator">-</span>mapping<span class="token operator">></span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>3.2 web.xml注册加载application.xml文件</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token operator">&lt;</span>context<span class="token operator">-</span>param<span class="token operator">></span>
+  <span class="token operator">&lt;</span>param<span class="token operator">-</span>name<span class="token operator">></span>contextConfigLocation<span class="token operator">&lt;</span><span class="token operator">/</span>param<span class="token operator">-</span>name<span class="token operator">></span>
+  <span class="token operator">&lt;</span>param<span class="token operator">-</span>value<span class="token operator">></span>classpath<span class="token operator">:</span>application<span class="token punctuation">.</span>xml<span class="token operator">&lt;</span><span class="token operator">/</span>param<span class="token operator">-</span>value<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>context<span class="token operator">-</span>param<span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
