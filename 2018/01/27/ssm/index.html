@@ -253,7 +253,7 @@
 
     
         <meta property="article:published_time" content="Sat Jan 27 2018 00:00:00 GMT+0800" />
-        <meta property="article:modified_time" content="Sat Jan 27 2018 15:38:36 GMT+0800" />
+        <meta property="article:modified_time" content="Sat Jan 27 2018 15:42:33 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
@@ -280,7 +280,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/01/27/ssm/index.html",
     "headline": "SSM框架集成基础（一）配置文件",
     "datePublished": "Sat Jan 27 2018 00:00:00 GMT+0800",
-    "dateModified": "Sat Jan 27 2018 15:38:36 GMT+0800",
+    "dateModified": "Sat Jan 27 2018 15:42:33 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Squirrel Chen",
@@ -510,8 +510,23 @@
         <ol>
 <li>配置文件<br>web.xml web应用程序的核心文件,web应用程序运行时，会首先读取web.xml文件,依据上面的代码完成初始化的配置<br>application.xml web应用程序的应用配置文件,通常作为主配置文件写在web.xml中,当读取web.xml时也会读取application.xml 文件<br>spring-mvc.xml 配置springmvc相关的配置文件<br>spring-mybatis.xml 配置spring与mybatis集成的相关配置文件</li>
 <li>文件作用</li>
-<li>代码编写</li>
+<li>代码编写<br>3.1 首先我们需要在web.xml配置好spring核心,也就是DispatcherServlet</li>
 </ol>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token operator">&lt;</span>servlet<span class="token operator">></span>
+   <span class="token operator">&lt;</span>servlet<span class="token operator">-</span>name<span class="token operator">></span>dispatcher<span class="token operator">&lt;</span><span class="token operator">/</span>servlet<span class="token operator">-</span>name<span class="token operator">></span>
+   <span class="token operator">&lt;</span>servlet<span class="token operator">-</span><span class="token keyword">class</span><span class="token operator">></span>org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>DispatcherServlet<span class="token operator">&lt;</span><span class="token operator">/</span>servlet<span class="token operator">-</span><span class="token keyword">class</span><span class="token operator">></span>
+   <span class="token operator">&lt;</span>init<span class="token operator">-</span>param<span class="token operator">></span>
+     <span class="token operator">&lt;</span>param<span class="token operator">-</span>name<span class="token operator">></span>contextConfigLocation<span class="token operator">&lt;</span><span class="token operator">/</span>param<span class="token operator">-</span>name<span class="token operator">></span>
+     <span class="token operator">&lt;</span>param<span class="token operator">-</span>value<span class="token operator">></span>classpath<span class="token operator">:</span>spring<span class="token operator">-</span>mvc<span class="token punctuation">.</span>xml<span class="token operator">&lt;</span><span class="token operator">/</span>param<span class="token operator">-</span>value<span class="token operator">></span>
+   <span class="token operator">&lt;</span><span class="token operator">/</span>init<span class="token operator">-</span>param<span class="token operator">></span>
+   <span class="token operator">&lt;</span>load<span class="token operator">-</span>on<span class="token operator">-</span>startup<span class="token operator">></span><span class="token number">1</span><span class="token operator">&lt;</span><span class="token operator">/</span>load<span class="token operator">-</span>on<span class="token operator">-</span>startup<span class="token operator">></span>
+ <span class="token operator">&lt;</span><span class="token operator">/</span>servlet<span class="token operator">></span>
+
+ <span class="token operator">&lt;</span>servlet<span class="token operator">-</span>mapping<span class="token operator">></span>
+   <span class="token operator">&lt;</span>servlet<span class="token operator">-</span>name<span class="token operator">></span>dispatcher<span class="token operator">&lt;</span><span class="token operator">/</span>servlet<span class="token operator">-</span>name<span class="token operator">></span>
+   <span class="token operator">&lt;</span>url<span class="token operator">-</span>pattern<span class="token operator">></span><span class="token operator">/</span><span class="token operator">&lt;</span><span class="token operator">/</span>url<span class="token operator">-</span>pattern<span class="token operator">></span>
+ <span class="token operator">&lt;</span><span class="token operator">/</span>servlet<span class="token operator">-</span>mapping<span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
