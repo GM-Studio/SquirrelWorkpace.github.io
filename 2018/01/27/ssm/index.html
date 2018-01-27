@@ -253,7 +253,7 @@
 
     
         <meta property="article:published_time" content="Sat Jan 27 2018 00:00:00 GMT+0800" />
-        <meta property="article:modified_time" content="Sat Jan 27 2018 15:44:16 GMT+0800" />
+        <meta property="article:modified_time" content="Sat Jan 27 2018 15:49:09 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
@@ -280,7 +280,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/01/27/ssm/index.html",
     "headline": "SSM框架集成基础（一）配置文件",
     "datePublished": "Sat Jan 27 2018 00:00:00 GMT+0800",
-    "dateModified": "Sat Jan 27 2018 15:44:16 GMT+0800",
+    "dateModified": "Sat Jan 27 2018 15:49:09 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Squirrel Chen",
@@ -533,6 +533,55 @@
   <span class="token operator">&lt;</span>param<span class="token operator">-</span>value<span class="token operator">></span>classpath<span class="token operator">:</span>application<span class="token punctuation">.</span>xml<span class="token operator">&lt;</span><span class="token operator">/</span>param<span class="token operator">-</span>value<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>context<span class="token operator">-</span>param<span class="token operator">></span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>3.3 application.xml 注册加载相关mybatis集成文件</p>
+<pre class="line-numbers language-java"><code class="language-java">
+<span class="token operator">&lt;</span><span class="token operator">?</span>xml version<span class="token operator">=</span><span class="token string">"1.0"</span> encoding<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token operator">?</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>beans xmlns<span class="token operator">=</span><span class="token string">"http://www.springframework.org/schema/beans"</span>
+       xmlns<span class="token operator">:</span>xsi<span class="token operator">=</span><span class="token string">"http://www.w3.org/2001/XMLSchema-instance"</span>
+       xsi<span class="token operator">:</span>schemaLocation<span class="token operator">=</span>"http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>org<span class="token operator">/</span>schema<span class="token operator">/</span>beans
+       http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>org<span class="token operator">/</span>schema<span class="token operator">/</span>beans<span class="token operator">/</span>spring<span class="token operator">-</span>beans<span class="token punctuation">.</span>xsd"<span class="token operator">></span>
+
+    <span class="token operator">&lt;</span><span class="token keyword">import</span> resource<span class="token operator">=</span><span class="token string">"classpath:spring-mybatis.xml"</span><span class="token operator">/</span><span class="token operator">></span>
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>beans<span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>3.4 spring-mvc.xml 加载相关springmvc的</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token operator">&lt;</span><span class="token operator">?</span>xml version<span class="token operator">=</span><span class="token string">"1.0"</span> encoding<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token operator">?</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>beans xmlns<span class="token operator">=</span><span class="token string">"http://www.springframework.org/schema/beans"</span>
+       xmlns<span class="token operator">:</span>xsi<span class="token operator">=</span><span class="token string">"http://www.w3.org/2001/XMLSchema-instance"</span> xmlns<span class="token operator">:</span>mvc<span class="token operator">=</span><span class="token string">"http://www.springframework.org/schema/mvc"</span>
+       xmlns<span class="token operator">:</span>context<span class="token operator">=</span><span class="token string">"http://www.springframework.org/schema/context"</span>
+       xmlns<span class="token operator">:</span>mav<span class="token operator">=</span><span class="token string">"http://www.springframework.org/schema/mvc"</span>
+       xsi<span class="token operator">:</span>schemaLocation<span class="token operator">=</span><span class="token string">"http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"</span><span class="token operator">></span>
+
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 注解的支持，可以将请求参数绑定到控制器参数<span class="token operator">--</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>mvc<span class="token operator">:</span>annotation<span class="token operator">-</span>driven<span class="token operator">/</span><span class="token operator">></span>
+
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>注解扫描<span class="token operator">--</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>context<span class="token operator">:</span>component<span class="token operator">-</span>scan base<span class="token operator">-</span><span class="token keyword">package</span><span class="token operator">=</span><span class="token string">"org.aibo.*"</span><span class="token operator">/</span><span class="token operator">></span>
+
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>静态资源处理，mapping：匹配URL，location：静态资源在WebApp中的位置<span class="token operator">--</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>mvc<span class="token operator">:</span>resources mapping<span class="token operator">=</span><span class="token string">"/css/**"</span> location<span class="token operator">=</span><span class="token string">"/css/"</span><span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>mvc<span class="token operator">:</span>resources mapping<span class="token operator">=</span><span class="token string">"/images/**"</span> location<span class="token operator">=</span><span class="token string">"/images/"</span><span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>mvc<span class="token operator">:</span>resources mapping<span class="token operator">=</span><span class="token string">"/js/**"</span> location<span class="token operator">=</span><span class="token string">"/js/"</span><span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>mvc<span class="token operator">:</span>resources mapping<span class="token operator">=</span><span class="token string">"/video/**"</span> location<span class="token operator">=</span><span class="token string">"/video/"</span><span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>mvc<span class="token operator">:</span>resources mapping<span class="token operator">=</span><span class="token string">"/fonts/**"</span> location<span class="token operator">=</span><span class="token string">"/fonts/"</span><span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>mav<span class="token operator">:</span>resources mapping<span class="token operator">=</span><span class="token string">"/bootstrap/**"</span> location<span class="token operator">=</span><span class="token string">"/bootstrap/"</span><span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>mvc<span class="token operator">:</span>resources mapping<span class="token operator">=</span><span class="token string">"/layui/**"</span> location<span class="token operator">=</span><span class="token string">"/layui/"</span><span class="token operator">/</span><span class="token operator">></span>
+
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 注解的映射器 <span class="token operator">--</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>bean <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"</span><span class="token operator">/</span><span class="token operator">></span>
+
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 注解的适配器 <span class="token operator">--</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>bean <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"</span><span class="token operator">/</span><span class="token operator">></span>
+
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 视图解析器 <span class="token operator">--</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>bean <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"org.springframework.web.servlet.view.InternalResourceViewResolver"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"contentType"</span> value<span class="token operator">=</span><span class="token string">"text/html"</span><span class="token operator">/</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"prefix"</span> value<span class="token operator">=</span><span class="token string">"/"</span><span class="token operator">/</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"suffix"</span> value<span class="token operator">=</span><span class="token string">".jsp"</span><span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>bean<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>beans<span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
