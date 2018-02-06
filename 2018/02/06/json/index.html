@@ -43,7 +43,7 @@
     
     <title>
         
-            Java学习－网络编程(一) | 
+            json | 
         
         Squirrel&#39;Blog
     </title>
@@ -55,7 +55,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Squirrel Chen">
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",Java,网络编程">
+    <meta name="keywords" content=",json">
 
     <!-- Import lsloader -->
     <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
@@ -246,18 +246,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Java学习－网络编程(一) | Squirrel&#39;Blog">
+    <meta property="og:title" content="json | Squirrel&#39;Blog">
     <meta property="og:image" content="http://yoursite.com/favicon/favicon.jpeg" />
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="Java"> <meta property="og:article:tag" content="网络编程"> 
+    <meta property="og:article:tag" content="json"> 
 
     
-        <meta property="article:published_time" content="Thu Nov 02 2017 00:00:00 GMT+0800" />
-        <meta property="article:modified_time" content="Sun Nov 19 2017 21:22:01 GMT+0800" />
+        <meta property="article:published_time" content="Tue Feb 06 2018 19:30:30 GMT+0800" />
+        <meta property="article:modified_time" content="Tue Feb 06 2018 19:33:31 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="Java学习－网络编程(一) | Squirrel&#39;Blog">
+    <meta name="twitter:title" content="json | Squirrel&#39;Blog">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="http://yoursite.com/favicon/favicon.jpeg">
     <meta name="twitter:card" content="summary_large_image" />
@@ -265,7 +265,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2017/11/02/java3/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/02/06/json/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -277,10 +277,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2017/11/02/java3/index.html",
-    "headline": "Java学习－网络编程(一)",
-    "datePublished": "Thu Nov 02 2017 00:00:00 GMT+0800",
-    "dateModified": "Sun Nov 19 2017 21:22:01 GMT+0800",
+    "mainEntityOfPage": "http://yoursite.com/2018/02/06/json/index.html",
+    "headline": "json",
+    "datePublished": "Tue Feb 06 2018 19:30:30 GMT+0800",
+    "dateModified": "Tue Feb 06 2018 19:33:31 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Squirrel Chen",
@@ -298,7 +298,7 @@
             "url": "/favicon/favicon.jpeg"
         }
     },
-    "keywords": ",Java,网络编程",
+    "keywords": ",json",
     "description": "",
 }
 </script>
@@ -363,15 +363,6 @@
     <!-- Left aligned menu below button -->
     
     
-    <button id="post-toc-trigger-btn"
-        class="mdl-button mdl-js-button mdl-button--icon">
-        <i class="material-icons">format_list_numbered</i>
-    </button>
-
-    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#序"><span class="post-toc-number">1.</span> <span class="post-toc-text">序</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#API解释"><span class="post-toc-number">2.</span> <span class="post-toc-text">API解释</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#举个栗子"><span class="post-toc-number">3.</span> <span class="post-toc-text">举个栗子</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#结束"><span class="post-toc-number">4.</span> <span class="post-toc-text">结束</span></a></li></ol>
-    </ul>
-    
 
 
 
@@ -401,7 +392,7 @@
         
     
             <p class="article-headline-p">
-                Java学习－网络编程(一)
+                json
             </p>
         </div>
 
@@ -420,7 +411,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Squirrel Chen</strong>
-        <span>11月 02, 2017</span>
+        <span>2月 06, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -444,7 +435,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/Java/">Java</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/网络编程/">网络编程</a>
+        <a class="post_tag-link" href="/tags/json/">json</a>
     </ul>
     
 
@@ -459,7 +450,7 @@
     <!-- Leancloud Views -->
         <a class="post_share-link" href="#">
             <li class="mdl-menu__item">
-                <span id="/2017/11/02/java3/" class="leancloud-views_num" data-flag-title="Java学习－网络编程(一)">
+                <span id="/2018/02/06/json/" class="leancloud-views_num" data-flag-title="json">
      &nbsp;浏览量
 </span>
 
@@ -482,7 +473,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Java学习－网络编程(一)&url=http://yoursite.com/2017/11/02/java3/index.html&pic=http://yoursite.com/favicon/favicon.jpeg&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=json&url=http://yoursite.com/2018/02/06/json/index.html&pic=http://yoursite.com/favicon/favicon.jpeg&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -516,81 +507,11 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>大家都会发现,在工作当中,网络编程是基础的,也是很必要的.比如我们经常会用<code>socket</code>通信,<code>HTTP协议</code>,<code>UDP协议</code>之类的.那么今天我们将会学习到如何用<code>HttpURLConnection</code>这个类进行网络编程.</p>
-<h1 id="API解释"><a href="#API解释" class="headerlink" title="API解释"></a>API解释</h1><p>首先我们在官网查下<code>HttpURLConnetcion</code>的API，官网解释如下：</p>
-<pre><code>A URLConnection with support for HTTP-specific features. See the spec for details.
-Each HttpURLConnection instance is used to make a single request but the underlying network connection to the HTTP server may be transparently shared by other instances. Calling the close() methods on the InputStream or OutputStream of an HttpURLConnection after a request may free network resources associated with this instance but has no effect on any shared persistent connection. Calling the disconnect() method may close the underlying socket if a persistent connection is otherwise idle at that time.
-The HTTP protocol handler has a few settings that can be accessed through System Properties. This covers Proxy settings as well as &gt;various other settings.
-</code></pre><p>大概的意思则是与<code>HTTP</code>特定功能的支持一个<code>URLConnection</code>.详情请参阅规范.每个<code>HttpURLConnection</code>实例是用来制造单个请求,但基础网络连接到<code>HTTP</code>服务器可以通过其他实例可以透明共用,呼吁一个<code>HttpURLConnection</code>类的的<code>InputStream</code>和<code>OutputStream</code>的密切方法的请求后,可能释放与此实例关联的网络资源,但对任何共享的持久连接没有任何影响.如果一个持久连接就是在那个时候闲置的调用<code>disconnect()</code>方法可以关闭基础套接字.<code>HTTP</code>协议处理程序,可以通过系统属性来访问一些设置.这包括代理设置,以及其他各种设置.而在上述叙述中,我们发现<code>HttpURLConnection</code>是有一个父类的<code>URLConnetcion</code>API文档描述如下:</p>
-<pre><code>The abstract class URLConnection is the superclass of all classes that represent a communications link between the application and a URL. Instances of this class can be used both to read from and to write to the resource referenced by the URL. In general, creating a connection to a URL is a multistep process
-</code></pre><p>翻译如下就是</p>
-<pre><code>抽象类URLConnection是代表应用程序和URL之间的通信链路的所有类的超类.这个类的实例既可以用来读取和写入由URL引用的资源.一般况下,创建一个URL连接是一个多步骤的过程.
-</code></pre><h1 id="举个栗子"><a href="#举个栗子" class="headerlink" title="举个栗子"></a>举个栗子</h1><p>那么现在废话少说，查看例子是怎么使用的吧：</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>baoquan<span class="token punctuation">.</span>upload<span class="token punctuation">;</span>
-<span class="token keyword">import</span> java<span class="token punctuation">.</span>io<span class="token punctuation">.</span>DataOutputStream<span class="token punctuation">;</span>
-<span class="token keyword">import</span> java<span class="token punctuation">.</span>io<span class="token punctuation">.</span>OutputStream<span class="token punctuation">;</span>
-<span class="token keyword">import</span> java<span class="token punctuation">.</span>net<span class="token punctuation">.</span>HttpURLConnection<span class="token punctuation">;</span>
-<span class="token keyword">import</span> java<span class="token punctuation">.</span>net<span class="token punctuation">.</span>URL<span class="token punctuation">;</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DataUpload</span> <span class="token keyword">implements</span> <span class="token class-name">Upload</span> <span class="token punctuation">{</span>
-        <span class="token annotation punctuation">@Override</span>
-       <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">fileupload</span><span class="token punctuation">(</span>String filename<span class="token punctuation">,</span> String url<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token comment" spellcheck="true">// TODO Auto-generated method stub</span>
-              <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-   <span class="token punctuation">}</span>
-       <span class="token annotation punctuation">@Override</span>
-       <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">dataupload</span><span class="token punctuation">(</span>String url<span class="token punctuation">,</span> String data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token comment" spellcheck="true">// TODO Auto-generated method stub</span>
-                <span class="token keyword">try</span><span class="token punctuation">{</span>
-            <span class="token comment" spellcheck="true">//创建URL连接</span>
-            URL uploadurl<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">URL</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span>
-                     <span class="token comment" spellcheck="true">//打开端口通信</span>
-                HttpURLConnection con<span class="token operator">=</span><span class="token punctuation">(</span>HttpURLConnection<span class="token punctuation">)</span>uploadurl<span class="token punctuation">.</span><span class="token function">openConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                    <span class="token comment" spellcheck="true">//设置相关属性设置 输入输出流打开</span>
-                con<span class="token punctuation">.</span><span class="token function">setDoInput</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                con<span class="token punctuation">.</span><span class="token function">setDoOutput</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                  <span class="token comment" spellcheck="true">//设置请求方式 包括POST GET</span>
-                 con<span class="token punctuation">.</span><span class="token function">setRequestMethod</span><span class="token punctuation">(</span><span class="token string">"POST"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                   <span class="token comment" spellcheck="true">//设置请求头属性</span>
-                 con<span class="token punctuation">.</span><span class="token function">setRequestProperty</span><span class="token punctuation">(</span><span class="token string">"Connection"</span><span class="token punctuation">,</span><span class="token string">"keep-Alive"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                 con<span class="token punctuation">.</span><span class="token function">setRequestProperty</span><span class="token punctuation">(</span><span class="token string">"User-Agent"</span><span class="token punctuation">,</span> <span class="token string">"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/51.0.2704.79 Chrome/51.0.2704.79 Safari/537.36"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                 con<span class="token punctuation">.</span><span class="token function">setRequestProperty</span><span class="token punctuation">(</span><span class="token string">"Charset"</span><span class="token punctuation">,</span> <span class="token string">"UTF-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                     <span class="token comment" spellcheck="true">//打开输出流</span>
-                 OutputStream out<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">DataOutputStream</span><span class="token punctuation">(</span>con<span class="token punctuation">.</span><span class="token function">getOutputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   
-                        <span class="token comment" spellcheck="true">//写入数据</span>
-                 out<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                     <span class="token comment" spellcheck="true">//清空缓冲区</span>
-                 out<span class="token punctuation">.</span><span class="token function">flush</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                    <span class="token comment" spellcheck="true">//关闭输出流</span>
-                 out<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                 System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>con<span class="token punctuation">.</span><span class="token function">getResponseCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                 <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-               <span class="token keyword">catch</span><span class="token punctuation">(</span>Exception e<span class="token punctuation">)</span>
-              <span class="token punctuation">{</span>
-                 System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"POST请求异常"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                 e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-               <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-
-        <span class="token punctuation">}</span>
-        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span>
-  <span class="token punctuation">{</span>
-                 DataUpload dataup<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">DataUpload</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                 dataup<span class="token punctuation">.</span><span class="token function">dataupload</span><span class="token punctuation">(</span><span class="token string">"http://localhost:8080/Server/servlet/UploadServlet"</span><span class="token punctuation">,</span> <span class="token string">"你好世界"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>由以上代码 可以看出</p>
-<pre><code>1. 创建URL对象
-2. URL打开URL地址连接也就是openConnection()
-3. 设置请求的相关方式POST/GET
-4. 设置请求的头的相关属性
-5. 获取输入/输出流
-6. 读取/写入数据
-7. 清空缓冲区
-8. 关闭连接
-</code></pre><h1 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h1><p>大概就是这么的一个过程,大家都明白了吧.其实<code>HttpURLConnection</code>也是采用<code>socket</code>通信的.它内部封装了关于<code>socket</code>的相关信息.因此熟悉<code>socket</code>的通信相关编程知识的,也就能发现其实<code>HttpURLConnection</code>也是类似的编程步骤.好了.暂时写到这儿.有什么不对或者问题,请务必告知本人.谢谢.</p>
+        <ol>
+<li>JSON验证性问题</li>
+<li>JSON跨站请求问题</li>
+<li>JSON在服务端,客户端使用的问题</li>
+</ol>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
@@ -599,7 +520,7 @@ The HTTP protocol handler has a few settings that can be accessed through System
                             Copyright© Squirrel's Blog
                         </strong>
                         <br>
-                        <strong>本文链接：</strong><a href="http://yoursite.com/2017/11/02/java3/">http://yoursite.com/2017/11/02/java3/</a>
+                        <strong>本文链接：</strong><a href="http://yoursite.com/2018/02/06/json/">http://yoursite.com/2018/02/06/json/</a>
                     </p>
                 </blockquote>
         
@@ -617,7 +538,7 @@ The HTTP protocol handler has a few settings that can be accessed through System
     <!-- 使用 changyan -->
 <div id="changyan-comment">
     <!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="2017/11/02/java3/"  ></div>
+<div id="SOHUCS" sid="2018/02/06/json/"  ></div>
 <script type="text/javascript">
 (function(){
 var appid = 'cysD2L3UA';
@@ -641,21 +562,13 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2017/11/03/java2/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2017/11/01/css/" id="post_nav-older" class="next-content">
+        <a href="/2018/02/02/fileupload/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
