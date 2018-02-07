@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-02-06T11:33:31.827Z</updated>
+  <updated>2018-02-07T12:12:27.015Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>深入理解git工作原理</title>
+    <link href="http://yoursite.com/2018/02/07/git/"/>
+    <id>http://yoursite.com/2018/02/07/git/</id>
+    <published>2018-02-07T12:11:28.000Z</published>
+    <updated>2018-02-07T12:12:27.015Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;git的工作原理&lt;/li&gt;
+&lt;li&gt;出现问题&lt;/li&gt;
+&lt;li&gt;总结&lt;/li&gt;
+&lt;/ol&gt;
+
+      
+    
+    </summary>
+    
+      <category term="git" scheme="http://yoursite.com/categories/git/"/>
+    
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>json</title>
@@ -477,31 +505,6 @@
       
       
         &lt;h1 id=&quot;ST插件安装&quot;&gt;&lt;a href=&quot;#ST插件安装&quot; class=&quot;headerlink&quot; title=&quot;ST插件安装&quot;&gt;&lt;/a&gt;ST插件安装&lt;/h1&gt;&lt;h2 id=&quot;ST2的package-control&quot;&gt;&lt;a href=&quot;#ST2的package-contro
-      
-    
-    </summary>
-    
-      <category term="ST" scheme="http://yoursite.com/categories/ST/"/>
-    
-    
-      <category term="ST" scheme="http://yoursite.com/tags/ST/"/>
-    
-      <category term="文本编辑器" scheme="http://yoursite.com/tags/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sublime Text(ST) 初级玩法</title>
-    <link href="http://yoursite.com/2017/11/07/st2/"/>
-    <id>http://yoursite.com/2017/11/07/st2/</id>
-    <published>2017-11-06T16:00:00.000Z</published>
-    <updated>2017-11-19T13:30:59.236Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;ST-的常用快捷键&quot;&gt;&lt;a href=&quot;#ST-的常用快捷键&quot; class=&quot;headerlink&quot; title=&quot;ST 的常用快捷键&quot;&gt;&lt;/a&gt;ST 的常用快捷键&lt;/h1&gt;&lt;h2 id=&quot;选择类&quot;&gt;&lt;a href=&quot;#选择类&quot; class=&quot;headerlink
       
     
     </summary>
