@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[深入理解git工作原理]]></title>
     <url>%2F2018%2F02%2F07%2Fgit%2F</url>
-    <content type="text"><![CDATA[git的工作原理 文件的状态 问题出现 问题总结 git write-object invalid oject …]]></content>
+    <content type="text"><![CDATA[git的工作原理 文件的状态 问题出现 问题总结 git hash-object invalid oject …git write-tree git update-index]]></content>
       <categories>
         <category>git</category>
       </categories>
