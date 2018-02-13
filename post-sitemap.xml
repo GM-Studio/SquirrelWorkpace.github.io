@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://yoursite.com/2018/02/02/fileupload/</loc>
+        <lastmod>2018-02-13T08:32:07.131Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://yoursite.com/2018/02/07/git/</loc>
         <lastmod>2018-02-12T15:34:09.164Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -25,14 +33,6 @@
     <url>
         <loc>http://yoursite.com/2018/02/02/suiji3/</loc>
         <lastmod>2018-02-05T11:42:04.808Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://yoursite.com/2018/02/02/fileupload/</loc>
-        <lastmod>2018-02-03T10:07:52.702Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
