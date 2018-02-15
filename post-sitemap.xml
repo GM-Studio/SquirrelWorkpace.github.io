@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://yoursite.com/2017/01/04/suiji2/</loc>
+        <lastmod>2018-02-15T15:11:51.054Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://yoursite.com/2018/02/02/suiji3/</loc>
         <lastmod>2018-02-14T08:45:04.110Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -57,14 +65,6 @@
     <url>
         <loc>http://yoursite.com/2018/01/09/kaoyan/</loc>
         <lastmod>2018-01-29T12:14:43.067Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://yoursite.com/2017/01/04/suiji2/</loc>
-        <lastmod>2018-01-26T11:49:03.885Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
