@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://yoursite.com/2017/12/04/world/</loc>
+        <lastmod>2018-02-17T10:40:20.616Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://yoursite.com/2017/01/04/suiji2/</loc>
         <lastmod>2018-02-16T08:43:08.956Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -73,14 +81,6 @@
     <url>
         <loc>http://yoursite.com/2018/01/02/suiji/</loc>
         <lastmod>2018-01-25T15:32:21.464Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://yoursite.com/2017/12/04/world/</loc>
-        <lastmod>2018-01-03T12:50:45.942Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
