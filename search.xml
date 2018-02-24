@@ -103,7 +103,7 @@
   <entry>
     <title><![CDATA[Java性能分析工具VisualVM教程(一)]]></title>
     <url>%2F2017%2F11%2F16%2Fjprofiler%2F</url>
-    <content type="text"><![CDATA[序我们程序员不仅仅需要写代码,更多的是如何优化代码.如何优化程序.那么就需要性能分析以及优化工具.使得程序能运行的更快更好.那么好用的性能分析工具有哪些纳?在此.我推荐VisualVM.其他软件没有用过. # 内容 查看内存 查看线程 查看堆栈 查看类以及实例 窗口大体浏览左边:应用程序显示栏 Java所有的应用程序都会显示右边: 应用程序的详细显示 下标:Overview: 应用程序信息概栏Monitor: 监视器 以图形化的显示Cpu Heap Classes Threads的信息Threads: 各种线程的显示包括运行的休息的等待的监视的Sampler: 对于各种变量使用的内存进行分析并显示 jprofiler hello jprofiler 未完待续]]></content>
+    <content type="text"><![CDATA[序我们程序员不仅仅需要写代码,更多的是如何优化代码.如何优化程序.那么就需要性能分析以及优化工具.使得程序能运行的更快更好.那么好用的性能分析工具有哪些纳?在此.我推荐VisualVM.其他软件没有用过. # 内容 查看内存 查看线程 查看堆栈 查看类以及实例 窗口大体浏览左边:应用程序显示栏 Java所有的应用程序都会显示右边: 应用程序的详细显示 下标:Overview: 应用程序信息概栏Monitor: 监视器 以图形化的显示Cpu Heap Classes Threads的信息Threads: 各种线程的显示包括运行的休息的等待的监视的Sampler: 对于各种变量使用的内存进行分析并显示 未完待续]]></content>
       <categories>
         <category>Java</category>
       </categories>
