@@ -306,7 +306,7 @@
 <li>jquery </li>
 <li>git　文件状态，工作区，工作流程，原理</li>
 <li>springmvc dao service controller   test    </li>
-<li>流光</li>
+<li></li>
 </ol>
 ]]></content>
       
@@ -605,31 +605,6 @@ r-&gt;4
     </entry>
     
     <entry>
-      <title><![CDATA[linux学习笔记(一)设置快捷键]]></title>
-      <url>/2017/11/13/linux1/</url>
-      <content type="html"><![CDATA[<h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>在linux操作系统中,一切皆文件.那么当我们程序装的很多的时候,我们要去桌面or应用栏去一个个找需要打开的应用程序的图标.对我们程序员来说.时间就是金钱.我们特别注重效率.那么我们有什么办法可以直接打开我们所需要运行的app纳?答案就是设置快捷键.如何设置纳?请看下面的老司机的步骤.</p>
-<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><h2 id="明确一点"><a href="#明确一点" class="headerlink" title="明确一点"></a>明确一点</h2><p>我们所运行的应用程序其桌面图标或者说运行脚本都放在了<code>/usr/share/applications</code>这个文件夹中.</p>
-<h2 id="打开系统设置"><a href="#打开系统设置" class="headerlink" title="打开系统设置"></a>打开系统设置</h2><p>菜单栏搜索<code>System Settings</code>,找到<code>Keyboard</code>,点击打开.找到<code>Shortscuts-&gt;Custom Shortscuts</code>点击下方的+号.</p>
-<h2 id="开始设置快捷键"><a href="#开始设置快捷键" class="headerlink" title="开始设置快捷键"></a>开始设置快捷键</h2><p><code>Name</code> 填写应用程序的名称 ex:<code>谷歌浏览器</code>就填写<code>Chrome</code><br><code>Command</code> 填写在<code>/usr/share/applications</code> 中找到了<code>chrome</code>图标右击鼠标,打开属性<code>Command</code> 这一栏的内容,复制粘粘到快捷键设置就好.</p>
-<h1 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h1><p>linux学习笔记系列暂时就写到这儿了,还有后续哦,敬请期待吧………..</p>
-]]></content>
-      
-        <categories>
-            
-            <category> linux </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> linux </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[学习教训]]></title>
       <url>/2017/11/13/lesson/</url>
       <content type="html"><![CDATA[<ol>
@@ -656,6 +631,31 @@ r-&gt;4
         <tags>
             
             <tag> 教训 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[linux学习笔记(一)设置快捷键]]></title>
+      <url>/2017/11/13/linux1/</url>
+      <content type="html"><![CDATA[<h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>在linux操作系统中,一切皆文件.那么当我们程序装的很多的时候,我们要去桌面or应用栏去一个个找需要打开的应用程序的图标.对我们程序员来说.时间就是金钱.我们特别注重效率.那么我们有什么办法可以直接打开我们所需要运行的app纳?答案就是设置快捷键.如何设置纳?请看下面的老司机的步骤.</p>
+<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><h2 id="明确一点"><a href="#明确一点" class="headerlink" title="明确一点"></a>明确一点</h2><p>我们所运行的应用程序其桌面图标或者说运行脚本都放在了<code>/usr/share/applications</code>这个文件夹中.</p>
+<h2 id="打开系统设置"><a href="#打开系统设置" class="headerlink" title="打开系统设置"></a>打开系统设置</h2><p>菜单栏搜索<code>System Settings</code>,找到<code>Keyboard</code>,点击打开.找到<code>Shortscuts-&gt;Custom Shortscuts</code>点击下方的+号.</p>
+<h2 id="开始设置快捷键"><a href="#开始设置快捷键" class="headerlink" title="开始设置快捷键"></a>开始设置快捷键</h2><p><code>Name</code> 填写应用程序的名称 ex:<code>谷歌浏览器</code>就填写<code>Chrome</code><br><code>Command</code> 填写在<code>/usr/share/applications</code> 中找到了<code>chrome</code>图标右击鼠标,打开属性<code>Command</code> 这一栏的内容,复制粘粘到快捷键设置就好.</p>
+<h1 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h1><p>linux学习笔记系列暂时就写到这儿了,还有后续哦,敬请期待吧………..</p>
+]]></content>
+      
+        <categories>
+            
+            <category> linux </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> linux </tag>
             
         </tags>
         
