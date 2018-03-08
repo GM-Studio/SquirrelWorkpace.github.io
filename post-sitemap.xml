@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://yoursite.com/2018/03/08/new/</loc>
+        <lastmod>2018-03-08T14:30:57.364Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://yoursite.com/2018/01/09/kaoyan/</loc>
         <lastmod>2018-03-07T14:05:22.330Z</lastmod>
         <changefreq>weekly</changefreq>

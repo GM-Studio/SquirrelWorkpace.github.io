@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title></title>
+    <url>%2F2018%2F03%2F08%2Fnew%2F</url>
+    <content type="text"><![CDATA[hello world]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[深入理解git工作原理]]></title>
     <url>%2F2018%2F02%2F07%2Fgit%2F</url>
     <content type="text"><![CDATA[git的工作原理 文件的状态 问题出现 问题总结 git hash-object invalid oject …git write-tree git update-index 民主]]></content>
